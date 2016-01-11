@@ -199,14 +199,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式</p>
-<p>错误实例1:意图声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：函数必须有函数名</p>
-<p>错误实例2：声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：最后面的那一组小括号被当做分组运算符，并没有被解析成调用fun函数</p>
-<p>正确实例：通过常用的运算符如()、！、—、+、typeof等放在匿名函数前，<br>让解析器把后面的函数当做表达式执行再通过()调用该函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure></p>
-<p>我的<a href="http://www.iwooto.com" target="_blank" rel="external">博客地址</a></p>
-
+        <h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的
       
     </div>
     
@@ -219,6 +212,10 @@
 
       
 
+      
+        <p class="article-more-link">
+          <a  href="/2016/01/10/重新搭建博客/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
