@@ -3,9 +3,9 @@
   <title><![CDATA[pangyalin的博客]]></title>
   
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
+  <link href="http://iwooto.com/"/>
   <updated>2016-01-11T12:24:22.119Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://iwooto.com/</id>
   
   <author>
     <name><![CDATA[pyl]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[再次认识js的立即执行函数]]></title>
-    <link href="http://yoursite.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2016/01/10/重新搭建博客/</id>
+    <link href="http://iwooto.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://iwooto.com/2016/01/10/重新搭建博客/</id>
     <published>2016-01-10T14:14:00.000Z</published>
     <updated>2016-01-11T12:24:22.119Z</updated>
     <content type="html"><![CDATA[<h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式</p>
@@ -32,7 +32,7 @@
     <![CDATA[<h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8F]]>
     </summary>
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+      <category term="js" scheme="http://iwooto.com/tags/js/"/>
     
   </entry>
   
