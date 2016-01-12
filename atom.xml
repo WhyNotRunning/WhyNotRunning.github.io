@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://iwooto.com/"/>
-  <updated>2016-01-11T15:09:29.196Z</updated>
+  <updated>2016-01-11T16:04:03.518Z</updated>
   <id>http://iwooto.com/</id>
   
   <author>
@@ -13,6 +13,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[hexo博客搭建过程]]></title>
+    <link href="http://iwooto.com/2016/01/11/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
+    <id>http://iwooto.com/2016/01/11/hexo博客搭建过程/</id>
+    <published>2016-01-11T15:39:41.000Z</published>
+    <updated>2016-01-11T16:04:03.518Z</updated>
+    <content type="html"><![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git<a id="more"></a></p>
+<h3 id="u521B_u5EFAgit_pages"><a href="#u521B_u5EFAgit_pages" class="headerlink" title="创建git pages"></a>创建git pages</h3><p>在github新建一个仓库，Github Pages 的仓库名必须为your_user_name.github.io<br>获取git的ssh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -c <span class="string">"youremail@163.com"</span> <span class="comment">#连点三次</span></span><br></pre></td></tr></table></figure></p>
+<p>找到C:\Users\Administrator.ssh\id_rsa.pub 文件打开，复制里面内容添加到自己的github的sshkeys 中（新建一个add sshkey）</p>
+<h3 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h3><p>安装Hexo<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo</span><br><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p>查看Hexo版本<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo v</span><br></pre></td></tr></table></figure></p>
+<p>创建Hexo项目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init myHexo</span><br></pre></td></tr></table></figure></p>
+<p>进入项目初始化<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> myHexo</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure></p>
+<p>安装依赖包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git]]>
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://iwooto.com/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[再次认识js的立即执行函数]]></title>
