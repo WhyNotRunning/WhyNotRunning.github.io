@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://iwooto.com/2016/01/12/hexo博客搭建过程/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
 <meta property="og:description" content="软件安装1.nodejs2.git">
-<meta property="og:updated_time" content="2016-01-15T16:44:02.330Z">
+<meta property="og:updated_time" content="2016-01-15T16:59:29.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客搭建过程">
 <meta name="twitter:description" content="软件安装1.nodejs2.git">
@@ -228,6 +228,8 @@
 <h3 id="u5B89_u88C5_u63D2_u4EF6"><a href="#u5B89_u88C5_u63D2_u4EF6" class="headerlink" title="安装插件"></a>安装插件</h3><p>生成rss<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save-dev</span><br></pre></td></tr></table></figure></p>
 <p>生成网站地图<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save-dev</span><br></pre></td></tr></table></figure></p>
 <p>-save和save-dev可以省掉你手动修改package.json文件的步骤。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install module-name -save 自动把模块和版本号添加到dependencies部分</span><br><span class="line">npm install module-name -save-dve 自动把模块和版本号添加到devdependencies部分</span><br></pre></td></tr></table></figure></p>
+<h3 id="hexo_u53D1_u5E03_u62A5_u9519"><a href="#hexo_u53D1_u5E03_u62A5_u9519" class="headerlink" title="hexo发布报错"></a>hexo发布报错</h3><p>执行 hexo d 报错<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: spawn git ENOENT</span><br><span class="line">    at exports._errnoException (util.js:<span class="number">746</span>:<span class="number">11</span>)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (child_process.js:<span class="number">1053</span>:<span class="number">32</span>)</span><br><span class="line">    at child_process.js:<span class="number">1144</span>:<span class="number">20</span></span><br><span class="line">    at process._tickCallback (node.js:<span class="number">355</span>:<span class="number">11</span>)</span><br></pre></td></tr></table></figure></p>
+<p>hexo提交必须通过git bash上才可以提交</p>
 
       
     </div>
