@@ -12,7 +12,7 @@
 <meta property="og:url" content="http://iwooto.com/2016/01/12/hexo博客搭建过程/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
 <meta property="og:description" content="软件安装1.nodejs2.git">
-<meta property="og:updated_time" content="2016-01-12T15:46:24.570Z">
+<meta property="og:updated_time" content="2016-01-15T16:44:02.330Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo博客搭建过程">
 <meta name="twitter:description" content="软件安装1.nodejs2.git">
@@ -225,6 +225,9 @@
 <p>hexo命令简写hexo + 命令首字母<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo c ==&gt; hexo clean</span><br></pre></td></tr></table></figure></p>
 <h3 id="u65B0_u5EFA_u4E00_u7BC7_u535A_u5BA2"><a href="#u65B0_u5EFA_u4E00_u7BC7_u535A_u5BA2" class="headerlink" title="新建一篇博客"></a>新建一篇博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"博客名称"</span></span><br></pre></td></tr></table></figure>
 <p>找到source/_post/博客名称.md进行编辑</p>
+<h3 id="u5B89_u88C5_u63D2_u4EF6"><a href="#u5B89_u88C5_u63D2_u4EF6" class="headerlink" title="安装插件"></a>安装插件</h3><p>生成rss<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>生成网站地图<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>-save和save-dev可以省掉你手动修改package.json文件的步骤。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install module-name -save 自动把模块和版本号添加到dependencies部分</span><br><span class="line">npm install module-name -save-dve 自动把模块和版本号添加到devdependencies部分</span><br></pre></td></tr></table></figure></p>
 
       
     </div>

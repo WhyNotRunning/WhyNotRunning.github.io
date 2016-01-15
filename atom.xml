@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://iwooto.com/"/>
-  <updated>2016-01-12T15:46:24.570Z</updated>
+  <updated>2016-01-15T16:44:02.330Z</updated>
   <id>http://iwooto.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://iwooto.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
     <id>http://iwooto.com/2016/01/12/hexo博客搭建过程/</id>
     <published>2016-01-12T13:39:41.000Z</published>
-    <updated>2016-01-12T15:46:24.570Z</updated>
+    <updated>2016-01-15T16:44:02.330Z</updated>
     <content type="html"><![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git<a id="more"></a></p>
 <h3 id="u521B_u5EFAgit_pages"><a href="#u521B_u5EFAgit_pages" class="headerlink" title="创建git pages"></a>创建git pages</h3><p>在github新建一个仓库，Github Pages 的仓库名必须为your_user_name.github.io<br>获取git的ssh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -c <span class="string">"youremail@163.com"</span> <span class="comment">#连点三次</span></span><br></pre></td></tr></table></figure></p>
 <p>找到C:\Users\Administrator.ssh\id_rsa.pub 文件打开，复制里面内容添加到自己的github的sshkeys 中（新建一个add sshkey）</p>
@@ -36,6 +36,9 @@
 <p>hexo命令简写hexo + 命令首字母<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo c ==&gt; hexo clean</span><br></pre></td></tr></table></figure></p>
 <h3 id="u65B0_u5EFA_u4E00_u7BC7_u535A_u5BA2"><a href="#u65B0_u5EFA_u4E00_u7BC7_u535A_u5BA2" class="headerlink" title="新建一篇博客"></a>新建一篇博客</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo new <span class="string">"博客名称"</span></span><br></pre></td></tr></table></figure>
 <p>找到source/_post/博客名称.md进行编辑</p>
+<h3 id="u5B89_u88C5_u63D2_u4EF6"><a href="#u5B89_u88C5_u63D2_u4EF6" class="headerlink" title="安装插件"></a>安装插件</h3><p>生成rss<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-feed --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>生成网站地图<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-generator-sitemap --save-dev</span><br></pre></td></tr></table></figure></p>
+<p>-save和save-dev可以省掉你手动修改package.json文件的步骤。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install module-name -save 自动把模块和版本号添加到dependencies部分</span><br><span class="line">npm install module-name -save-dve 自动把模块和版本号添加到devdependencies部分</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git]]>
