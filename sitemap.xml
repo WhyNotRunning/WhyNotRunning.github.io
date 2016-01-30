@@ -2,18 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://iwooto.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</loc>
-    <lastmod>2016-01-15T16:59:29.111Z</lastmod>
+    <loc>http://yoursite.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2016-01-30T05:15:48.831Z</lastmod>
   </url>
   
   <url>
-    <loc>http://iwooto.com/essays/index.html</loc>
-    <lastmod>2016-01-11T15:36:23.661Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://iwooto.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
-    <lastmod>2016-01-11T15:09:29.196Z</lastmod>
+    <loc>http://yoursite.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/</loc>
+    <lastmod>2016-01-30T05:15:43.038Z</lastmod>
   </url>
   
 </urlset>

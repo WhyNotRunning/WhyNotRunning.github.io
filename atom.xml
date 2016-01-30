@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[pangyalin的博客]]></title>
-  
+  <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://iwooto.com/"/>
-  <updated>2016-01-15T16:59:29.111Z</updated>
-  <id>http://iwooto.com/</id>
+  <link href="http://yoursite.com/"/>
+  <updated>2016-01-30T05:15:48.831Z</updated>
+  <id>http://yoursite.com/</id>
   
   <author>
-    <name><![CDATA[pyl]]></name>
+    <name><![CDATA[pangyalin]]></name>
     
   </author>
   
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[hexo博客搭建过程]]></title>
-    <link href="http://iwooto.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
-    <id>http://iwooto.com/2016/01/12/hexo博客搭建过程/</id>
+    <link href="http://yoursite.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
+    <id>http://yoursite.com/2016/01/12/hexo博客搭建过程/</id>
     <published>2016-01-12T13:39:41.000Z</published>
-    <updated>2016-01-15T16:59:29.111Z</updated>
+    <updated>2016-01-30T05:15:48.831Z</updated>
     <content type="html"><![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git<a id="more"></a></p>
 <h3 id="u521B_u5EFAgit_pages"><a href="#u521B_u5EFAgit_pages" class="headerlink" title="创建git pages"></a>创建git pages</h3><p>在github新建一个仓库，Github Pages 的仓库名必须为your_user_name.github.io<br>获取git的ssh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -c <span class="string">"youremail@163.com"</span> <span class="comment">#连点三次</span></span><br></pre></td></tr></table></figure></p>
 <p>找到C:\Users\Administrator.ssh\id_rsa.pub 文件打开，复制里面内容添加到自己的github的sshkeys 中（新建一个add sshkey）</p>
@@ -47,16 +47,16 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://iwooto.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[再次认识js的立即执行函数]]></title>
-    <link href="http://iwooto.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://iwooto.com/2016/01/10/重新搭建博客/</id>
+    <link href="http://yoursite.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://yoursite.com/2016/01/10/重新搭建博客/</id>
     <published>2016-01-10T14:14:00.000Z</published>
-    <updated>2016-01-11T15:09:29.196Z</updated>
+    <updated>2016-01-30T05:15:43.038Z</updated>
     <content type="html"><![CDATA[<h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式<a id="more"></a><br>错误实例1:意图声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
 <p>错误原因：函数必须有函数名</p>
 <p>错误实例2：声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
@@ -69,7 +69,7 @@
     
     </summary>
     
-      <category term="js" scheme="http://iwooto.com/tags/js/"/>
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
     
   </entry>
   
