@@ -4,7 +4,7 @@
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-01-30T09:00:10.815Z</updated>
+  <updated>2016-01-30T09:57:24.399Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,23 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[有时候有时候]]></title>
+    <link href="http://yoursite.com/2016/01/30/%E6%9C%89%E6%97%B6%E5%80%99%E6%9C%89%E6%97%B6%E5%80%99/"/>
+    <id>http://yoursite.com/2016/01/30/有时候有时候/</id>
+    <published>2016-01-30T09:55:46.000Z</published>
+    <updated>2016-01-30T09:57:24.399Z</updated>
+    <content type="html"><![CDATA[<p>有时候事情其实并不是你想象中的那么难</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>有时候事情其实并不是你想象中的那么难</p>
+]]>
+    </summary>
+    
+      <category term="essays" scheme="http://yoursite.com/tags/essays/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[java 代码中添加log日志]]></title>
@@ -42,7 +59,7 @@
     <link href="http://yoursite.com/2016/01/30/maven%E9%A1%B9%E7%9B%AE%E5%A4%9A%E4%B8%AAmodule%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA/"/>
     <id>http://yoursite.com/2016/01/30/maven项目多个module工程搭建/</id>
     <published>2016-01-30T06:42:58.000Z</published>
-    <updated>2016-01-30T08:29:04.587Z</updated>
+    <updated>2016-01-30T09:04:23.987Z</updated>
     <content type="html"><![CDATA[<h3 id="u521B_u5EFA_u7236_u5DE5_u7A0B"><a href="#u521B_u5EFA_u7236_u5DE5_u7A0B" class="headerlink" title="创建父工程"></a>创建父工程</h3><p>maven多模块项目需要一个父工程来聚合各个子模块，不过其实就是需要一个父pomxml，<br>主要作用是声明子模块，代码如下：<a id="more"></a></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;project xmlns=<span class="string">"http://maven.apache.org/POM/4.0.0"</span> xmlns:xsi=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span> xsi:schemaLocation=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span><br><span class="line">  &lt;modelVersion&gt;<span class="number">4.0</span>.<span class="number">0</span>&lt;/modelVersion&gt; &lt;!-- maven版本号--&gt;</span><br><span class="line">  &lt;groupId&gt;com.iwooto&lt;/groupId&gt;      &lt;!-- maven包路径--&gt;</span><br><span class="line">  &lt;artifactId&gt;maventest&lt;/artifactId&gt; &lt;!-- maven包名--&gt;</span><br><span class="line">  &lt;packaging&gt;pom&lt;/packaging&gt;		 &lt;!-- maven父工程的packaging类型必须为pom--&gt;</span><br><span class="line">  &lt;version&gt;<span class="variable">$&#123;project.version&#125;</span>&lt;/version&gt; &lt;!-- 项目版本--&gt;</span><br><span class="line">  &lt;name&gt;maventest&lt;/name&gt;                 &lt;!-- 项目名称--&gt;</span><br><span class="line">  &lt;url&gt;http://maven.apache.org&lt;/url&gt;     &lt;!-- maven库--&gt;</span><br><span class="line">  &lt;properties&gt;</span><br><span class="line">      &lt;project.version&gt;<span class="number">0.0</span>.<span class="number">1</span>&lt;/project.version&gt;</span><br><span class="line">  &lt;/properties&gt;</span><br><span class="line">  &lt;modules&gt;</span><br><span class="line">  	&lt;module&gt;mavenweb&lt;/module&gt;   &lt;!-- 第一个web项目子模块--&gt;</span><br><span class="line">  	&lt;module&gt;mavenadmin&lt;/module&gt; &lt;!-- 第二个web项目子模块--&gt;</span><br><span class="line">  	&lt;module&gt;mavenjava&lt;/module&gt;  &lt;!-- 第一个java项目子模块，当然也可以已打包的形式引入--&gt;</span><br><span class="line">  &lt;/modules&gt;</span><br><span class="line">  &lt;dependencies&gt; &lt;!-- 父工程下面的所有子模块都会继承的引入下面的依赖包 --&gt;</span><br><span class="line">		&lt;dependency&gt;</span><br><span class="line">			&lt;groupId&gt;junit&lt;/groupId&gt;</span><br><span class="line">			&lt;artifactId&gt;junit&lt;/artifactId&gt;</span><br><span class="line">			&lt;version&gt;<span class="number">4.8</span>.<span class="number">1</span>&lt;/version&gt;</span><br><span class="line">			&lt;scope&gt;<span class="built_in">test</span>&lt;/scope&gt;</span><br><span class="line">		&lt;/dependency&gt;</span><br><span class="line">	&lt;/dependencies&gt;</span><br><span class="line">  &lt;dependencyManagement&gt; &lt;!-- 只有父工程会引入以下的依赖包，对子模块无影响--&gt;</span><br><span class="line">	  &lt;dependencies&gt;</span><br><span class="line">		    &lt;dependency&gt;</span><br><span class="line">		    	&lt;groupId&gt;com.iwooto&lt;/groupId&gt;</span><br><span class="line">		    	&lt;artifactId&gt;mavenadmin&lt;/artifactId&gt;</span><br><span class="line">		    	&lt;version&gt;<span class="variable">$&#123;project.version&#125;</span>&lt;/version&gt;</span><br><span class="line">		    	&lt;<span class="built_in">type</span>&gt;war&lt;/<span class="built_in">type</span>&gt;</span><br><span class="line">		    &lt;/dependency&gt;</span><br><span class="line">		    &lt;dependency&gt;</span><br><span class="line">		    	&lt;groupId&gt;com.iwooto&lt;/groupId&gt;</span><br><span class="line">		    	&lt;artifactId&gt;mavenweb&lt;/artifactId&gt;</span><br><span class="line">		    	&lt;version&gt;<span class="variable">$&#123;project.version&#125;</span>&lt;/version&gt;</span><br><span class="line">		    	&lt;<span class="built_in">type</span>&gt;war&lt;/<span class="built_in">type</span>&gt;</span><br><span class="line">		    &lt;/dependency&gt;</span><br><span class="line">		    &lt;dependency&gt;</span><br><span class="line">		    	&lt;groupId&gt;com.iwooto&lt;/groupId&gt;</span><br><span class="line">		    	&lt;artifactId&gt;mavenjava&lt;/artifactId&gt;</span><br><span class="line">		    	&lt;version&gt;<span class="variable">$&#123;project.version&#125;</span>&lt;/version&gt;</span><br><span class="line">		    &lt;/dependency&gt; </span><br><span class="line">	  &lt;/dependencies&gt;</span><br><span class="line">  &lt;/dependencyManagement&gt;</span><br><span class="line">&lt;/project&gt;</span><br></pre></td></tr></table></figure>
 <h3 id="u521B_u5EFA_u5B50_u6A21_u5757_u5DE5_u7A0B"><a href="#u521B_u5EFA_u5B50_u6A21_u5757_u5DE5_u7A0B" class="headerlink" title="创建子模块工程"></a>创建子模块工程</h3><p>目录结构<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line"> |-- my-module1 </span><br><span class="line"> |   `-- pom.xml 第一个web项目子模块</span><br><span class="line"> |-- my-module2</span><br><span class="line"> |   `-- pom.xml 第二个web项目子模块</span><br><span class="line"> |-- my-module3</span><br><span class="line"> |   `-- pom.xml 第一个java项目子模块</span><br><span class="line"> `-- pom.xml     父模块</span><br></pre></td></tr></table></figure></p>
@@ -79,13 +96,11 @@
     <link href="http://yoursite.com/2016/01/30/Python%E5%AD%A6%E4%B9%A0/"/>
     <id>http://yoursite.com/2016/01/30/Python学习/</id>
     <published>2016-01-30T06:39:40.000Z</published>
-    <updated>2016-01-30T06:40:26.690Z</updated>
+    <updated>2016-01-30T09:09:29.280Z</updated>
     <content type="html"></content>
     <summary type="html">
     
     </summary>
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
