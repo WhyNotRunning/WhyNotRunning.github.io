@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>再次认识js的立即执行函数 | pangyalin的博客</title>
+  <title>Python学习 | pangyalin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="从ES3是如何解析js的过程理解1.首先函数的正确声明结构是怎样的2.表达式的声明方式，和如何构成表达式">
+  <meta name="description" content="pangyalin的博客">
 <meta property="og:type" content="article">
-<meta property="og:title" content="再次认识js的立即执行函数">
-<meta property="og:url" content="http://yoursite.com/2016/01/10/重新搭建博客/index.html">
+<meta property="og:title" content="Python学习">
+<meta property="og:url" content="http://yoursite.com/2016/01/30/Python学习/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="从ES3是如何解析js的过程理解1.首先函数的正确声明结构是怎样的2.表达式的声明方式，和如何构成表达式">
-<meta property="og:updated_time" content="2016-01-30T05:15:43.038Z">
+<meta property="og:description" content="pangyalin的博客">
+<meta property="og:updated_time" content="2016-01-30T06:40:26.690Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="再次认识js的立即执行函数">
-<meta name="twitter:description" content="从ES3是如何解析js的过程理解1.首先函数的正确声明结构是怎样的2.表达式的声明方式，和如何构成表达式">
+<meta name="twitter:title" content="Python学习">
+<meta name="twitter:description" content="pangyalin的博客">
   
     <link rel="alternative" href="http://iwooto.com/atom.xml" title="pangyalin的博客" type="application/atom+xml">
   
@@ -172,11 +172,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-重新搭建博客" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python学习" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/10/重新搭建博客/" class="article-date">
-  	<time datetime="2016-01-10T14:14:00.000Z" itemprop="datePublished">2016-01-10</time>
+      <a href="/2016/01/30/Python学习/" class="article-date">
+  	<time datetime="2016-01-30T06:39:40.000Z" itemprop="datePublished">2016-01-30</time>
 </a>
     </div>
   
@@ -189,7 +189,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      再次认识js的立即执行函数
+      Python学习
     </h1>
   
 
@@ -198,7 +198,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
 	</div>
 
         
@@ -209,13 +209,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式<a id="more"></a><br>错误实例1:意图声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：函数必须有函数名</p>
-<p>错误实例2：声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：最后面的那一组小括号被当做分组运算符，并没有被解析成调用fun函数</p>
-<p>正确实例：通过常用的运算符如()、！、—、+、typeof等放在匿名函数前，<br>让解析器把后面的函数当做表达式执行再通过()调用该函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure></p>
-<p>我的<a href="http://www.iwooto.com" target="_blank" rel="external">博客地址</a></p>
-
+        
       
     </div>
     
@@ -224,15 +218,20 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/01/12/hexo博客搭建过程/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/01/30/maven项目多个module工程搭建/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          hexo博客搭建过程
+          maven项目多个module工程搭建
         
       </div>
     </a>
   
+  
+    <a href="/2016/01/12/hexo博客搭建过程/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">hexo博客搭建过程</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -265,7 +264,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="重新搭建博客" data-title="再次认识js的立即执行函数" data-url="http://yoursite.com/2016/01/10/重新搭建博客/"></div>
+	<div class="ds-thread" data-thread-key="Python学习" data-title="Python学习" data-url="http://yoursite.com/2016/01/30/Python学习/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
