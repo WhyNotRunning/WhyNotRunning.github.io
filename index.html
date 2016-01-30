@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>pangyalin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="pangyalin的博客">
@@ -22,19 +21,19 @@
     <link rel="icon" href="/favicon.png">
   
   <link rel="stylesheet" href="/css/style.css" type="text/css">
-</head>
+  
 
+  <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+</head>
 <body>
   <div id="container">
     <div class="left-col">
     <div class="overlay"></div>
 <div class="intrude-less">
 	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="/img/favicon.png" class="js-avatar">
-			
-		</a>
+		<div class="profilepic">
+			<img src="/img/favicon.png">
+		</div>
 
 		<hgroup>
 		  <h1 class="header-author"><a href="/">pangyalin</a></h1>
@@ -108,7 +107,7 @@
 				
 				
 				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
+					<div class="widget tagcloud">
 						<a href="/tags/essays/" style="font-size: 10px;">essays</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/js/" style="font-size: 10px;">js</a> <a href="/tags/log/" style="font-size: 10px;">log</a> <a href="/tags/maven/" style="font-size: 10px;">maven</a>
 					</div>
 				</section>
@@ -120,30 +119,25 @@
 				
 				<section class="switch-part switch-part3">
 				
-					<div id="js-aboutme">just do it</div>
+					just do it
 				</section>
 				
 			</div>
 		</div>
 	</header>				
 </div>
-
     </div>
     <div class="mid-col">
       <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">pangyalin</h1>
-  	</div>
+  	<div class="overlay"></div>
 	<div class="intrude-less">
 		<header id="header" class="inner">
 			<div class="profilepic">
-			
-				<img lazy-src="/img/favicon.png" class="js-avatar">
-			
+				<img src="/img/favicon.png">
 			</div>
+
 			<hgroup>
-			  <h1 class="header-author">pangyalin</h1>
+			  <h1 class="header-author"><a href="/">pangyalin</a></h1>
 			</hgroup>
 			
 			<p class="header-subtitle">pangyalin的博客</p>
@@ -174,8 +168,7 @@
 		</header>				
 	</div>
 </nav>
-
-      <div class="body-wrap">
+      
   
     <article id="post-有时候有时候" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -183,6 +176,10 @@
       <a href="/2016/01/30/有时候有时候/" class="article-date">
   	<time datetime="2016-01-30T09:55:46.000Z" itemprop="datePublished">2016-01-30</time>
 </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essays/">essays</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -199,7 +196,6 @@
   
 
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
@@ -207,26 +203,9 @@
 
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essays/">essays</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
 </article>
-
-
-
 
 
 
@@ -240,6 +219,10 @@
       <a href="/2016/01/30/java-代码中添加log日志/" class="article-date">
   	<time datetime="2016-01-30T08:41:36.000Z" itemprop="datePublished">2016-01-30</time>
 </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -256,38 +239,21 @@
   
 
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="1-_u5F97_u5230_u8BB0_u5F55_u5668"><a href="#1-_u5F97_u5230_u8BB0_u5F55_u5668" class="headerlink" title="1.得到记录器"></a>1.得到记录器</h1><p>使用Log4j，第一步就是获取日志记录器，这个记录器将负责控制日志信息。其语法为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static Logger getLogger( String name)，</span><br></pre></td></tr></table></figure></p>
 <p>通过指定的名字获得记录器，如果必要的话，则为这个名字创建一个新的记录器。
+        
+          <p class="article-more-link">
+            <a href="/2016/01/30/java-代码中添加log日志/#more">more >></a>
+          </p>
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/log/">log</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/30/java-代码中添加log日志/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
 </article>
-
-
-
 
 
 
@@ -301,6 +267,10 @@
       <a href="/2016/01/30/maven项目多个module工程搭建/" class="article-date">
   	<time datetime="2016-01-30T06:42:58.000Z" itemprop="datePublished">2016-01-30</time>
 </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -317,37 +287,20 @@
   
 
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="u521B_u5EFA_u7236_u5DE5_u7A0B"><a href="#u521B_u5EFA_u7236_u5DE5_u7A0B" class="headerlink" title="创建父工程"></a>创建父工程</h3><p>maven多模块项目需要一个父工程来聚合各个子模块，不过其实就是需要一个父pomxml，<br>主要作用是声明子模块，代码如下：
+        
+          <p class="article-more-link">
+            <a href="/2016/01/30/maven项目多个module工程搭建/#more">more >></a>
+          </p>
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/30/maven项目多个module工程搭建/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
 </article>
-
-
-
 
 
 
@@ -361,6 +314,8 @@
       <a href="/2016/01/30/Python学习/" class="article-date">
   	<time datetime="2016-01-30T06:39:40.000Z" itemprop="datePublished">2016-01-30</time>
 </a>
+      
+      
     </div>
   
   <div class="article-inner">
@@ -377,29 +332,15 @@
   
 
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
         
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
 </article>
-
-
-
 
 
 
@@ -413,6 +354,10 @@
       <a href="/2016/01/12/hexo博客搭建过程/" class="article-date">
   	<time datetime="2016-01-12T13:39:41.000Z" itemprop="datePublished">2016-01-12</time>
 </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -429,37 +374,20 @@
   
 
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git
+        
+          <p class="article-more-link">
+            <a href="/2016/01/12/hexo博客搭建过程/#more">more >></a>
+          </p>
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/12/hexo博客搭建过程/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
 </article>
-
-
-
 
 
 
@@ -473,6 +401,10 @@
       <a href="/2016/01/10/重新搭建博客/" class="article-date">
   	<time datetime="2016-01-10T14:14:00.000Z" itemprop="datePublished">2016-01-10</time>
 </a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
+
     </div>
   
   <div class="article-inner">
@@ -489,31 +421,17 @@
   
 
       </header>
-      
     
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式
+        
+          <p class="article-more-link">
+            <a href="/2016/01/10/重新搭建博客/#more">more >></a>
+          </p>
+        
       
     </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/js/">js</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/01/10/重新搭建博客/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
 </article>
@@ -523,12 +441,9 @@
 
 
 
-
-
-
   
   
-</div>
+
       <footer id="footer">
   <div class="outer">
     <div id="footer-info">
@@ -544,49 +459,8 @@
     </div>
     
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-
-
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
-
-
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <script src="/js/main.js" type="text/javascript"></script>
 
   </div>
 </body>
