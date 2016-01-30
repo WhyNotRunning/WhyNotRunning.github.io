@@ -1790,7 +1790,7 @@ pre .javascript .function {
 #header .tagcloud a {
   color: #fff;
 }
-#header .tagcloud a {
+.tagcloud a {
   display: inline-block;
   text-decoration: none;
   font-weight: normal;
