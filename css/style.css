@@ -781,7 +781,7 @@ a {
 }
 .archive-article-inner .article-meta .archive-article-date {
   cursor: default;
-  font-size: 12px;
+  font-size: 18px;
   margin-bottom: 5px;
   margin-top: -10px;
 }
@@ -790,7 +790,7 @@ a {
   color: #999;
   position: relative;
   margin-right: 10px;
-  font: 16px FontAwesome;
+  font: 18px FontAwesome;
 }
 .archive-article-inner .article-meta .article-category:before {
   float: left;
@@ -1182,7 +1182,7 @@ a {
 }
 .archive-article-inner .article-meta .archive-article-date {
   cursor: default;
-  font-size: 12px;
+  font-size: 18px;
   margin-bottom: 5px;
   margin-top: -10px;
 }
@@ -2032,4 +2032,20 @@ pre .javascript .function {
   padding: 0;
   height: 100%;
   overflow: hidden;
+}
+.tagcloud a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: normal;
+  font-size: 10px;
+  color: #fff;
+  height: 18px;
+  line-height: 18px;
+  float: left;
+  padding: 0 5px 0px 10px;
+  position: relative;
+  -webkit-border-radius: 0 5px 5px 0;
+  border-radius: 0 5px 5px 0;
+  margin: 5px 9px 5px 8px;
+  font-family: Menlo, Monaco, "Andale Mono", "lucida console", "Courier New", monospace;
 }
