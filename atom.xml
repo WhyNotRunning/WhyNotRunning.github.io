@@ -3,9 +3,9 @@
   <title><![CDATA[pangyalin的博客]]></title>
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
+  <link href="http://www.iwooto.com/"/>
   <updated>2016-01-30T09:57:24.399Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://www.iwooto.com/</id>
   
   <author>
     <name><![CDATA[pangyalin]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[有时候有时候]]></title>
-    <link href="http://yoursite.com/2016/01/30/%E6%9C%89%E6%97%B6%E5%80%99%E6%9C%89%E6%97%B6%E5%80%99/"/>
-    <id>http://yoursite.com/2016/01/30/有时候有时候/</id>
+    <link href="http://www.iwooto.com/2016/01/30/%E6%9C%89%E6%97%B6%E5%80%99%E6%9C%89%E6%97%B6%E5%80%99/"/>
+    <id>http://www.iwooto.com/2016/01/30/有时候有时候/</id>
     <published>2016-01-30T09:55:46.000Z</published>
     <updated>2016-01-30T09:57:24.399Z</updated>
     <content type="html"><![CDATA[<p>有时候事情其实并不是你想象中的那么难</p>
@@ -27,14 +27,14 @@
 ]]>
     </summary>
     
-      <category term="essays" scheme="http://yoursite.com/tags/essays/"/>
+      <category term="essays" scheme="http://www.iwooto.com/tags/essays/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[java 代码中添加log日志]]></title>
-    <link href="http://yoursite.com/2016/01/30/java-%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%B7%BB%E5%8A%A0log%E6%97%A5%E5%BF%97/"/>
-    <id>http://yoursite.com/2016/01/30/java-代码中添加log日志/</id>
+    <link href="http://www.iwooto.com/2016/01/30/java-%E4%BB%A3%E7%A0%81%E4%B8%AD%E6%B7%BB%E5%8A%A0log%E6%97%A5%E5%BF%97/"/>
+    <id>http://www.iwooto.com/2016/01/30/java-代码中添加log日志/</id>
     <published>2016-01-30T08:41:36.000Z</published>
     <updated>2016-01-30T09:00:10.815Z</updated>
     <content type="html"><![CDATA[<h1 id="1-_u5F97_u5230_u8BB0_u5F55_u5668"><a href="#1-_u5F97_u5230_u8BB0_u5F55_u5668" class="headerlink" title="1.得到记录器"></a>1.得到记录器</h1><p>使用Log4j，第一步就是获取日志记录器，这个记录器将负责控制日志信息。其语法为：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public static Logger getLogger( String name)，</span><br></pre></td></tr></table></figure></p>
@@ -50,14 +50,14 @@
     
     </summary>
     
-      <category term="log" scheme="http://yoursite.com/tags/log/"/>
+      <category term="log" scheme="http://www.iwooto.com/tags/log/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[maven项目多个module工程搭建]]></title>
-    <link href="http://yoursite.com/2016/01/30/maven%E9%A1%B9%E7%9B%AE%E5%A4%9A%E4%B8%AAmodule%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA/"/>
-    <id>http://yoursite.com/2016/01/30/maven项目多个module工程搭建/</id>
+    <link href="http://www.iwooto.com/2016/01/30/maven%E9%A1%B9%E7%9B%AE%E5%A4%9A%E4%B8%AAmodule%E5%B7%A5%E7%A8%8B%E6%90%AD%E5%BB%BA/"/>
+    <id>http://www.iwooto.com/2016/01/30/maven项目多个module工程搭建/</id>
     <published>2016-01-30T06:42:58.000Z</published>
     <updated>2016-01-30T09:04:23.987Z</updated>
     <content type="html"><![CDATA[<h3 id="u521B_u5EFA_u7236_u5DE5_u7A0B"><a href="#u521B_u5EFA_u7236_u5DE5_u7A0B" class="headerlink" title="创建父工程"></a>创建父工程</h3><p>maven多模块项目需要一个父工程来聚合各个子模块，不过其实就是需要一个父pomxml，<br>主要作用是声明子模块，代码如下：<a id="more"></a></p>
@@ -87,14 +87,14 @@
     
     </summary>
     
-      <category term="maven" scheme="http://yoursite.com/tags/maven/"/>
+      <category term="maven" scheme="http://www.iwooto.com/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Python学习]]></title>
-    <link href="http://yoursite.com/2016/01/30/Python%E5%AD%A6%E4%B9%A0/"/>
-    <id>http://yoursite.com/2016/01/30/Python学习/</id>
+    <link href="http://www.iwooto.com/2016/01/30/Python%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://www.iwooto.com/2016/01/30/Python学习/</id>
     <published>2016-01-30T06:39:40.000Z</published>
     <updated>2016-01-30T09:09:29.280Z</updated>
     <content type="html"></content>
@@ -106,8 +106,8 @@
   
   <entry>
     <title><![CDATA[hexo博客搭建过程]]></title>
-    <link href="http://yoursite.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
-    <id>http://yoursite.com/2016/01/12/hexo博客搭建过程/</id>
+    <link href="http://www.iwooto.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
+    <id>http://www.iwooto.com/2016/01/12/hexo博客搭建过程/</id>
     <published>2016-01-12T13:39:41.000Z</published>
     <updated>2016-01-30T05:15:48.831Z</updated>
     <content type="html"><![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git<a id="more"></a></p>
@@ -137,14 +137,14 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://yoursite.com/tags/hexo/"/>
+      <category term="hexo" scheme="http://www.iwooto.com/tags/hexo/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[再次认识js的立即执行函数]]></title>
-    <link href="http://yoursite.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://yoursite.com/2016/01/10/重新搭建博客/</id>
+    <link href="http://www.iwooto.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://www.iwooto.com/2016/01/10/重新搭建博客/</id>
     <published>2016-01-10T14:14:00.000Z</published>
     <updated>2016-01-30T05:15:43.038Z</updated>
     <content type="html"><![CDATA[<h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式<a id="more"></a><br>错误实例1:意图声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
@@ -152,14 +152,14 @@
 <p>错误实例2：声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
 <p>错误原因：最后面的那一组小括号被当做分组运算符，并没有被解析成调用fun函数</p>
 <p>正确实例：通过常用的运算符如()、！、—、+、typeof等放在匿名函数前，<br>让解析器把后面的函数当做表达式执行再通过()调用该函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure></p>
-<p>我的<a href="http://www.iwooto.com" target="_blank" rel="external">博客地址</a></p>
+<p>我的<a href="http://www.iwooto.com">博客地址</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式]]>
     
     </summary>
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+      <category term="js" scheme="http://www.iwooto.com/tags/js/"/>
     
   </entry>
   
