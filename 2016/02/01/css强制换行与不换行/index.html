@@ -4,33 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>&#39;css强制换行与不换行&#39; | pangyalin的博客</title>
+  <title>css强制换行与不换行 | pangyalin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="基本解释
-word-break:break-all;只对英文起作用，以字母作为换行依据
-word-wrap:break-word; 只对英文起作用，以单词作为换行依据
-white-space:pre-wrap; 只对中文起作用，强制换行
-white-space:nowrap; 强制不换行，都起作用
-white-space:nowrap; overflow:hidden; text-overflow">
+  <meta name="description" content="基本解释word-break:break-all;只对英文起作用，以字母作为换行依据word-wrap:break-word; 只对英文起作用，以单词作为换行依据white-space:pre-wrap; 只对中文起作用，强制换行white-space:nowrap; 强制不换行，都起作用white-space:nowrap; overflow:hidden; text-overflow:elli">
 <meta property="og:type" content="article">
-<meta property="og:title" content="'css强制换行与不换行'">
+<meta property="og:title" content="css强制换行与不换行">
 <meta property="og:url" content="http://www.iwooto.com/2016/02/01/css强制换行与不换行/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="基本解释
-word-break:break-all;只对英文起作用，以字母作为换行依据
-word-wrap:break-word; 只对英文起作用，以单词作为换行依据
-white-space:pre-wrap; 只对中文起作用，强制换行
-white-space:nowrap; 强制不换行，都起作用
-white-space:nowrap; overflow:hidden; text-overflow">
-<meta property="og:updated_time" content="2016-02-01T13:17:32.017Z">
+<meta property="og:description" content="基本解释word-break:break-all;只对英文起作用，以字母作为换行依据word-wrap:break-word; 只对英文起作用，以单词作为换行依据white-space:pre-wrap; 只对中文起作用，强制换行white-space:nowrap; 强制不换行，都起作用white-space:nowrap; overflow:hidden; text-overflow:elli">
+<meta property="og:updated_time" content="2016-02-01T13:35:13.120Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="'css强制换行与不换行'">
-<meta name="twitter:description" content="基本解释
-word-break:break-all;只对英文起作用，以字母作为换行依据
-word-wrap:break-word; 只对英文起作用，以单词作为换行依据
-white-space:pre-wrap; 只对中文起作用，强制换行
-white-space:nowrap; 强制不换行，都起作用
-white-space:nowrap; overflow:hidden; text-overflow">
+<meta name="twitter:title" content="css强制换行与不换行">
+<meta name="twitter:description" content="基本解释word-break:break-all;只对英文起作用，以字母作为换行依据word-wrap:break-word; 只对英文起作用，以单词作为换行依据white-space:pre-wrap; 只对中文起作用，强制换行white-space:nowrap; 强制不换行，都起作用white-space:nowrap; overflow:hidden; text-overflow:elli">
   
     <link rel="alternative" href="http://iwooto.com/atom.xml" title="pangyalin的博客" type="application/atom+xml">
   
@@ -208,7 +193,7 @@ white-space:nowrap; overflow:hidden; text-overflow">
         
   
     <h1 class="article-title" itemprop="name">
-      &#39;css强制换行与不换行&#39;
+      css强制换行与不换行
     </h1>
   
 
@@ -228,16 +213,9 @@ white-space:nowrap; overflow:hidden; text-overflow">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h2><ol>
-<li>word-break:break-all;只对英文起作用，以字母作为换行依据</li>
-<li>word-wrap:break-word; 只对英文起作用，以单词作为换行依据</li>
-<li>white-space:pre-wrap; 只对中文起作用，强制换行</li>
-<li>white-space:nowrap; 强制不换行，都起作用</li>
-<li>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;不换行，超出部分隐藏且以省略号形式出现<br>注意，一定要指定容器的宽度，不然的话是没有用的。<br>注意word-break 是IE5+专有属性<br>语法：<br>word-break : normal | break-all | keep-all<br>对于中文，应该使用break-all 。<h1 id="u5F3A_u5236_u4E0D_u6362_u884C"><a href="#u5F3A_u5236_u4E0D_u6362_u884C" class="headerlink" title="强制不换行"></a>强制不换行</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">white-space:nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="u81EA_u52A8_u6362_u884C"><a href="#u81EA_u52A8_u6362_u884C" class="headerlink" title="自动换行"></a>自动换行</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">word-wrap: <span class="built_in">break</span>-word;</span><br><span class="line">word-break: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="u5F3A_u5236_u82F1_u6587_u5355_u8BCD_u65AD_u884C"><a href="#u5F3A_u5236_u82F1_u6587_u5355_u8BCD_u65AD_u884C" class="headerlink" title="强制英文单词断行"></a>强制英文单词断行</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">word-break:<span class="built_in">break</span>-all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        <h2 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h2><p>word-break:break-all;只对英文起作用，以字母作为换行依据<br>word-wrap:break-word; 只对英文起作用，以单词作为换行依据<br>white-space:pre-wrap; 只对中文起作用，强制换行<br>white-space:nowrap; 强制不换行，都起作用<br>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;不换行，超出部分隐藏且以省略号形式出现<br>注意，一定要指定容器的宽度，不然的话是没有用的。<a id="more"></a><br>注意word-break 是IE5+专有属性<br>语法：<br>word-break : normal | break-all | keep-all<br>对于中文，应该使用break-all 。<br>强制不换行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div&#123;white-space:nowrap;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>自动换行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div&#123;word-wrap: <span class="built_in">break</span>-word;word-break: normal;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>强制英文单词断行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div&#123;word-break:<span class="built_in">break</span>-all;&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="CSS_u8BBE_u7F6E_u4E0D_u8F6C_u884C_3A"><a href="#CSS_u8BBE_u7F6E_u4E0D_u8F6C_u884C_3A" class="headerlink" title="CSS设置不转行:"></a>CSS设置不转行:</h2><p>overflow:hidden 隐藏<br>white-space：normal 默认<br>pre 换行和其他空白字符都将受到保护<br>nowrap 强制在同一行内显示所有文本，直到文本结束或者遭遇 br 对象</p>
 <h2 id="u8BBE_u7F6E_u5F3A_u884C_u6362_u884C"><a href="#u8BBE_u7F6E_u5F3A_u884C_u6362_u884C" class="headerlink" title="设置强行换行"></a>设置强行换行</h2><p>word-break:<br>normal   : 依照亚洲语言和非亚洲语言的文本规则，允许在字内换行<br>break-all: 该行为与亚洲语言的normal相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本<br>keep-all : 与所有非亚洲语言的normal相同。对于中文，韩文，日文，不允许字断开。</p>
 <h2 id="u82F1_u6587_u4E0D_u6362_u884C"><a href="#u82F1_u6587_u4E0D_u6362_u884C" class="headerlink" title="英文不换行"></a>英文不换行</h2><p>CSS里加上 word-break: break-all; 问题解决。这个问题只有IE才有，在FF下测试,FF可以自己加滚动条，这样也不影响效果<br>建议大家做Skin时，记得在body里加 word-break: break-all; 这样可以解决IE的框架被英文撑开的问题<br>以下引用word-break的说明, 注意word-break 是IE5+专有属性<br>语法：<br>word-break : normal | break-all | keep-all<br>参数：<br>normal   : 依照亚洲语言和非亚洲语言的文本规则，允许在字内换行<br>break-all: 该行为与亚洲语言的normal相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本<br>keep-all : 与所有非亚洲语言的normal相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本<br>说明：<br>设置或检索对象内文本的字内换行行为。尤其在出现多种语言时。<br>对于中文，应该使用break-all 。<br>div {word-break : break-all; }</p>
@@ -293,7 +271,7 @@ white-space:nowrap; overflow:hidden; text-overflow">
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="css强制换行与不换行" data-title="&#39;css强制换行与不换行&#39;" data-url="http://www.iwooto.com/2016/02/01/css强制换行与不换行/"></div>
+	<div class="ds-thread" data-thread-key="css强制换行与不换行" data-title="css强制换行与不换行" data-url="http://www.iwooto.com/2016/02/01/css强制换行与不换行/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

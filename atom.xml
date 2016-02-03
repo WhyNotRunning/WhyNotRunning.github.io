@@ -4,7 +4,7 @@
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.iwooto.com/"/>
-  <updated>2016-02-01T13:17:32.017Z</updated>
+  <updated>2016-02-01T13:35:13.120Z</updated>
   <id>http://www.iwooto.com/</id>
   
   <author>
@@ -15,21 +15,14 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title><![CDATA['css强制换行与不换行']]></title>
+    <title><![CDATA[css强制换行与不换行]]></title>
     <link href="http://www.iwooto.com/2016/02/01/css%E5%BC%BA%E5%88%B6%E6%8D%A2%E8%A1%8C%E4%B8%8E%E4%B8%8D%E6%8D%A2%E8%A1%8C/"/>
     <id>http://www.iwooto.com/2016/02/01/css强制换行与不换行/</id>
     <published>2016-02-01T13:00:32.000Z</published>
-    <updated>2016-02-01T13:17:32.017Z</updated>
-    <content type="html"><![CDATA[<h2 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h2><ol>
-<li>word-break:break-all;只对英文起作用，以字母作为换行依据</li>
-<li>word-wrap:break-word; 只对英文起作用，以单词作为换行依据</li>
-<li>white-space:pre-wrap; 只对中文起作用，强制换行</li>
-<li>white-space:nowrap; 强制不换行，都起作用</li>
-<li>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;不换行，超出部分隐藏且以省略号形式出现<br>注意，一定要指定容器的宽度，不然的话是没有用的。<br>注意word-break 是IE5+专有属性<br>语法：<br>word-break : normal | break-all | keep-all<br>对于中文，应该使用break-all 。<h1 id="u5F3A_u5236_u4E0D_u6362_u884C"><a href="#u5F3A_u5236_u4E0D_u6362_u884C" class="headerlink" title="强制不换行"></a>强制不换行</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">white-space:nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="u81EA_u52A8_u6362_u884C"><a href="#u81EA_u52A8_u6362_u884C" class="headerlink" title="自动换行"></a>自动换行</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">word-wrap: <span class="built_in">break</span>-word;</span><br><span class="line">word-break: normal;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="u5F3A_u5236_u82F1_u6587_u5355_u8BCD_u65AD_u884C"><a href="#u5F3A_u5236_u82F1_u6587_u5355_u8BCD_u65AD_u884C" class="headerlink" title="强制英文单词断行"></a>强制英文单词断行</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">div&#123;</span><br><span class="line">word-break:<span class="built_in">break</span>-all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+    <updated>2016-02-01T13:35:13.120Z</updated>
+    <content type="html"><![CDATA[<h2 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h2><p>word-break:break-all;只对英文起作用，以字母作为换行依据<br>word-wrap:break-word; 只对英文起作用，以单词作为换行依据<br>white-space:pre-wrap; 只对中文起作用，强制换行<br>white-space:nowrap; 强制不换行，都起作用<br>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;不换行，超出部分隐藏且以省略号形式出现<br>注意，一定要指定容器的宽度，不然的话是没有用的。<a id="more"></a><br>注意word-break 是IE5+专有属性<br>语法：<br>word-break : normal | break-all | keep-all<br>对于中文，应该使用break-all 。<br>强制不换行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div&#123;white-space:nowrap;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>自动换行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div&#123;word-wrap: <span class="built_in">break</span>-word;word-break: normal;&#125;</span><br></pre></td></tr></table></figure></p>
+<p>强制英文单词断行<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div&#123;word-break:<span class="built_in">break</span>-all;&#125;</span><br></pre></td></tr></table></figure></p>
 <h2 id="CSS_u8BBE_u7F6E_u4E0D_u8F6C_u884C_3A"><a href="#CSS_u8BBE_u7F6E_u4E0D_u8F6C_u884C_3A" class="headerlink" title="CSS设置不转行:"></a>CSS设置不转行:</h2><p>overflow:hidden 隐藏<br>white-space：normal 默认<br>pre 换行和其他空白字符都将受到保护<br>nowrap 强制在同一行内显示所有文本，直到文本结束或者遭遇 br 对象</p>
 <h2 id="u8BBE_u7F6E_u5F3A_u884C_u6362_u884C"><a href="#u8BBE_u7F6E_u5F3A_u884C_u6362_u884C" class="headerlink" title="设置强行换行"></a>设置强行换行</h2><p>word-break:<br>normal   : 依照亚洲语言和非亚洲语言的文本规则，允许在字内换行<br>break-all: 该行为与亚洲语言的normal相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本<br>keep-all : 与所有非亚洲语言的normal相同。对于中文，韩文，日文，不允许字断开。</p>
 <h2 id="u82F1_u6587_u4E0D_u6362_u884C"><a href="#u82F1_u6587_u4E0D_u6362_u884C" class="headerlink" title="英文不换行"></a>英文不换行</h2><p>CSS里加上 word-break: break-all; 问题解决。这个问题只有IE才有，在FF下测试,FF可以自己加滚动条，这样也不影响效果<br>建议大家做Skin时，记得在body里加 word-break: break-all; 这样可以解决IE的框架被英文撑开的问题<br>以下引用word-break的说明, 注意word-break 是IE5+专有属性<br>语法：<br>word-break : normal | break-all | keep-all<br>参数：<br>normal   : 依照亚洲语言和非亚洲语言的文本规则，允许在字内换行<br>break-all: 该行为与亚洲语言的normal相同。也允许非亚洲语言文本行的任意字内断开。该值适合包含一些非亚洲文本的亚洲文本<br>keep-all : 与所有非亚洲语言的normal相同。对于中文，韩文，日文，不允许字断开。适合包含少量亚洲文本的非亚洲文本<br>说明：<br>设置或检索对象内文本的字内换行行为。尤其在出现多种语言时。<br>对于中文，应该使用break-all 。<br>div {word-break : break-all; }</p>
@@ -41,8 +34,8 @@
 <p>转载<a href="/&#39;http://blog.csdn.net/ldl22847/article/details/7247702&#39;">CSS强制英文、中文换行与不换行</a><br>转载<a href="/&#39;http://www.feitec.com/showart.asp?id=825&#39;">Css让文字自适应Table宽度</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<h2 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h2><ol>
-<li>word-break:break-a]]>
+    <![CDATA[<h2 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h2><p>word-break:break-all;只对英文起作用，以字母作为换行依据<br>word-wrap:break-word; 只对英文起作用，以单词作为换行依据<br>white-space:pre-wrap; 只对中文起作用，强制换行<br>white-space:nowrap; 强制不换行，都起作用<br>white-space:nowrap; overflow:hidden; text-overflow:ellipsis;不换行，超出部分隐藏且以省略号形式出现<br>注意，一定要指定容器的宽度，不然的话是没有用的。]]>
+    
     </summary>
     
       <category term="css" scheme="http://www.iwooto.com/tags/css/"/>
@@ -144,7 +137,7 @@
     <link href="http://www.iwooto.com/2016/01/12/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%BF%87%E7%A8%8B/"/>
     <id>http://www.iwooto.com/2016/01/12/hexo博客搭建过程/</id>
     <published>2016-01-12T13:39:41.000Z</published>
-    <updated>2016-01-30T05:15:48.831Z</updated>
+    <updated>2016-02-01T13:23:42.448Z</updated>
     <content type="html"><![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git<a id="more"></a></p>
 <h3 id="u521B_u5EFAgit_pages"><a href="#u521B_u5EFAgit_pages" class="headerlink" title="创建git pages"></a>创建git pages</h3><p>在github新建一个仓库，Github Pages 的仓库名必须为your_user_name.github.io<br>获取git的ssh<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -c <span class="string">"youremail@163.com"</span> <span class="comment">#连点三次</span></span><br></pre></td></tr></table></figure></p>
 <p>找到C:\Users\Administrator.ssh\id_rsa.pub 文件打开，复制里面内容添加到自己的github的sshkeys 中（新建一个add sshkey）</p>
@@ -166,6 +159,8 @@
 <p>-save和save-dev可以省掉你手动修改package.json文件的步骤。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install module-name -save 自动把模块和版本号添加到dependencies部分</span><br><span class="line">npm install module-name -save-dve 自动把模块和版本号添加到devdependencies部分</span><br></pre></td></tr></table></figure></p>
 <h3 id="hexo_u53D1_u5E03_u62A5_u9519"><a href="#hexo_u53D1_u5E03_u62A5_u9519" class="headerlink" title="hexo发布报错"></a>hexo发布报错</h3><p>执行 hexo d 报错<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Error: spawn git ENOENT</span><br><span class="line">    at exports._errnoException (util.js:<span class="number">746</span>:<span class="number">11</span>)</span><br><span class="line">    at Process.ChildProcess._handle.onexit (child_process.js:<span class="number">1053</span>:<span class="number">32</span>)</span><br><span class="line">    at child_process.js:<span class="number">1144</span>:<span class="number">20</span></span><br><span class="line">    at process._tickCallback (node.js:<span class="number">355</span>:<span class="number">11</span>)</span><br></pre></td></tr></table></figure></p>
 <p>hexo提交必须通过git bash上才可以提交</p>
+<h3 id="npm_u6DD8_u5B9D_u955C_u50CF_u4F7F_u7528"><a href="#npm_u6DD8_u5B9D_u955C_u50CF_u4F7F_u7528" class="headerlink" title="npm淘宝镜像使用"></a>npm淘宝镜像使用</h3><p>你可以使用我们定制的 cnpm (gzip 压缩支持) 命令行工具代替默认的 npm:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://npm.taobao.org/" target="_blank" rel="external">淘宝 NPM 镜像</a></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h3 id="u8F6F_u4EF6_u5B89_u88C5"><a href="#u8F6F_u4EF6_u5B89_u88C5" class="headerlink" title="软件安装"></a>软件安装</h3><p>1.nodejs<br>2.git]]>
