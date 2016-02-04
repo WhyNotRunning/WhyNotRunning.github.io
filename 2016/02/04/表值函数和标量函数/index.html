@@ -4,17 +4,21 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: maven | pangyalin的博客</title>
+  <title>表值函数和标量函数 | pangyalin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="pangyalin的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="pangyalin的博客">
-<meta property="og:url" content="http://www.iwooto.com/tags/maven/index.html">
+  <meta name="description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
+标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表值函数和标量函数">
+<meta property="og:url" content="http://www.iwooto.com/2016/02/04/表值函数和标量函数/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="pangyalin的博客">
+<meta property="og:description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
+标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
+<meta property="og:updated_time" content="2016-02-04T15:22:31.427Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="pangyalin的博客">
-<meta name="twitter:description" content="pangyalin的博客">
+<meta name="twitter:title" content="表值函数和标量函数">
+<meta name="twitter:description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
+标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
   
     <link rel="alternative" href="http://iwooto.com/atom.xml" title="pangyalin的博客" type="application/atom+xml">
   
@@ -175,53 +179,112 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-表值函数和标量函数" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/01/30/maven项目多个module工程搭建/" class="archive-article-date">
-  	<time datetime="2016-01-30T06:42:58.000Z" itemprop="datePublished">Jan 30</time>
+    <div class="article-meta">
+      <a href="/2016/02/04/表值函数和标量函数/" class="article-date">
+  	<time datetime="2016-02-04T12:36:16.000Z" itemprop="datePublished">2016-02-04</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/01/30/maven项目多个module工程搭建/">maven项目多个module工程搭建</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      表值函数和标量函数
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/maven/">maven</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sql/">sql</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h1><p>表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表</p>
+<p>标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时，必须将前缀 :: 添加至函数名：<br>SELECT * FROM ::fn_helpcollations()</p>
+<p>存储过程:可包含程序流、逻辑以及对数据库的查询。它们可以接受参数、输出参数、返回单个或多个结果集以及返回值。</p>
+<p>函数与存储过程本质上没区别。只是函数有如：只能返回一个变量的限制。而存储过程可以返回多个。而函数是可以嵌入在sql中使用的,可以在select中调用，而存储过程不行。执行的本质都一样。函数限制比较多，比如不能用临时表，只能用表变量．还有一些函数都不可用等等．而存储过程的限制相对就比较少</p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/02/01/css强制换行与不换行/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">css强制换行与不换行</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="表值函数和标量函数" data-title="表值函数和标量函数" data-url="http://www.iwooto.com/2016/02/04/表值函数和标量函数/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
 
 </div>
       <footer id="footer">
@@ -247,9 +310,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
