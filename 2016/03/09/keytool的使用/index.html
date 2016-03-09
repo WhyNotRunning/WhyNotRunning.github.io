@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>有时候有时候 | pangyalin的博客</title>
+  <title>keytool的使用 | pangyalin的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="有时候事情其实并不是你想象中的那么难">
+  <meta name="description" content="概念keytool 是个密钥和证书管理工具。它使用户能够管理自己的公钥/私钥对及相关证书，用于（通过数字签名）自我认证（用户向别的用户/服务认证自己）或数据完整性以及认证服务。在JDK1.4以后的版本中都包含了这一工具，它的位置为%JAVA_HOME%\bin\keytool.exe">
 <meta property="og:type" content="article">
-<meta property="og:title" content="有时候有时候">
-<meta property="og:url" content="http://www.iwooto.com/2016/01/30/有时候有时候/index.html">
+<meta property="og:title" content="keytool的使用">
+<meta property="og:url" content="http://www.iwooto.com/2016/03/09/keytool的使用/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="有时候事情其实并不是你想象中的那么难">
-<meta property="og:updated_time" content="2016-01-30T09:57:24.399Z">
+<meta property="og:description" content="概念keytool 是个密钥和证书管理工具。它使用户能够管理自己的公钥/私钥对及相关证书，用于（通过数字签名）自我认证（用户向别的用户/服务认证自己）或数据完整性以及认证服务。在JDK1.4以后的版本中都包含了这一工具，它的位置为%JAVA_HOME%\bin\keytool.exe">
+<meta property="og:updated_time" content="2016-03-09T15:33:44.241Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="有时候有时候">
-<meta name="twitter:description" content="有时候事情其实并不是你想象中的那么难">
+<meta name="twitter:title" content="keytool的使用">
+<meta name="twitter:description" content="概念keytool 是个密钥和证书管理工具。它使用户能够管理自己的公钥/私钥对及相关证书，用于（通过数字签名）自我认证（用户向别的用户/服务认证自己）或数据完整性以及认证服务。在JDK1.4以后的版本中都包含了这一工具，它的位置为%JAVA_HOME%\bin\keytool.exe">
   
     <link rel="alternative" href="http://iwooto.com/atom.xml" title="pangyalin的博客" type="application/atom+xml">
   
@@ -176,11 +176,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-有时候有时候" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-keytool的使用" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/01/30/有时候有时候/" class="article-date">
-  	<time datetime="2016-01-30T09:55:46.000Z" itemprop="datePublished">2016-01-30</time>
+      <a href="/2016/03/09/keytool的使用/" class="article-date">
+  	<time datetime="2016-03-09T14:59:35.000Z" itemprop="datePublished">2016-03-09</time>
 </a>
     </div>
   
@@ -193,7 +193,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      有时候有时候
+      keytool的使用
     </h1>
   
 
@@ -202,7 +202,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/essays/">essays</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/java/">java</a></li></ul>
 	</div>
 
         
@@ -213,7 +213,14 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>有时候事情其实并不是你想象中的那么难</p>
+        <h1 id="u6982_u5FF5"><a href="#u6982_u5FF5" class="headerlink" title="概念"></a>概念</h1><p>keytool 是个密钥和证书管理工具。它使用户能够管理自己的公钥/私钥对及相关证书，用于（通过数字签名）自我认证（用户向别的用户/服务认证自己）或数据完整性以及认证服务。<br>在JDK1.4以后的版本中都包含了这一工具，它的位置为%JAVA_HOME%\bin\keytool.exe<a id="more"></a></p>
+<h1 id="u4F7F_u7528_u6559_u7A0B_28java_u73AF_u5883_u53D8_u91CF_u5DF2_u7ECF_u914D_u597D_u7684_u60C5_u51B5_u4E0B_u8FDB_u884C_u7684_29"><a href="#u4F7F_u7528_u6559_u7A0B_28java_u73AF_u5883_u53D8_u91CF_u5DF2_u7ECF_u914D_u597D_u7684_u60C5_u51B5_u4E0B_u8FDB_u884C_u7684_29" class="headerlink" title="使用教程(java环境变量已经配好的情况下进行的)"></a>使用教程(java环境变量已经配好的情况下进行的)</h1><p>1.查看帮助 cmd 命令行中输入keytool<br>2.创建证书<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkeypair -alias <span class="string">"iwooto.com"</span> -keystore <span class="string">"iwooto.keystore"</span></span><br></pre></td></tr></table></figure></p>
+<p>3.查看秘钥库里面的证书<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -list -keystore iwooto.keystore</span><br></pre></td></tr></table></figure></p>
+<p>4.导出证书到文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -export -alias iwooto.com -file iwooto.crt -keystore iwooto.keystore</span><br></pre></td></tr></table></figure></p>
+<p>5.导入证书<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#导入iwooto.crt证书到test秘钥库</span></span><br><span class="line">keytool -import -keystore <span class="built_in">test</span> -file iwooto.crt</span><br><span class="line"><span class="comment">#导入iwooto.crt证书到JDK秘钥库(如果报错先删除jdk下的cacerts文件)</span></span><br><span class="line">keytool -import -keystore D:\Java\jdk1.<span class="number">7.0</span>_71\jre\lib\security\cacerts -file iwooto.crt</span><br><span class="line"><span class="comment">#或</span></span><br><span class="line">keytool -import -keystore D:\Java\jdk1.<span class="number">7.0</span>_71\jre\lib\security\cacerts -file iwooto.crt -alias iwooto.com</span><br></pre></td></tr></table></figure></p>
+<p>6.查看证书信息<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -printcert -file iwooto.crt</span><br></pre></td></tr></table></figure></p>
+<p>7.修改证书条目口令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -keypasswd -alias iwooto.com -keystore iwooto.keystore</span><br></pre></td></tr></table></figure></p>
+<p>8.删除秘钥库的条目<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -delete -keystore iwooto.keystore -alias iwooto.com</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -223,18 +230,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/02/01/css强制换行与不换行/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          css强制换行与不换行
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/01/30/java-代码中添加log日志/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">java 代码中添加log日志</div>
+    <a href="/2016/02/25/linux文件目录权限/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux文件目录权限</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -269,7 +267,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="有时候有时候" data-title="有时候有时候" data-url="http://www.iwooto.com/2016/01/30/有时候有时候/"></div>
+	<div class="ds-thread" data-thread-key="keytool的使用" data-title="keytool的使用" data-url="http://www.iwooto.com/2016/03/09/keytool的使用/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
