@@ -4,7 +4,7 @@
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.iwooto.com/"/>
-  <updated>2016-03-09T15:33:44.241Z</updated>
+  <updated>2016-03-09T16:00:38.788Z</updated>
   <id>http://www.iwooto.com/</id>
   
   <author>
@@ -13,6 +13,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[gradle使用]]></title>
+    <link href="http://www.iwooto.com/2016/03/09/gradle%E4%BD%BF%E7%94%A8/"/>
+    <id>http://www.iwooto.com/2016/03/09/gradle使用/</id>
+    <published>2016-03-09T15:44:23.000Z</published>
+    <updated>2016-03-09T16:00:38.788Z</updated>
+    <content type="html"><![CDATA[<h1 id="gradle"><a href="#gradle" class="headerlink" title="gradle"></a>gradle</h1><p>听说gradle这个工具各种厉害就自己安装了一下，把玩把玩<a id="more"></a></p>
+<h1 id="gradle_u5B89_u88C5"><a href="#gradle_u5B89_u88C5" class="headerlink" title="gradle安装"></a>gradle安装</h1><p>源码下载使用迅雷下载<br><a href="https://downloads.gradle.org/distributions/gradle-2.11-all.zip" target="_blank" rel="external">https://downloads.gradle.org/distributions/gradle-2.11-all.zip</a><br>配置环境变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">GRADLE_HOEM: D:\gradle-<span class="number">2.11</span></span><br><span class="line">Path: %GRADLE_HOME%\bin;</span><br></pre></td></tr></table></figure></p>
+<p>查看安装是否成功<br>cmd下： gradle -v #显示版本信息</p>
+<h1 id="eclipse_u5B89_u88C5gradle"><a href="#eclipse_u5B89_u88C5gradle" class="headerlink" title="eclipse安装gradle"></a>eclipse安装gradle</h1><p>Help-&gt;install new software-&gt;add<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: gradle</span><br><span class="line">location:http://dist.springsource.com/release/TOOLS/gradle</span><br></pre></td></tr></table></figure></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="gradle"><a href="#gradle" class="headerlink" title="gradle"></a>gradle</h1><p>听说gradle这个工具各种厉害就自己安装了一下，把玩把玩]]>
+    
+    </summary>
+    
+      <category term="gradle" scheme="http://www.iwooto.com/tags/gradle/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[keytool的使用]]></title>
