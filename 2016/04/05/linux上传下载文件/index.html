@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Linux," />
 
 
 
@@ -59,16 +59,16 @@
 
 
 
-<meta name="description" content="pangyalin的博客">
+<meta name="description" content="安装lrzsz12345678sudo apt-get install lrzsz或sudo yum install lrzszrz上传文件rzsz下载文件sz filename">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python学习">
-<meta property="og:url" content="http://www.iwooto.com/2016/01/30/Python学习/index.html">
+<meta property="og:title" content="linux上传下载文件">
+<meta property="og:url" content="http://www.iwooto.com/2016/04/05/linux上传下载文件/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="pangyalin的博客">
-<meta property="og:updated_time" content="2016-01-30T09:09:29.280Z">
+<meta property="og:description" content="安装lrzsz12345678sudo apt-get install lrzsz或sudo yum install lrzszrz上传文件rzsz下载文件sz filename">
+<meta property="og:updated_time" content="2016-04-05T16:40:12.939Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python学习">
-<meta name="twitter:description" content="pangyalin的博客">
+<meta name="twitter:title" content="linux上传下载文件">
+<meta name="twitter:description" content="安装lrzsz12345678sudo apt-get install lrzsz或sudo yum install lrzszrz上传文件rzsz下载文件sz filename">
 
 
 
@@ -86,7 +86,7 @@
   };
 </script>
 
-  <title> Python学习 | pangyalin的博客 </title>
+  <title> linux上传下载文件 | pangyalin的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -206,7 +206,7 @@
             
             
               
-                Python学习
+                linux上传下载文件
               
             
           </h1>
@@ -218,8 +218,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-30T14:39:40+08:00" content="2016-01-30">
-              2016-01-30
+            <time itemprop="dateCreated" datetime="2016-04-05T22:08:47+08:00" content="2016-04-05">
+              2016-04-05
             </time>
           </span>
 
@@ -245,7 +245,34 @@
       
 
       
-        
+        <h1 id="u5B89_u88C5lrzsz"><a href="#u5B89_u88C5lrzsz" class="headerlink" title="安装lrzsz"></a>安装lrzsz</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install lrzsz</span><br><span class="line">或</span><br><span class="line">sudo yum install lrzsz</span><br><span class="line"></span><br><span class="line">rz上传文件</span><br><span class="line">rz</span><br><span class="line">sz下载文件</span><br><span class="line">sz filename</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h1 id="u6587_u4EF6_u590D_u5236cp"><a href="#u6587_u4EF6_u590D_u5236cp" class="headerlink" title="文件复制cp"></a>文件复制cp</h1><p>语法： cp [选项] 源文件或目录 目标文件或目录<br>　该命令的各选项含义如下： </p>
+<ul>
+<li>a 该选项通常在拷贝目录时使用。它保留链接、文件属性，并递归地拷贝目录，其作用等于dpR选项的组合。 </li>
+<li>d 拷贝时保留链接。 </li>
+<li>f 删除已经存在的目标文件而不提示。 </li>
+<li>i 和f选项相反，在覆盖目标文件之前将给出提示要求用户确认。回答y时目标文件将被覆盖，是交互式拷贝。 </li>
+<li>p 此时cp除复制源文件的内容外，还将把其修改时间和访问权限也复制到新文件中。 </li>
+<li>r 若给出的源文件是一目录文件，此时cp将递归复制该目录下所有的子目录和文件。此时目标文件必须为一个目录名。 </li>
+<li>l 不作拷贝，只是链接文件。<br>　　需要说明的是，为防止用户在不经意的情况下用cp命令破坏另一个文件，如用户指定的目标文件名已存在，用cp命令拷贝文件后，这个文件就会被新源文件覆盖，因此，建议用户在使用cp命令拷贝文件时，最好使用i选项。</li>
+</ul>
+<h1 id="u6587_u4EF6_u5220_u9664rm"><a href="#u6587_u4EF6_u5220_u9664rm" class="headerlink" title="文件删除rm"></a>文件删除rm</h1><p>语法： rm [选项] 文件名</p>
+<ul>
+<li>f 忽略不存在的文件，从不给出提示。 </li>
+<li>r 指示rm将参数中列出的全部目录和子目录均递归地删除。 </li>
+<li>i 进行交互式删除。</li>
+</ul>
+<p>　　使用rm命令要小心。因为一旦文件被删除，它是不能被恢复的。了防止这种情况的发生，可以使用i选项来逐个确认要删除的文件。如果用户输入y，文件将被删除。如果输入任何其他东西，文件则不会删除。</p>
+<h1 id="u6587_u4EF6_u79FB_u52A8mv"><a href="#u6587_u4EF6_u79FB_u52A8mv" class="headerlink" title="文件移动mv"></a>文件移动mv</h1><p>   语法： mv [选项] 源文件或目录 目标文件或目录</p>
+<p>　 说 明：视mv命令中第二个参数类型的不同（是目标文件还是目标目录），mv命令将文件重命名或将其移至一个新的目录中。当第二个参数类型是文件时，mv命令 完成文件重命名，此时，源文件只能有一个（也可以是源目录名），它将所给的源文件或目录重命名为给定的目标文件名。当第二个参数是已存在的目录名称时，源 文件或目录参数可以有多个，mv命令将各参数指定的源文件均移至目标目录中。在跨文件系统移动文件时，mv先拷贝，再将原有文件删除，而链至该文件的链接 也将丢失。 </p>
+<p>　　命令中各选项的含义为： </p>
+<ul>
+<li>I 交互方式操作。如果mv操作将导致对已存在的目标文件的覆盖，此时系统询问是否重写，要求用户回答y或n，这样可以避免误覆盖文件。 </li>
+<li>f 禁止交互操作。在mv操作要覆盖某已有的目标文件时不给任何指示，指定此选项后，i选项将不再起作用。</li>
+</ul>
+<p>　　如果所给目标文件（不是目录）已存在，此时该文件的内容将被新文件覆盖。为防止用户用mv命令破坏另一个文件，使用mv命令移动文件时，最好使用i选项。</p>
+
       
     </div>
 
@@ -257,21 +284,27 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag">#Linux</a>
+          
+        </div>
+      
 
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/01/12/hexo博客搭建过程/" rel="next" title="hexo博客搭建过程">
-                <i class="fa fa-chevron-left"></i> hexo博客搭建过程
+              <a href="/2016/03/30/js模板引擎/" rel="next" title="js模板引擎">
+                <i class="fa fa-chevron-left"></i> js模板引擎
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/01/30/maven项目多个module工程搭建/" rel="prev" title="maven项目多个module工程搭建">
-                maven项目多个module工程搭建 <i class="fa fa-chevron-right"></i>
+              <a href="/2016/04/06/redis下载安装测试/" rel="prev" title="redis下载安装测试">
+                redis下载安装测试 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -340,7 +373,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">13</span>
+              <span class="site-state-item-count">16</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -350,7 +383,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -391,7 +424,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u5B89_u88C5lrzsz"><span class="nav-number">1.</span> <span class="nav-text">安装lrzsz</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6587_u4EF6_u590D_u5236cp"><span class="nav-number">2.</span> <span class="nav-text">文件复制cp</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6587_u4EF6_u5220_u9664rm"><span class="nav-number">3.</span> <span class="nav-text">文件删除rm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6587_u4EF6_u79FB_u52A8mv"><span class="nav-number">4.</span> <span class="nav-text">文件移动mv</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

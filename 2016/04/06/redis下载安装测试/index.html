@@ -1,0 +1,727 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="redis," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pangyalin的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.jpg?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="redis安装1． 下载地址：1$ wget http://download.redis.io/releases/redis-3.0.7.tar.gz
+2． 解压缩1$ tar xzf redis-3.0.7.tar.gz
+3． 编译12345$ cd redis-3.0.7$ make$make install$cp redis.conf /etc/">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis下载安装测试">
+<meta property="og:url" content="http://www.iwooto.com/2016/04/06/redis下载安装测试/index.html">
+<meta property="og:site_name" content="pangyalin的博客">
+<meta property="og:description" content="redis安装1． 下载地址：1$ wget http://download.redis.io/releases/redis-3.0.7.tar.gz
+2． 解压缩1$ tar xzf redis-3.0.7.tar.gz
+3． 编译12345$ cd redis-3.0.7$ make$make install$cp redis.conf /etc/">
+<meta property="og:updated_time" content="2016-04-05T17:24:59.372Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="redis下载安装测试">
+<meta name="twitter:description" content="redis安装1． 下载地址：1$ wget http://download.redis.io/releases/redis-3.0.7.tar.gz
+2． 解压缩1$ tar xzf redis-3.0.7.tar.gz
+3． 编译12345$ cd redis-3.0.7$ make$make install$cp redis.conf /etc/">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> redis下载安装测试 | pangyalin的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pangyalin的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">pangyalin的博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                redis下载安装测试
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-06T00:38:32+08:00" content="2016-04-06">
+              2016-04-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="redis_u5B89_u88C5"><a href="#redis_u5B89_u88C5" class="headerlink" title="redis安装"></a>redis安装</h1><p>1． 下载地址：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://download.redis.io/releases/redis-<span class="number">3.0</span>.<span class="number">7</span>.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>2． 解压缩<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ tar xzf redis-<span class="number">3.0</span>.<span class="number">7</span>.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>3． 编译<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> redis-<span class="number">3.0</span>.<span class="number">7</span></span><br><span class="line">$ make</span><br><span class="line"><span class="variable">$make</span> install</span><br><span class="line"></span><br><span class="line"><span class="variable">$cp</span> redis.conf /etc/</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>参数介绍：</p>
+<p>make install命令执行完成后，会在/usr/local/bin目录下生成本个可执行文件，分别是redis-server、redis-cli、redis-benchmark、redis-check-aof 、redis-check-dump，它们的作用如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">redis-server：Redis服务器的daemon启动程序</span><br><span class="line"></span><br><span class="line">redis-cli：Redis命令行操作工具。也可以用telnet根据其纯文本协议来操作</span><br><span class="line"></span><br><span class="line">redis-benchmark：Redis性能测试工具，测试Redis在当前系统下的读写性能</span><br><span class="line"></span><br><span class="line">redis-check-aof：数据修复</span><br><span class="line"></span><br><span class="line">redis-check-dump：检查导出工具</span><br></pre></td></tr></table></figure></p>
+<p>4． 修改系统配置文件，执行命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a) <span class="built_in">echo</span> vm.overcommit_memory=<span class="number">1</span> &gt;&gt; /etc/sysctl.conf</span><br><span class="line"></span><br><span class="line">b) sysctl vm.overcommit_memory=<span class="number">1</span> 或执行<span class="built_in">echo</span> vm.overcommit_memory=<span class="number">1</span> &gt;&gt;/proc/sys/vm/overcommit_memory</span><br></pre></td></tr></table></figure></p>
+<p>使用数字含义：</p>
+<p>0，表示内核将检查是否有足够的可用内存供应用进程使用；如果有足够的可用内存，内存申请允许；否则，内存申请失败，并把错误返回给应用进程。</p>
+<p>1，表示内核允许分配所有的物理内存，而不管当前的内存状态如何。</p>
+<p>2，表示内核允许分配超过所有物理内存和交换空间总和的内存</p>
+<p>5． 修改redis配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a) $ <span class="built_in">cd</span> /etc</span><br><span class="line"></span><br><span class="line">b) vi redis.conf</span><br><span class="line"></span><br><span class="line">c) 修改daemonize yes---目的使进程在后台运行</span><br></pre></td></tr></table></figure></p>
+<p>参数介绍：</p>
+<p>daemonize：是否以后台daemon方式运行</p>
+<p>pidfile：pid文件位置</p>
+<p>port：监听的端口号</p>
+<p>timeout：请求超时时间</p>
+<p>loglevel：log信息级别</p>
+<p>logfile：log文件位置</p>
+<p>databases：开启数据库的数量</p>
+<p>save <em> </em>：保存快照的频率，第一个<em>表示多长时间，第三个</em>表示执行多少次写操作。在一定时间内执行一定数量的写操作时，自动保存快照。可设置多个条件。</p>
+<p>rdbcompression：是否使用压缩</p>
+<p>dbfilename：数据快照文件名（只是文件名，不包括目录）</p>
+<p>dir：数据快照的保存目录（这个是目录）</p>
+<p>appendonly：是否开启appendonlylog，开启的话每次写操作会记一条log，这会提高数据抗风险能力，但影响效率。</p>
+<p>appendfsync：appendonlylog如何同步到磁盘（三个选项，分别是每次写都强制调用fsync、每秒启用一次fsync、不调用fsync等待系统自己同步）</p>
+<p>6． 启动redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line">```bash</span><br><span class="line">a) $ <span class="built_in">cd</span> /usr/<span class="built_in">local</span>/bin</span><br><span class="line"></span><br><span class="line">b1) ./redis-server</span><br><span class="line">b2) ./redis-server /etc/redis.conf</span><br></pre></td></tr></table></figure></p>
+<p>注意:b1这种方式启动redis 使用的是默认配置。也可以通过启动参数告诉redis使用指定配置文件使用下面命令启动。<br>b2启动方式加载redis.conf是一个默认的配置文件。我们可以根据需要使用自己的配置文件。<br>7． 检查是否启动成功<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a) $ ps -ef | grep redis</span><br></pre></td></tr></table></figure></p>
+<p>启动redis服务进程后，就可以使用测试客户端程序redis-cli和redis服务交互了。 比如：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ ./redis-cli</span><br><span class="line">redis&gt; <span class="built_in">set</span> foo bar</span><br><span class="line">OK</span><br><span class="line">redis&gt; get foo</span><br><span class="line"><span class="string">"bar"</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="Ubuntu__u4E0B_u5B89_u88C5redis"><a href="#Ubuntu__u4E0B_u5B89_u88C5redis" class="headerlink" title="Ubuntu 下安装redis"></a>Ubuntu 下安装redis</h1><p>在 Ubuntu 系统安装 Redi 可以使用以下命令:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> apt-get update</span><br><span class="line"><span class="variable">$sudo</span> apt-get install redis-server</span><br></pre></td></tr></table></figure></p>
+<p>启动 Redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$redis</span>-server</span><br></pre></td></tr></table></figure></p>
+<p>查看 redis 是否启动？<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$redis</span>-cli</span><br></pre></td></tr></table></figure></p>
+<p>关闭 Redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">./redis-cli shutdown</span><br><span class="line">或</span><br><span class="line"><span class="built_in">kill</span> -<span class="number">9</span> PID</span><br></pre></td></tr></table></figure></p>
+<p>设置密码访问<br>修改redis.conf文件配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># requirepass foobared去掉注释，foobared改为自己的密码，我在这里改为123456</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="java_u6D4B_u8BD5_u4EE3_u7801"><a href="#java_u6D4B_u8BD5_u4EE3_u7801" class="headerlink" title="java测试代码"></a>java测试代码</h1><p>导入redis.clients.jedis.Jedis包<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;redis.clients&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;jedis&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">2.5</span>.<span class="number">2</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>java代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">package com.iwooto.redis;</span><br><span class="line"></span><br><span class="line">import redis.clients.jedis.Jedis;</span><br><span class="line"></span><br><span class="line">public class TestRedis &#123;</span><br><span class="line">	</span><br><span class="line">	public static void main(String[] args)&#123;</span><br><span class="line"></span><br><span class="line">		Jedis jedis = new Jedis(<span class="string">"192.168.233.129"</span>, <span class="number">6379</span>);</span><br><span class="line">		//权限认证</span><br><span class="line">		jedis.auth(<span class="string">"123456"</span>);</span><br><span class="line">		//查看服务是否运行</span><br><span class="line">	    System.out.println(<span class="string">"Server is running: "</span>+jedis.ping());</span><br><span class="line">		jedis.set(<span class="string">"test"</span>, <span class="string">"testValue"</span>);</span><br><span class="line">		String str = jedis.get(<span class="string">"test"</span>);</span><br><span class="line">		System.out.println(str);</span><br><span class="line">		jedis.close();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="redis_u9519_u8BEF_u8BB0_u5F55"><a href="#redis_u9519_u8BEF_u8BB0_u5F55" class="headerlink" title="redis错误记录"></a>redis错误记录</h1><p>Q:MISCONF Redis is configured to save RDB snapshots<br>A:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">启动客户端./redis-cli </span><br><span class="line">输入  config <span class="built_in">set</span> stop-writes-on-bgsave-error no</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/redis/" rel="tag">#redis</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/04/05/linux上传下载文件/" rel="next" title="linux上传下载文件">
+                <i class="fa fa-chevron-left"></i> linux上传下载文件
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/06/python学习-2/" rel="prev" title="python学习(2)">
+                python学习(2) <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="pangyalin" />
+          <p class="site-author-name" itemprop="name">pangyalin</p>
+          <p class="site-description motion-element" itemprop="description">pangyalin的博客</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#redis_u5B89_u88C5"><span class="nav-number">1.</span> <span class="nav-text">redis安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Ubuntu__u4E0B_u5B89_u88C5redis"><span class="nav-number">2.</span> <span class="nav-text">Ubuntu 下安装redis</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#java_u6D4B_u8BD5_u4EE3_u7801"><span class="nav-number">3.</span> <span class="nav-text">java测试代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#redis_u9519_u8BEF_u8BB0_u5F55"><span class="nav-number">4.</span> <span class="nav-text">redis错误记录</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">pangyalin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
