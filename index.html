@@ -208,6 +208,108 @@
             
               
                 
+                <a class="post-title-link" href="/2016/04/19/java注解/" itemprop="url">
+                  java自定义注解
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-04-19T20:31:10+08:00" content="2016-04-19">
+              2016-04-19
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="u5143_u6CE8_u89E3"><a href="#u5143_u6CE8_u89E3" class="headerlink" title="元注解"></a>元注解</h1><p>@Target表示该注解可以用于什么地方，可能的ElementType参数有：<br>CONSTRUCTOR：构造器的声明<br>FIELD：域声明（包括enum实例）<br>LOCAL_VARIABLE：局部变量声明<br>METHOD：方法声明<br>PACKAGE：包声明<br>PARAMETER：参数声明<br>TYPE：类、接口（包括注解类型）或enum声明</p>
+<p>@Retention表示需要在什么级别保存该注解信息。可选的RetentionPolicy参数包括：<br>SOURCE：在源文件中有效（即源文件保留）注解将被编译器丢弃<br>CLASS：注解在class文件中可用，但会被VM丢弃<br>RUNTIME：VM将在运行期间保留注解，因此可以通过反射机制读取注解的信息。</p>
+<p>@Document 将注解包含在Javadoc中</p>
+<p>@Inherited 允许子类继承父类中的注解<br>　　@Inherited 元注解是一个标记注解，@Inherited阐述了某个被标注的类型是被继承的。如果一个使用了@Inherited修饰的annotation类型被用于一个class，则这个annotation将被用于该class的子类。</p>
+<p>　　注意：@Inherited annotation类型是被标注过的class的子类所继承。类并不从它所实现的接口继承annotation，方法并不从它所重载的方法继承annotation。</p>
+<p>　　当@Inherited annotation类型标注的annotation的Retention是RetentionPolicy.RUNTIME，则反射API增强了这种继承性。如果我们使用java.lang.reflect去查询一个@Inherited annotation类型的annotation时，反射代码检查将展开工作：检查class和其父类，直到发现指定的annotation类型被发现，或者到达类继承结构的顶层。</p>
+<h1 id="u81EA_u5B9A_u4E49_u6CE8_u89E3"><a href="#u81EA_u5B9A_u4E49_u6CE8_u89E3" class="headerlink" title="自定义注解"></a>自定义注解</h1><p>　使用@interface自定义注解时，自动继承了java.lang.annotation.Annotation接口，由编译程序自动完成其他细节。在定义注解时，不能继承其他的注解或接口。@interface用来声明一个注解，其中的每一个方法实际上是声明了一个配置参数。方法的名称就是参数的名称，返回值类型就是参数的类型（返回值类型只能是基本类型、Class、String、enum）。可以通过default来声明参数的默认值。<br>定义注解格式：<br>　　public @interface 注解名 {定义体}</p>
+<p>注解参数的可支持数据类型：</p>
+<p>　　　　1.所有基本数据类型（int,float,boolean,byte,double,char,long,short)<br>　　　　2.String类型<br>　　　　3.Class类型<br>　　　　4.enum类型<br>　　　　5.Annotation类型<br>　　　　6.以上所有类型的数组</p>
+<p>　　Annotation类型里面的参数该怎么设定:<br>　　第一,只能用public或默认(default)这两个访问权修饰.例如,String value();这里把方法设为defaul默认类型；　 　<br>　　第二,参数成员只能用基本类型byte,short,char,int,long,float,double,boolean八种基本数据类型和 String,Enum,Class,annotations等数据类型,以及这一些类型的数组.例如,String value();这里的参数成员就为String;　　<br>　　第三,如果只有一个参数成员,最好把参数名称设为”value”,后加小括号.例:下面的例子FruitName注解就只有一个参数成员。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">package annotation;</span><br><span class="line"></span><br><span class="line">import java.lang.annotation.Documented;</span><br><span class="line">import java.lang.annotation.ElementType;</span><br><span class="line">import java.lang.annotation.Retention;</span><br><span class="line">import java.lang.annotation.RetentionPolicy;</span><br><span class="line">import java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 水果名称注解</span><br><span class="line"> * @author peida</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">@Target(ElementType.FIELD)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">public @interface FruitName &#123;</span><br><span class="line">    String value() default <span class="string">""</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">package annotation;</span><br><span class="line"></span><br><span class="line">import java.lang.annotation.Documented;</span><br><span class="line">import java.lang.annotation.ElementType;</span><br><span class="line">import java.lang.annotation.Retention;</span><br><span class="line">import java.lang.annotation.RetentionPolicy;</span><br><span class="line">import java.lang.annotation.Target;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 水果颜色注解</span><br><span class="line"> * @author peida</span><br><span class="line"> *</span><br><span class="line"> */</span><br><span class="line">@Target(ElementType.FIELD)</span><br><span class="line">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">@Documented</span><br><span class="line">public @interface FruitColor &#123;</span><br><span class="line">    /**</span><br><span class="line">     * 颜色枚举</span><br><span class="line">     * @author peida</span><br><span class="line">     *</span><br><span class="line">     */</span><br><span class="line">    public enum Color&#123; BULE,RED,GREEN&#125;;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 颜色属性</span><br><span class="line">     * @<span class="built_in">return</span></span><br><span class="line">     */</span><br><span class="line">    Color fruitColor() default Color.GREEN;</span><br><span class="line"></span><br><span class="line">    /**</span><br><span class="line">     * 校验颜色</span><br><span class="line">     * @<span class="built_in">return</span></span><br><span class="line">     */</span><br><span class="line">	public Valid valid default @Valid;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	@Target(ElementType.FIELD)</span><br><span class="line">	@Retention(RetentionPolicy.RUNTIME)</span><br><span class="line">	@Documented</span><br><span class="line">	public @interface Valid &#123;</span><br><span class="line">	    </span><br><span class="line">        /**</span><br><span class="line">         * 必须与<span class="keyword">in</span>中String相符,目前仅支持String类型</span><br><span class="line">         * </span><br><span class="line">         * @<span class="built_in">return</span> e.g. &#123;<span class="string">"abc"</span>,<span class="string">"123"</span>&#125;</span><br><span class="line">         */</span><br><span class="line">        public String[] <span class="keyword">in</span>() default &#123;&#125;;</span><br><span class="line">        /**</span><br><span class="line">         * 是否允许为空,用于验证数据 default <span class="literal">true</span></span><br><span class="line">         * </span><br><span class="line">         * @<span class="built_in">return</span></span><br><span class="line">         */</span><br><span class="line">        public boolean allowNull() default <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>/<strong><strong><em>*</em></strong></strong>注解使用<strong><strong><strong><em>*</em></strong></strong></strong>/<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">public class Fruit &#123;</span><br><span class="line">    </span><br><span class="line">    @FruitName(<span class="string">"Apple"</span>)</span><br><span class="line">    private String fruitName;</span><br><span class="line">    </span><br><span class="line">    @FruitColor(fruitColor=Color.RED, valid =@Valid(allowNull = <span class="literal">false</span>))</span><br><span class="line">    private String fruitColor;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>/<strong><strong><em>*</em></strong></strong>注解处理器<strong><strong><strong><em>*</em></strong></strong></strong>/<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">public class Test &#123;</span><br><span class="line">  public static void main(String[] args) throws IOException &#123;</span><br><span class="line">    </span><br><span class="line">        String strFruitName=<span class="string">" 水果名称："</span>;</span><br><span class="line">        String strFruitColor=<span class="string">" 水果颜色："</span>;</span><br><span class="line">        Boolean bool = <span class="literal">true</span>;//是否校验</span><br><span class="line">        Field[] fields = Fruit.class.getDeclaredFields();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(Field field :fields)&#123;</span><br><span class="line">            <span class="keyword">if</span>(field.isAnnotationPresent(FruitName.class))&#123;</span><br><span class="line">                FruitName fruitName = (FruitName) field.getAnnotation(FruitName.class);</span><br><span class="line">                strFruitName=strFruitName+fruitName.value();</span><br><span class="line">                System.out.println(strFruitName);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(field.isAnnotationPresent(FruitColor.class))&#123;</span><br><span class="line">                FruitColor fruitColor= (FruitColor) field.getAnnotation(FruitColor.class);</span><br><span class="line">                strFruitColor=strFruitColor+fruitColor.fruitColor().toString();</span><br><span class="line">                bool = fruitColor.Valid.allowNull();</span><br><span class="line">                System.out.println(strFruitColor);</span><br><span class="line">                System.out.println(bool);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/04/06/python学习-1/" itemprop="url">
                   python学习(1)
                 </a>
@@ -1002,98 +1104,6 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/02/04/表值函数和标量函数/" itemprop="url">
-                  表值函数和标量函数
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-04T20:36:16+08:00" content="2016-02-04">
-              2016-02-04
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h1><p>表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表</p>
-<p>标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时，必须将前缀 :: 添加至函数名：<br>SELECT * FROM ::fn_helpcollations()</p>
-<p>存储过程:可包含程序流、逻辑以及对数据库的查询。它们可以接受参数、输出参数、返回单个或多个结果集以及返回值。</p>
-<p>函数与存储过程本质上没区别。只是函数有如：只能返回一个变量的限制。而存储过程可以返回多个。而函数是可以嵌入在sql中使用的,可以在select中调用，而存储过程不行。执行的本质都一样。函数限制比较多，比如不能用临时表，只能用表变量．还有一些函数都不可用等等．而存储过程的限制相对就比较少<br><a href="http://knowsky.com/534162.html" target="_blank" rel="external">转载地址</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1139,7 +1149,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">16</span>
+              <span class="site-state-item-count">17</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
