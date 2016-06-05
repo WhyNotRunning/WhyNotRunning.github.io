@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="js," />
+  <meta name="keywords" content="sqlserver," />
 
 
 
@@ -59,16 +59,16 @@
 
 
 
-<meta name="description" content="从ES3是如何解析js的过程理解1.首先函数的正确声明结构是怎样的2.表达式的声明方式，和如何构成表达式">
+<meta name="description" content="触发器的分类DML触发器是响应Insert、Update、Delete语句，DDL是响应Create、Alter、Drop开头的数据定义语句而激活的。1.触发器的概念：就是在数据库进行insert、delete、update时会触发我们规定的的一系列的动作创建一个简单的触发器">
 <meta property="og:type" content="article">
-<meta property="og:title" content="再次认识js的立即执行函数">
-<meta property="og:url" content="http://www.iwooto.com/2016/01/10/重新搭建博客/index.html">
+<meta property="og:title" content="sqlserver触发器">
+<meta property="og:url" content="http://www.iwooto.com/2016/06/05/sqlserver触发器/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="从ES3是如何解析js的过程理解1.首先函数的正确声明结构是怎样的2.表达式的声明方式，和如何构成表达式">
-<meta property="og:updated_time" content="2016-01-30T05:15:43.038Z">
+<meta property="og:description" content="触发器的分类DML触发器是响应Insert、Update、Delete语句，DDL是响应Create、Alter、Drop开头的数据定义语句而激活的。1.触发器的概念：就是在数据库进行insert、delete、update时会触发我们规定的的一系列的动作创建一个简单的触发器">
+<meta property="og:updated_time" content="2016-06-05T15:10:43.897Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="再次认识js的立即执行函数">
-<meta name="twitter:description" content="从ES3是如何解析js的过程理解1.首先函数的正确声明结构是怎样的2.表达式的声明方式，和如何构成表达式">
+<meta name="twitter:title" content="sqlserver触发器">
+<meta name="twitter:description" content="触发器的分类DML触发器是响应Insert、Update、Delete语句，DDL是响应Create、Alter、Drop开头的数据定义语句而激活的。1.触发器的概念：就是在数据库进行insert、delete、update时会触发我们规定的的一系列的动作创建一个简单的触发器">
 
 
 
@@ -86,7 +86,7 @@
   };
 </script>
 
-  <title> 再次认识js的立即执行函数 | pangyalin的博客 </title>
+  <title> sqlserver触发器 | pangyalin的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -206,7 +206,7 @@
             
             
               
-                再次认识js的立即执行函数
+                sqlserver触发器
               
             
           </h1>
@@ -218,8 +218,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-01-10T22:14:00+08:00" content="2016-01-10">
-              2016-01-10
+            <time itemprop="dateCreated" datetime="2016-06-05T22:23:01+08:00" content="2016-06-05">
+              2016-06-05
             </time>
           </span>
 
@@ -245,12 +245,9 @@
       
 
       
-        <h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式<a id="more"></a><br>错误实例1:意图声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：函数必须有函数名</p>
-<p>错误实例2：声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：最后面的那一组小括号被当做分组运算符，并没有被解析成调用fun函数</p>
-<p>正确实例：通过常用的运算符如()、！、—、+、typeof等放在匿名函数前，<br>让解析器把后面的函数当做表达式执行再通过()调用该函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure></p>
-<p>我的<a href="http://www.iwooto.com">博客地址</a></p>
+        <p>触发器的分类<br>DML触发器是响应Insert、Update、Delete语句，DDL是响应Create、Alter、Drop开头的数据定义语句而激活的。<br>1.触发器的概念：就是在数据库进行insert、delete、update时会触发我们规定的的一系列的动作<br>创建一个简单的触发器<a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create trigger tgr_name --触发器的名称</span><br><span class="line">on table_name --触发器作用的表名</span><br><span class="line">	<span class="keyword">for</span> insert --触发的操作</span><br><span class="line">as</span><br><span class="line">	<span class="built_in">print</span> <span class="string">'我添加了一条记录哦'</span></span><br><span class="line">go</span><br></pre></td></tr></table></figure></p>
+<p>2.获取触发器触发是操作的数据<br>触发器有两个特殊的表，新插入的数据表（inserted）和删除的数据表（deleted）,这两张表只能读去数据，不能修改数据。inserted表存放插入和修改后的数据，deleted表存放删除和修改前的数据。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create trigger OrderDetail_Update</span><br><span class="line">	on OrderDetail</span><br><span class="line">	after update</span><br><span class="line">as</span><br><span class="line">begin</span><br><span class="line">	<span class="keyword">if</span>(update(je))--列级触发器，当金额改变时触发</span><br><span class="line">	insert into OrderDetailTz select newid() id,* from deleted --获取插入前的数据插入到调整表当中</span><br><span class="line">end</span><br></pre></td></tr></table></figure></p>
+<p>3.After 与Instead Of<br>Instead Of触发器与After触发器的工作流程是不一样。<br>After触发器是在SQLSERVER服务器接到执行SQL语句请求之后，先建立Inserted和Updated临时表，然后在更改物理表上的数据，最后才激活触发器程序。<br>而Instead Of触发器在SQLSERVER服务器接到执行SQL语句请求，建立Inserted和Updated临时表后就激活了Instead Of触发器程序，至于SQL语句的请求如何操作数据就不在管了，把执行权全权叫给了Instead Of触发器。<br>Instead Of触发器实例<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Create Trigger OrderDetail_Insert</span><br><span class="line">  ON OrderDetail</span><br><span class="line">  Instead Of Insert</span><br><span class="line">AS</span><br><span class="line">Begin</span><br><span class="line">    Set Nocount On; /*屏蔽触发器里Insert语句执行完后返回的所影响的行数的消息*/</span><br><span class="line">    Declare @Orderid int,@Price money,@discount real</span><br><span class="line">    select @OrderId=OrderId,@Price=Price,@Discount=Discount from Inserted</span><br><span class="line">    <span class="keyword">if</span>(@Discount)&gt;<span class="number">0.6</span></span><br><span class="line">    begin</span><br><span class="line">       <span class="built_in">print</span> <span class="string">'折扣不能大于0.6'</span></span><br><span class="line">    end</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    begin</span><br><span class="line">       insert into OrderDetail(OrderId,Price,Discount) values(@OrderId,@Price,@discount)</span><br><span class="line">    end</span><br><span class="line">End</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -265,7 +262,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/js/" rel="tag">#js</a>
+            <a href="/tags/sqlserver/" rel="tag">#sqlserver</a>
           
         </div>
       
@@ -274,13 +271,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/04/19/java注解/" rel="next" title="java自定义注解">
+                <i class="fa fa-chevron-left"></i> java自定义注解
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/01/12/hexo博客搭建过程/" rel="prev" title="hexo博客搭建过程">
-                hexo博客搭建过程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -399,7 +396,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><span class="nav-number">1.</span> <span class="nav-text">从ES3是如何解析js的过程理解</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
