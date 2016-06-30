@@ -4,7 +4,7 @@
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.iwooto.com/"/>
-  <updated>2016-06-13T11:21:32.356Z</updated>
+  <updated>2016-06-30T14:30:37.788Z</updated>
   <id>http://www.iwooto.com/</id>
   
   <author>
@@ -13,6 +13,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[git命令]]></title>
+    <link href="http://www.iwooto.com/2016/06/30/git%E5%91%BD%E4%BB%A4/"/>
+    <id>http://www.iwooto.com/2016/06/30/git命令/</id>
+    <published>2016-06-30T14:21:54.000Z</published>
+    <updated>2016-06-30T14:30:37.788Z</updated>
+    <content type="html"><![CDATA[<h1 id="u751F_u6210ssh_key"><a href="#u751F_u6210ssh_key" class="headerlink" title="生成ssh key"></a>生成ssh key</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? Y</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Passphrases <span class="keyword">do</span> not match. Try again.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<p>把生成的id_rsa.pub添加到github上</p>
+<h1 id="u6D4B_u8BD5_u80FD_u5426_u8FDE_u63A5_u6210_u529F"><a href="#u6D4B_u8BD5_u80FD_u5426_u8FDE_u63A5_u6210_u529F" class="headerlink" title="测试能否连接成功"></a>测试能否连接成功</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ ssh -T git@github.com</span><br><span class="line">Hi your name! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure>
+<p>克隆项目到本地环境<br>git clone git@github.com:WhyNotRunning/python.git</p>
+<p>查看本地环境的状态<br>git status</p>
+<p>提交修改的代码到本地仓库<br>git commit -m ‘message’<br>提交所有的代码到本地仓库<br>git commit -a -m ‘message’</p>
+<p>添加指定修改的文件<br>git add filename<br>添加所有修改的问题<br>git add ..<br>从当前的工作空间中和索引中删除文件<br>git rm filename<br>git rm filename 移除文件(从暂存区和工作区中删除)<br>git rm –cached filename 移除文件(只从暂存区中删除)</p>
+<p>把本地库推送到所有的分支上<br>git push<br>把本地库推送到指定的分支上<br>git push origin master</p>
+<p>拉取远程仓库：<br>git pull [remoteName] [localBranchName]</p>
+<p>还原一个版本的修改<br>git revert 版本号<br>当前的工作目录完全回滚到指定的版本号<br>git reset<br>还原文件到指定的版本版本<br>git reset –hard filename</p>
+<p>对分支的增、删、查等操作，例如’git branch new_branch’会从当前的工作版本创建一个叫做new_branch的新分支，’git branch -D new_branch’就会强制删除叫做new_branch的分支，’git branch’就会列出本地所有的分支<br>git branch<br>切换当前的分支<br>git checkout</p>
+<p>将文件给push到一个临时空间中<br>git stash (push)<br>将文件从临时空间pop下来<br>git stash pop</p>
+<p>与资源库文件进行对比<br>git diff filename</p>
+<p>合并两个文件到一起<br>git merge</p>
+<p>解决冲突<br>git stash 把文件放到一个临时的空间<br>git pull 获取远程分支上的代码<br>git stash pop 把临时空间上的代码取下来<br>git diff -w filename 查看本地仓库与远程分支代码的不同<br>合并代码中的冲突<br>git status 查看当前的状态<br>git add filename 添加修改的文件<br>git commit -m ‘message’ 提交到本地仓库<br>git push origin master 推送到远程的仓库</p>
+<p><a href="http://git-htmldocs.googlecode.com/git/git.html" target="_blank" rel="external">查看gitApi</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="u751F_u6210ssh_key"><a href="#u751F_u6210ssh_key" class="headerlink" title="生成ssh key"></a>生成ssh key</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? Y</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Passphrases <span class="keyword">do</span> not match. Try again.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>]]>
+    
+    </summary>
+    
+      <category term="git" scheme="http://www.iwooto.com/tags/git/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[sqlserver触发器]]></title>
@@ -313,7 +346,7 @@
     <link href="http://www.iwooto.com/2016/02/04/%E8%A1%A8%E5%80%BC%E5%87%BD%E6%95%B0%E5%92%8C%E6%A0%87%E9%87%8F%E5%87%BD%E6%95%B0/"/>
     <id>http://www.iwooto.com/2016/02/04/表值函数和标量函数/</id>
     <published>2016-02-04T12:36:16.000Z</published>
-    <updated>2016-02-04T15:25:22.454Z</updated>
+    <updated>2016-06-20T14:20:20.550Z</updated>
     <content type="html"><![CDATA[<h1 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h1><p>表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表</p>
 <p>标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时，必须将前缀 :: 添加至函数名：<br>SELECT * FROM ::fn_helpcollations()</p>
 <p>存储过程:可包含程序流、逻辑以及对数据库的查询。它们可以接受参数、输出参数、返回单个或多个结果集以及返回值。</p>
