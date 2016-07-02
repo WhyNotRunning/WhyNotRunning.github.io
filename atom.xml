@@ -4,7 +4,7 @@
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.iwooto.com/"/>
-  <updated>2016-06-30T14:30:37.788Z</updated>
+  <updated>2016-07-02T02:32:17.441Z</updated>
   <id>http://www.iwooto.com/</id>
   
   <author>
@@ -15,11 +15,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[eclipse常见问题]]></title>
+    <link href="http://www.iwooto.com/2016/07/02/eclipse%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+    <id>http://www.iwooto.com/2016/07/02/eclipse常见问题/</id>
+    <published>2016-07-02T02:11:02.000Z</published>
+    <updated>2016-07-02T02:32:17.441Z</updated>
+    <content type="html"><![CDATA[<h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><h1 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h1><p>1.Can not find the tag library descriptor for “<a href="http://shiro.apache.org/tags" target="_blank" rel="external">http://shiro.apache.org/tags</a>“<br>问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，<br>找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，<br>即使已经引入了jar包，确没有从新检查）<br><a id="more"></a></p>
+<h1 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h1><p>1.Project build error: Unknown packaging: bundle<br>问题解决：把maven-bundle-plugin插件移动到pluginManagement标签外，<br>Maven 只会在build-&gt;plugins下查询改jar包<br>2.Multiple annotations found at this line:</p>
+<pre><code>- Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:compile (execution: default, phase: process-classes)
+- Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:test-compile (execution: default, phase: process-classes)
+</code></pre><p>问题解决：在build与plugins之间添加pluginManagment标签</p>
+<p>pluginManagement是表示插件声明，即你在项目中的pluginManagement下声明了插件，maven不会加载该插件，pluginManagement声明可以被继承。</p>
+<p>pluginManagement的一个使用案例是当有父子项目的时候，父项目中可以利用pluginManagement声明子项目中需要用到的插件，之后，当某个或者某几个子项目需要加载该插件的时候，就可以在子项目中plugins节点只配置 groupId 和 artifactId就可以完成插件的引用。<br>pluginManagement主要是为了统一管理插件，确保所有子项目使用的插件版本保持一致，类似的还是dependencies和dependencyManagement。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><h1 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h1><p>1.Can not find the tag library descriptor for “<a href="http://shiro.apache.org/tags">http://shiro.apache.org/tags</a>“<br>问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，<br>找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，<br>即使已经引入了jar包，确没有从新检查）<br>]]>
+    
+    </summary>
+    
+      <category term="eclipse" scheme="http://www.iwooto.com/tags/eclipse/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[git命令]]></title>
     <link href="http://www.iwooto.com/2016/06/30/git%E5%91%BD%E4%BB%A4/"/>
     <id>http://www.iwooto.com/2016/06/30/git命令/</id>
     <published>2016-06-30T14:21:54.000Z</published>
-    <updated>2016-06-30T14:30:37.788Z</updated>
+    <updated>2016-06-30T14:33:23.208Z</updated>
     <content type="html"><![CDATA[<h1 id="u751F_u6210ssh_key"><a href="#u751F_u6210ssh_key" class="headerlink" title="生成ssh key"></a>生成ssh key</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? Y</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Passphrases <span class="keyword">do</span> not match. Try again.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
 <a id="more"></a>
 <p>把生成的id_rsa.pub添加到github上</p>

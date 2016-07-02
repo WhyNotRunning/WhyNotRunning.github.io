@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="sql," />
+  <meta name="keywords" content="eclipse," />
 
 
 
@@ -59,19 +59,16 @@
 
 
 
-<meta name="description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
-标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
+<meta name="description" content="javajsp1.Can not find the tag library descriptor for “http://shiro.apache.org/tags“问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，即使已经引入了jar包，确没有从新检查）">
 <meta property="og:type" content="article">
-<meta property="og:title" content="表值函数和标量函数">
-<meta property="og:url" content="http://www.iwooto.com/2016/02/04/表值函数和标量函数/index.html">
+<meta property="og:title" content="eclipse常见问题">
+<meta property="og:url" content="http://www.iwooto.com/2016/07/02/eclipse常见问题/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
-标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
-<meta property="og:updated_time" content="2016-06-20T14:20:20.550Z">
+<meta property="og:description" content="javajsp1.Can not find the tag library descriptor for “http://shiro.apache.org/tags“问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，即使已经引入了jar包，确没有从新检查）">
+<meta property="og:updated_time" content="2016-07-02T02:32:17.441Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="表值函数和标量函数">
-<meta name="twitter:description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
-标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
+<meta name="twitter:title" content="eclipse常见问题">
+<meta name="twitter:description" content="javajsp1.Can not find the tag library descriptor for “http://shiro.apache.org/tags“问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，即使已经引入了jar包，确没有从新检查）">
 
 
 
@@ -89,7 +86,7 @@
   };
 </script>
 
-  <title> 表值函数和标量函数 | pangyalin的博客 </title>
+  <title> eclipse常见问题 | pangyalin的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -209,7 +206,7 @@
             
             
               
-                表值函数和标量函数
+                eclipse常见问题
               
             
           </h1>
@@ -221,8 +218,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-04T20:36:16+08:00" content="2016-02-04">
-              2016-02-04
+            <time itemprop="dateCreated" datetime="2016-07-02T10:11:02+08:00" content="2016-07-02">
+              2016-07-02
             </time>
           </span>
 
@@ -248,10 +245,13 @@
       
 
       
-        <h1 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h1><p>表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表</p>
-<p>标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时，必须将前缀 :: 添加至函数名：<br>SELECT * FROM ::fn_helpcollations()</p>
-<p>存储过程:可包含程序流、逻辑以及对数据库的查询。它们可以接受参数、输出参数、返回单个或多个结果集以及返回值。</p>
-<p>函数与存储过程本质上没区别。只是函数有如：只能返回一个变量的限制。而存储过程可以返回多个。而函数是可以嵌入在sql中使用的,可以在select中调用，而存储过程不行。执行的本质都一样。函数限制比较多，比如不能用临时表，只能用表变量．还有一些函数都不可用等等．而存储过程的限制相对就比较少<br><a href="http://knowsky.com/534162.html" target="_blank" rel="external">转载地址</a></p>
+        <h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><h1 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h1><p>1.Can not find the tag library descriptor for “<a href="http://shiro.apache.org/tags" target="_blank" rel="external">http://shiro.apache.org/tags</a>“<br>问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，<br>找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，<br>即使已经引入了jar包，确没有从新检查）<br><a id="more"></a></p>
+<h1 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h1><p>1.Project build error: Unknown packaging: bundle<br>问题解决：把maven-bundle-plugin插件移动到pluginManagement标签外，<br>Maven 只会在build-&gt;plugins下查询改jar包<br>2.Multiple annotations found at this line:</p>
+<pre><code>- Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:compile (execution: default, phase: process-classes)
+- Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:test-compile (execution: default, phase: process-classes)
+</code></pre><p>问题解决：在build与plugins之间添加pluginManagment标签</p>
+<p>pluginManagement是表示插件声明，即你在项目中的pluginManagement下声明了插件，maven不会加载该插件，pluginManagement声明可以被继承。</p>
+<p>pluginManagement的一个使用案例是当有父子项目的时候，父项目中可以利用pluginManagement声明子项目中需要用到的插件，之后，当某个或者某几个子项目需要加载该插件的时候，就可以在子项目中plugins节点只配置 groupId 和 artifactId就可以完成插件的引用。<br>pluginManagement主要是为了统一管理插件，确保所有子项目使用的插件版本保持一致，类似的还是dependencies和dependencyManagement。</p>
 
       
     </div>
@@ -266,7 +266,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/sql/" rel="tag">#sql</a>
+            <a href="/tags/eclipse/" rel="tag">#eclipse</a>
           
         </div>
       
@@ -275,17 +275,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/01/css强制换行与不换行/" rel="next" title="css强制换行与不换行">
-                <i class="fa fa-chevron-left"></i> css强制换行与不换行
+              <a href="/2016/06/30/git命令/" rel="next" title="git命令">
+                <i class="fa fa-chevron-left"></i> git命令
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/25/linux文件目录权限/" rel="prev" title="linux文件目录权限">
-                linux文件目录权限 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -404,7 +400,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u57FA_u672C_u89E3_u91CA"><span class="nav-number">1.</span> <span class="nav-text">基本解释</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java"><span class="nav-number">1.</span> <span class="nav-text">java</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jsp"><span class="nav-number">2.</span> <span class="nav-text">jsp</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#maven"><span class="nav-number">3.</span> <span class="nav-text">maven</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
