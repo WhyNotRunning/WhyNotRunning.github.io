@@ -59,23 +59,18 @@
 
 
 
-<meta name="description" content="简介加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库
-加密类型对称加密(DES,3DES,TDEA,RC5,IDEA,BLOWFISH)、非对称加密（rsa），不可逆加密(md5,sha)
-sqlserver中的加密简介在SQL Server2000和以前的版本，是不支持加密的。所有的加密操作都需要在程序中完">
+<meta name="description" content="简介加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="sqlserver加密解密">
 <meta property="og:url" content="http://www.iwooto.com/2016/08/10/sqlserver加密解密/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="简介加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库
-加密类型对称加密(DES,3DES,TDEA,RC5,IDEA,BLOWFISH)、非对称加密（rsa），不可逆加密(md5,sha)
-sqlserver中的加密简介在SQL Server2000和以前的版本，是不支持加密的。所有的加密操作都需要在程序中完">
+<meta property="og:description" content="简介加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库">
+<meta property="og:image" content="http://ww2.sinaimg.cn/mw690/5e4d414cgw1ewsy8m4t7dg20eb0k90tk.gif">
 <meta property="og:image" content="http://www.iwooto.com/images/bg.jpg">
-<meta property="og:updated_time" content="2016-08-22T14:19:59.585Z">
+<meta property="og:updated_time" content="2016-08-22T15:30:52.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sqlserver加密解密">
-<meta name="twitter:description" content="简介加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库
-加密类型对称加密(DES,3DES,TDEA,RC5,IDEA,BLOWFISH)、非对称加密（rsa），不可逆加密(md5,sha)
-sqlserver中的加密简介在SQL Server2000和以前的版本，是不支持加密的。所有的加密操作都需要在程序中完">
+<meta name="twitter:description" content="简介加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库">
 
 
 
@@ -252,11 +247,21 @@ sqlserver中的加密简介在SQL Server2000和以前的版本，是不支持加
       
 
       
-        <h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><p>加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库</p>
+        <h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><p>加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库<br><a id="more"></a></p>
 <h1 id="u52A0_u5BC6_u7C7B_u578B"><a href="#u52A0_u5BC6_u7C7B_u578B" class="headerlink" title="加密类型"></a>加密类型</h1><p>对称加密(DES,3DES,TDEA,RC5,IDEA,BLOWFISH)、非对称加密（rsa），不可逆加密(md5,sha)</p>
 <h1 id="sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB"><a href="#sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB" class="headerlink" title="sqlserver中的加密简介"></a>sqlserver中的加密简介</h1><p>在SQL Server2000和以前的版本，是不支持加密的。所有的加密操作都需要在程序中完成。这导致一个问题，数据库中加密的数据仅仅是对某一特定程序有意义，而另外的程序如果没有对应的解密算法，则数据变得毫无意义。</p>
 <p>到了SQL Server2005，引入了列级加密。使得加密可以对特定列执行，这个过程涉及4对加密和解密的内置函数</p>
-<p>SQL Server 2008时代，则引入的了透明数据加密（TDE），所谓的透明数据加密，就是加密在数据库中进行，但从程序的角度来看就好像没有加密一样，和列级加密不同的是，TDE加密的级别是整个数据库。使用TDE加密的数据库文件或备份在另一个没有证书的实例上是不能附加或恢复的。<br><img src="/images/bg.jpg" alt="ShowImage"> </p>
+<p>SQL Server 2008时代，则引入的了透明数据加密（TDE），所谓的透明数据加密，就是加密在数据库中进行，但从程序的角度来看就好像没有加密一样，和列级加密不同的是，TDE加密的级别是整个数据库。使用TDE加密的数据库文件或备份在另一个没有证书的实例上是不能附加或恢复的。</p>
+<h1 id="SQL_Server_u4E2D_u7684_u52A0_u5BC6_u5C42_u6B21_u7ED3_u6784"><a href="#SQL_Server_u4E2D_u7684_u52A0_u5BC6_u5C42_u6B21_u7ED3_u6784" class="headerlink" title="SQL Server中的加密层次结构"></a>SQL Server中的加密层次结构</h1><p><img src="http://ww2.sinaimg.cn/mw690/5e4d414cgw1ewsy8m4t7dg20eb0k90tk.gif" alt="ShowImage"><br>由图可知，加密是分层级的。每一个数据库实例都拥有一个服务主密钥(Service Master Key),对应图中的橙色部分。这个密钥是整个实例的根密钥，在实例安装的时候自动生成,其本身由Windows提供的数据保护API进行保护(Data Pertection API)，服务主密钥除了为其子节点提供加密服务之外，还用于加密一些实例级别的信息，比如实例的登录名密码或者链接服务器的信息。</p>
+<p>1.创建服务器主秘钥<br>CREATE MASTER KEY ENCRYPTION BY PASSWORD =’Password’</p>
+<p>–创建证书<br>CREATE CERTIFICATE CertTest<br>ENCRYPTION BY PASSWORD = ‘Password’<br>with SUBJECT = ‘CertificateTest’<br>GO<br>–创建非对称密钥<br>CREATE ASYMMETRIC KEY AsymmetricTest<br>WITH ALGORITHM = RSA_2048<br>ENCRYPTION BY PASSWORD = ‘Password’;<br>GO<br>–创建对称密钥<br>CREATE SYMMETRIC KEY SymmetricTest<br>WITH ALGORITHM = AES_256<br>ENCRYPTION BY PASSWORD = ‘Password’;<br>GO</p>
+<h1 id="SQL_Server_u4E2D_u7684_u6570_u636E_u5217_u52A0_u5BC6_28Column-level_Encryption_29"><a href="#SQL_Server_u4E2D_u7684_u6570_u636E_u5217_u52A0_u5BC6_28Column-level_Encryption_29" class="headerlink" title="SQL Server中的数据列加密(Column-level Encryption)"></a>SQL Server中的数据列加密(Column-level Encryption)</h1><p>SQL Server在2005引入了列加密的功能。使得可以利用证书，对称密钥和非对称密钥对特定的列进行加密。在具体的实现上，根据加密解密的方式不同，内置了4对函数用于加密解密:</p>
+<p>EncryptByCert() 和DecryptByCert()—利用证书对数据进行加密和解密<br>EncryptByAsymKey() and DecryptByAsymKey()—利用非对称密钥对数据进行加密和解密<br>EncryptByKey() and DecryptByKey()—利用对称密钥对数据进行加密和解密<br>EncryptByPassphrase() and DecryptByPassphrase()—利用密码字段产生对称密钥对数据进行加密和解密<br>因此，加密数据列使用起来相对比较繁琐，需要程序在代码中显式的调用SQL Server内置的加密和解密函数，这需要额外的工作量，并且，加密或解密的列首先需要转换成Varbinary类型。</p>
+<p>例子：<br>create table test(<br>id varchar(32) not null,<br>name varchar(50) not null,<br>password varchar(2048) null<br>)</p>
+<p>–插入加密后的密码到数据库当中(证书加密)<br>insert into test (id,name,password)<br>values(‘1’,’test’,ENCRYPTBYCERT(Cert_ID(‘CertificateTest’),convert(varchar(2048),’test’)))<br>–查询解密后的密码(证书解密)<br>select convert(varchar(50),DECRYPTBYCERT(Cert_ID(‘CertificateTest’),password,’Password’) as password from test</p>
+<p>–插入加密后的密码到数据库当中(非对称秘钥)<br>insert into test (id,name,password)<br>values(‘1’,’test’,EncryptByAsymKey(ASYMKEY_ID(‘AsymmetricTest’),convert(varchar(2048),’test’)))<br>–查询解密后的密码(非对称秘钥)<br>select convert(varchar(50),DecryptByAsymKey(ASYMKEY_ID(‘AsymmetricTest’),password,’Password’) as password from test</p>
+<p>–插入加密后的密码到数据库当中(对称秘钥)<br>insert into test (id,name,password)<br>values(‘1’,’test’,EncryptByKey(Key_GUID(‘SymmetricTest’),’test’))<br>–查询解密后的密码(对称秘钥)<br>select convert(varchar(50),DecryptByKey(password)) as password from test</p>
+<p>参考地址<br><a href="http://blog.jobbole.com/92451/" target="_blank" rel="external">细说SQL Server中的加密</a><br><a href="https://dotblogs.com.tw/dc690216/2009/09/10/10559" target="_blank" rel="external">SQL - SQL Server 2008 加密與解密實作心得 (一)</a><br><a href="https://dotblogs.com.tw/dc690216/2009/09/10/10558" target="_blank" rel="external">SQL - SQL Server 2008 加密與解密實作心得 (二)</a><br><a href="http://www.51testing.com/html/50/n-832450.html" target="_blank" rel="external">T-SQL问题解决集锦——数据加解密</a><br><img src="/images/bg.jpg" alt="ShowImage"> </p>
 
       
     </div>
@@ -287,6 +292,10 @@ sqlserver中的加密简介在SQL Server2000和以前的版本，是不支持加
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/22/iis-添加ssl证书/" rel="prev" title="iis 添加ssl证书">
+                iis 添加ssl证书 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -354,7 +363,7 @@ sqlserver中的加密简介在SQL Server2000和以前的版本，是不支持加
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">21</span>
+              <span class="site-state-item-count">24</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -405,7 +414,7 @@ sqlserver中的加密简介在SQL Server2000和以前的版本，是不支持加
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u52A0_u5BC6_u7C7B_u578B"><span class="nav-number">2.</span> <span class="nav-text">加密类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB"><span class="nav-number">3.</span> <span class="nav-text">sqlserver中的加密简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u7B80_u4ECB"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u52A0_u5BC6_u7C7B_u578B"><span class="nav-number">2.</span> <span class="nav-text">加密类型</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB"><span class="nav-number">3.</span> <span class="nav-text">sqlserver中的加密简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL_Server_u4E2D_u7684_u52A0_u5BC6_u5C42_u6B21_u7ED3_u6784"><span class="nav-number">4.</span> <span class="nav-text">SQL Server中的加密层次结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SQL_Server_u4E2D_u7684_u6570_u636E_u5217_u52A0_u5BC6_28Column-level_Encryption_29"><span class="nav-number">5.</span> <span class="nav-text">SQL Server中的数据列加密(Column-level Encryption)</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
