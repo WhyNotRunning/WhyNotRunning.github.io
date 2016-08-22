@@ -208,6 +208,99 @@
             
               
                 
+                <a class="post-title-link" href="/2016/08/10/sqlserver加密解密/" itemprop="url">
+                  sqlserver加密解密
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-10T21:17:53+08:00" content="2016-08-10">
+              2016-08-10
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><p>加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库</p>
+<h1 id="u52A0_u5BC6_u7C7B_u578B"><a href="#u52A0_u5BC6_u7C7B_u578B" class="headerlink" title="加密类型"></a>加密类型</h1><p>对称加密(DES,3DES,TDEA,RC5,IDEA,BLOWFISH)、非对称加密（rsa），不可逆加密(md5,sha)</p>
+<h1 id="sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB"><a href="#sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB" class="headerlink" title="sqlserver中的加密简介"></a>sqlserver中的加密简介</h1><p>在SQL Server2000和以前的版本，是不支持加密的。所有的加密操作都需要在程序中完成。这导致一个问题，数据库中加密的数据仅仅是对某一特定程序有意义，而另外的程序如果没有对应的解密算法，则数据变得毫无意义。</p>
+<p>到了SQL Server2005，引入了列级加密。使得加密可以对特定列执行，这个过程涉及4对加密和解密的内置函数</p>
+<p>SQL Server 2008时代，则引入的了透明数据加密（TDE），所谓的透明数据加密，就是加密在数据库中进行，但从程序的角度来看就好像没有加密一样，和列级加密不同的是，TDE加密的级别是整个数据库。使用TDE加密的数据库文件或备份在另一个没有证书的实例上是不能附加或恢复的。<br><img src="/images/bg.jpg" alt="ShowImage"> </p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/07/02/eclipse常见问题/" itemprop="url">
                   eclipse常见问题
                 </a>
@@ -1016,99 +1109,11 @@
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/03/21/websocket/" itemprop="url">
-                  websocket
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-03-21T23:20:55+08:00" content="2016-03-21">
-              2016-03-21
-            </time>
-          </span>
-
-          
-
-          
-            
-          
-
-          
-
-          
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="u4E00_u3001tomcat_u4E2Dwebsocket-jar_u7F16_u5199_u7684websocket"><a href="#u4E00_u3001tomcat_u4E2Dwebsocket-jar_u7F16_u5199_u7684websocket" class="headerlink" title="一、tomcat中websocket.jar编写的websocket"></a>一、tomcat中websocket.jar编写的websocket</h1><h1 id="u4E8C_u3001springMVC4-0_u4EE5_u540E_u7248_u672C_u81EA_u5E26_u7684websocket"><a href="#u4E8C_u3001springMVC4-0_u4EE5_u540E_u7248_u672C_u81EA_u5E26_u7684websocket" class="headerlink" title="二、springMVC4.0以后版本自带的websocket"></a>二、springMVC4.0以后版本自带的websocket</h1>
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1149,7 +1154,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

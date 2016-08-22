@@ -65,7 +65,7 @@
 <meta property="og:url" content="http://www.iwooto.com/2016/07/02/eclipse常见问题/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
 <meta property="og:description" content="javajsp1.Can not find the tag library descriptor for “http://shiro.apache.org/tags“问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，即使已经引入了jar包，确没有从新检查）">
-<meta property="og:updated_time" content="2016-07-02T02:32:17.441Z">
+<meta property="og:updated_time" content="2016-07-07T15:15:06.054Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="eclipse常见问题">
 <meta name="twitter:description" content="javajsp1.Can not find the tag library descriptor for “http://shiro.apache.org/tags“问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，即使已经引入了jar包，确没有从新检查）">
@@ -252,6 +252,7 @@
 </code></pre><p>问题解决：在build与plugins之间添加pluginManagment标签</p>
 <p>pluginManagement是表示插件声明，即你在项目中的pluginManagement下声明了插件，maven不会加载该插件，pluginManagement声明可以被继承。</p>
 <p>pluginManagement的一个使用案例是当有父子项目的时候，父项目中可以利用pluginManagement声明子项目中需要用到的插件，之后，当某个或者某几个子项目需要加载该插件的时候，就可以在子项目中plugins节点只配置 groupId 和 artifactId就可以完成插件的引用。<br>pluginManagement主要是为了统一管理插件，确保所有子项目使用的插件版本保持一致，类似的还是dependencies和dependencyManagement。</p>
+<h1 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h1><p>javaBean中有一个属性为List<long><br>mybatis的Mapper中baseResultMap该属性对应的类型为VARCHAR<br>导致一直报错</long></p>
 
       
     </div>
@@ -282,6 +283,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/08/10/sqlserver加密解密/" rel="prev" title="sqlserver加密解密">
+                sqlserver加密解密 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -349,7 +354,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">20</span>
+              <span class="site-state-item-count">21</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -400,7 +405,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java"><span class="nav-number">1.</span> <span class="nav-text">java</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jsp"><span class="nav-number">2.</span> <span class="nav-text">jsp</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#maven"><span class="nav-number">3.</span> <span class="nav-text">maven</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#java"><span class="nav-number">1.</span> <span class="nav-text">java</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#jsp"><span class="nav-number">2.</span> <span class="nav-text">jsp</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#maven"><span class="nav-number">3.</span> <span class="nav-text">maven</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mybatis"><span class="nav-number">4.</span> <span class="nav-text">mybatis</span></a></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.iwooto.com/"/>
-  <updated>2016-07-02T02:32:17.441Z</updated>
+  <updated>2016-08-22T14:19:59.585Z</updated>
   <id>http://www.iwooto.com/</id>
   
   <author>
@@ -15,11 +15,31 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[sqlserver加密解密]]></title>
+    <link href="http://www.iwooto.com/2016/08/10/sqlserver%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/"/>
+    <id>http://www.iwooto.com/2016/08/10/sqlserver加密解密/</id>
+    <published>2016-08-10T13:17:53.000Z</published>
+    <updated>2016-08-22T14:19:59.585Z</updated>
+    <content type="html"><![CDATA[<h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><p>加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库</p>
+<h1 id="u52A0_u5BC6_u7C7B_u578B"><a href="#u52A0_u5BC6_u7C7B_u578B" class="headerlink" title="加密类型"></a>加密类型</h1><p>对称加密(DES,3DES,TDEA,RC5,IDEA,BLOWFISH)、非对称加密（rsa），不可逆加密(md5,sha)</p>
+<h1 id="sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB"><a href="#sqlserver_u4E2D_u7684_u52A0_u5BC6_u7B80_u4ECB" class="headerlink" title="sqlserver中的加密简介"></a>sqlserver中的加密简介</h1><p>在SQL Server2000和以前的版本，是不支持加密的。所有的加密操作都需要在程序中完成。这导致一个问题，数据库中加密的数据仅仅是对某一特定程序有意义，而另外的程序如果没有对应的解密算法，则数据变得毫无意义。</p>
+<p>到了SQL Server2005，引入了列级加密。使得加密可以对特定列执行，这个过程涉及4对加密和解密的内置函数</p>
+<p>SQL Server 2008时代，则引入的了透明数据加密（TDE），所谓的透明数据加密，就是加密在数据库中进行，但从程序的角度来看就好像没有加密一样，和列级加密不同的是，TDE加密的级别是整个数据库。使用TDE加密的数据库文件或备份在另一个没有证书的实例上是不能附加或恢复的。<br><img src="/images/bg.jpg" alt="ShowImage"> </p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><p>加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设]]>
+    </summary>
+    
+      <category term="sqlserver" scheme="http://www.iwooto.com/tags/sqlserver/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[eclipse常见问题]]></title>
     <link href="http://www.iwooto.com/2016/07/02/eclipse%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
     <id>http://www.iwooto.com/2016/07/02/eclipse常见问题/</id>
     <published>2016-07-02T02:11:02.000Z</published>
-    <updated>2016-07-02T02:32:17.441Z</updated>
+    <updated>2016-07-07T15:15:06.054Z</updated>
     <content type="html"><![CDATA[<h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><h1 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h1><p>1.Can not find the tag library descriptor for “<a href="http://shiro.apache.org/tags" target="_blank" rel="external">http://shiro.apache.org/tags</a>“<br>问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，<br>找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，<br>即使已经引入了jar包，确没有从新检查）<br><a id="more"></a></p>
 <h1 id="maven"><a href="#maven" class="headerlink" title="maven"></a>maven</h1><p>1.Project build error: Unknown packaging: bundle<br>问题解决：把maven-bundle-plugin插件移动到pluginManagement标签外，<br>Maven 只会在build-&gt;plugins下查询改jar包<br>2.Multiple annotations found at this line:</p>
 <pre><code>- Plugin execution not covered by lifecycle configuration: org.codehaus.mojo:aspectj-maven-plugin:1.0:compile (execution: default, phase: process-classes)
@@ -27,6 +47,7 @@
 </code></pre><p>问题解决：在build与plugins之间添加pluginManagment标签</p>
 <p>pluginManagement是表示插件声明，即你在项目中的pluginManagement下声明了插件，maven不会加载该插件，pluginManagement声明可以被继承。</p>
 <p>pluginManagement的一个使用案例是当有父子项目的时候，父项目中可以利用pluginManagement声明子项目中需要用到的插件，之后，当某个或者某几个子项目需要加载该插件的时候，就可以在子项目中plugins节点只配置 groupId 和 artifactId就可以完成插件的引用。<br>pluginManagement主要是为了统一管理插件，确保所有子项目使用的插件版本保持一致，类似的还是dependencies和dependencyManagement。</p>
+<h1 id="mybatis"><a href="#mybatis" class="headerlink" title="mybatis"></a>mybatis</h1><p>javaBean中有一个属性为List<long><br>mybatis的Mapper中baseResultMap该属性对应的类型为VARCHAR<br>导致一直报错</long></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><h1 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h1><p>1.Can not find the tag library descriptor for “<a href="http://shiro.apache.org/tags">http://shiro.apache.org/tags</a>“<br>问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，<br>找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，<br>即使已经引入了jar包，确没有从新检查）<br>]]>
@@ -524,28 +545,6 @@
     </summary>
     
       <category term="hexo" scheme="http://www.iwooto.com/tags/hexo/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[再次认识js的立即执行函数]]></title>
-    <link href="http://www.iwooto.com/2016/01/10/%E9%87%8D%E6%96%B0%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://www.iwooto.com/2016/01/10/重新搭建博客/</id>
-    <published>2016-01-10T14:14:00.000Z</published>
-    <updated>2016-01-30T05:15:43.038Z</updated>
-    <content type="html"><![CDATA[<h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式<a id="more"></a><br>错误实例1:意图声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">function</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：函数必须有函数名</p>
-<p>错误实例2：声明一个函数，并且立即调用改函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fun</span></span>()&#123;&#125;()</span><br></pre></td></tr></table></figure></p>
-<p>错误原因：最后面的那一组小括号被当做分组运算符，并没有被解析成调用fun函数</p>
-<p>正确实例：通过常用的运算符如()、！、—、+、typeof等放在匿名函数前，<br>让解析器把后面的函数当做表达式执行再通过()调用该函数<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">&#125;())</span><br></pre></td></tr></table></figure></p>
-<p>我的<a href="http://www.iwooto.com">博客地址</a></p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<h3 id="u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3"><a href="#u4ECEES3_u662F_u5982_u4F55_u89E3_u6790js_u7684_u8FC7_u7A0B_u7406_u89E3" class="headerlink" title="从ES3是如何解析js的过程理解"></a>从ES3是如何解析js的过程理解</h3><p>1.首先函数的正确声明结构是怎样的<br>2.表达式的声明方式，和如何构成表达式]]>
-    
-    </summary>
-    
-      <category term="js" scheme="http://www.iwooto.com/tags/js/"/>
     
   </entry>
   
