@@ -1,0 +1,713 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="vi," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pangyalin的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.jpg?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="进入vi的命令vi filename :打开或新建文件，并将光标置于第一行首vi +n filename ：打开文件，并将光标置于第n行首vi + filename ：打开文件，并将光标置于最后一行首vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filenamevi filen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vi命令">
+<meta property="og:url" content="http://www.iwooto.com/2016/08/30/vi命令/index.html">
+<meta property="og:site_name" content="pangyalin的博客">
+<meta property="og:description" content="进入vi的命令vi filename :打开或新建文件，并将光标置于第一行首vi +n filename ：打开文件，并将光标置于第n行首vi + filename ：打开文件，并将光标置于最后一行首vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filenamevi filen">
+<meta property="og:updated_time" content="2016-11-17T15:38:31.470Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vi命令">
+<meta name="twitter:description" content="进入vi的命令vi filename :打开或新建文件，并将光标置于第一行首vi +n filename ：打开文件，并将光标置于第n行首vi + filename ：打开文件，并将光标置于最后一行首vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filenamevi filen">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> vi命令 | pangyalin的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pangyalin的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">pangyalin的博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                vi命令
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-08-30T20:21:54+08:00" content="2016-08-30">
+              2016-08-30
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="u8FDB_u5165vi_u7684_u547D_u4EE4"><a href="#u8FDB_u5165vi_u7684_u547D_u4EE4" class="headerlink" title="进入vi的命令"></a>进入vi的命令</h1><p>vi filename :打开或新建文件，并将光标置于第一行首<br>vi +n filename ：打开文件，并将光标置于第n行首<br>vi + filename ：打开文件，并将光标置于最后一行首<br>vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处<br>vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename<br>vi filename….filename ：打开多个文件，依次进行编辑 </p>
+<h1 id="u79FB_u52A8_u5149_u6807_u7C7B_u547D_u4EE4"><a href="#u79FB_u52A8_u5149_u6807_u7C7B_u547D_u4EE4" class="headerlink" title="移动光标类命令"></a>移动光标类命令</h1><p>h ：光标左移一个字符<br>l ：光标右移一个字符<br>space：光标右移一个字符<br>Backspace：光标左移一个字符<br>k或Ctrl+p：光标上移一行<br>j或Ctrl+n ：光标下移一行<br>Enter ：光标下移一行<br>w或W ：光标右移一个字至字首<br>b或B ：光标左移一个字至字首<br>e或E ：光标右移一个字至字尾<br>) ：光标移至句尾<br>( ：光标移至句首<br>}：光标移至段落开头<br>{：光标移至段落结尾<br>nG：光标移至第n行首<br>n+：光标下移n行<br>n-：光标上移n行<br>n$：光标移至第n行尾<br>H ：光标移至屏幕顶行<br>M ：光标移至屏幕中间行<br>L ：光标移至屏幕最后行<br>0：（注意是数字零）光标移至当前行首<br>$：光标移至当前行尾 </p>
+<h1 id="u5C4F_u5E55_u7FFB_u6EDA_u7C7B_u547D_u4EE4"><a href="#u5C4F_u5E55_u7FFB_u6EDA_u7C7B_u547D_u4EE4" class="headerlink" title="屏幕翻滚类命令"></a>屏幕翻滚类命令</h1><p>Ctrl+u：向文件首翻半屏<br>Ctrl+d：向文件尾翻半屏<br>Ctrl+f：向文件尾翻一屏<br>Ctrl＋b；向文件首翻一屏<br>nz：将第n行滚至屏幕顶部，不指定n时将当前行滚至屏幕顶部。 </p>
+<h1 id="u63D2_u5165_u6587_u672C_u7C7B_u547D_u4EE4"><a href="#u63D2_u5165_u6587_u672C_u7C7B_u547D_u4EE4" class="headerlink" title="插入文本类命令"></a>插入文本类命令</h1><p>i ：在光标前<br>I ：在当前行首<br>a：光标后<br>A：在当前行尾<br>o：在当前行之下新开一行<br>O：在当前行之上新开一行<br>r：替换当前字符<br>R：替换当前字符及其后的字符，直至按ESC键<br>s：从当前光标位置处开始，以输入的文本替代指定数目的字符<br>S：删除指定数目的行，并以所输入文本代替之<br>ncw或nCW：修改指定数目的字<br>nCC：修改指定数目的行 </p>
+<h1 id="u5728_u6587_u4EF6_u4E2D_u4FEE_u6539_u6587_u672C"><a href="#u5728_u6587_u4EF6_u4E2D_u4FEE_u6539_u6587_u672C" class="headerlink" title="在文件中修改文本"></a>在文件中修改文本</h1><p>cw 仅仅修改光标处的单词（删除单词，然后进入追加模式中，以在被删除单词的位置添加文本）<br>s(小写) 替换单个字符<br>S(大写) 替换整行文本<br>cc 替换整行文本(同S)<br>r 用输入的下一个字符替代当前光标处的字符，并自动返回到命令模式<br>R 将编辑器放到覆盖模式，用输入的字符来逐个替换光标处的字符<br>C(大写) 修改行上从光标到行末之间的文本<br>ct# 修改行上从光标到前向第1个目标字符之间的文本。例如ctY将删除当前行上从光标到向前第1个字符Y之间的所有文本，并进入追加模式以在删除文本的位置添加文本<br>cf# 修改行上从光标到前向第1个目标字符之间的文本（包括目标字符）。例如cfY将删除当前行上从光标到向前第1个字符Y之间（包括Y）的所有文本，并进入追加模式以在删除文本的位置添加文本<br>cT# 修改行上从光标到后向第1个目标字符之间的文本。例如cTY将删除当前行上从光标到向后第1个字符Y之间的所有文本，并进入追加模式以在删除文本的位置添加文本<br>cF# 修改行上从光标到后向第1个目标字符之间的文本（包括目标字符）。例如cFY将删除当前行上从光标到向后第1个字符Y之间（包括Y）的所有文本，并进入追加模式以在删除文本的位置添加文本</p>
+<h1 id="u5220_u9664_u547D_u4EE4"><a href="#u5220_u9664_u547D_u4EE4" class="headerlink" title="删除命令"></a>删除命令</h1><p>ndw或ndW：删除光标处开始及其后的n-1个字<br>do：删至行首<br>d$：删至行尾<br>ndd：删除当前行及其后n-1行<br>x或X：删除一个字符，x删除光标后的，而X删除光标前的<br>dd 删除当前光标所有的文本行 </p>
+<p>#dd 删除＃行文本<br>dw 从文本中删除一个单词 </p>
+<p>#dw 从文本中删除＃个单词<br>x 删除光标所在的一个字符 </p>
+<p>#x 从文本中删除＃个字符<br>D 删除当前行上光标后面的部分<br>:#,#d 例如，:12,37d 将删除第12～37行之间的所有文本，包括第12和37行<br>撤销命令<br>u 撤销。恢复最近一次的文本修改操作，即使已经移动了光标。在Linux系统中，再次使用撤销命令将恢复更前一次的文本修改操作。在BSD的vi中，第2次撤销操作将撤销第一次撤销操作，恢复第1次撤销前修改的文本<br>:redo 在Linux系统中，取消撤销操作恢复文本修改。在标准的UNIX系统中，第2个u命令取消第1个u命令，结果就是一个“redo”<br>U 如果在修改后还没有将光标移出当前行，则可以撤销对当前行进行的所有的文本修改 </p>
+<h1 id="u641C_u7D22_u53CA_u66FF_u6362_u547D_u4EE4"><a href="#u641C_u7D22_u53CA_u66FF_u6362_u547D_u4EE4" class="headerlink" title="搜索及替换命令"></a>搜索及替换命令</h1><p>/pattern：从光标开始处向文件尾搜索pattern<br>?pattern：从光标开始处向文件首搜索pattern<br>n：在同一方向重复上一次搜索命令<br>N：在反方向上重复上一次搜索命令<br>：s/p1/p2/g：将当前行中所有p1均用p2替代<br>：n1,n2s/p1/p2/g：将第n1至n2行中所有p1均用p2替代<br>：g/p1/s//p2/g：将文件中所有p1均用p2替换 </p>
+<h1 id="u9009_u9879_u8BBE_u7F6E"><a href="#u9009_u9879_u8BBE_u7F6E" class="headerlink" title="选项设置"></a>选项设置</h1><p>all：列出所有选项设置情况<br>term：设置终端类型<br>ignorance：在搜索中忽略大小写<br>list：显示制表位(Ctrl+I)和行尾标志（$)<br>number：显示行号<br>report：显示由面向行的命令修改过的数目<br>terse：显示简短的警告信息<br>warn：在转到别的文件时若没保存当前文件则显示NO write信息<br>nomagic：允许在搜索模式中，使用前面不带“\”的特殊字符<br>nowrapscan：禁止vi在搜索到达文件两端时，又从另一端开始<br>mesg：允许vi显示其他用户用write写到自己终端上的信息 </p>
+<h1 id="u6700_u540E_u884C_u65B9_u5F0F_u547D_u4EE4"><a href="#u6700_u540E_u884C_u65B9_u5F0F_u547D_u4EE4" class="headerlink" title="最后行方式命令"></a>最后行方式命令</h1><p>：n1,n2 co n3：将n1行到n2行之间的内容拷贝到第n3行下<br>：n1,n2 m n3：将n1行到n2行之间的内容移至到第n3行下<br>：n1,n2 d ：将n1行到n2行之间的内容删除<br>：w ：保存当前文件<br>：e filename：打开文件filename进行编辑<br>：x：保存当前文件并退出<br>：q：退出vi<br>：q!：不保存文件并退出vi<br>：!command：执行shell命令command<br>：n1,n2 w!command：将文件中n1行至n2行的内容作为command的输入并执行之，若不指定n1，n2，则表示将整个文件内容作为command的输入<br>：r!command：将命令command的输出结果放到当前行 </p>
+<h1 id="u5BC4_u5B58_u5668_u64CD_u4F5C"><a href="#u5BC4_u5B58_u5668_u64CD_u4F5C" class="headerlink" title="寄存器操作"></a>寄存器操作</h1><p>“?nyy：将当前行及其下n行的内容保存到寄存器？中，其中?为一个字母，n为一个数字<br>“?nyw：将当前行及其下n个字保存到寄存器？中，其中?为一个字母，n为一个数字<br>“?nyl：将当前行及其下n个字符保存到寄存器？中，其中?为一个字母，n为一个数字<br>“?p：取出寄存器？中的内容并将其放到光标位置处。这里？可以是一个字母，也可以是一个数字<br>ndd：将当前行及其下共n行文本删除，并将所删内容放到1号删除寄存器中。</p>
+<h1 id="VI_u7684_u4F7F_u7528"><a href="#VI_u7684_u4F7F_u7528" class="headerlink" title="VI的使用"></a>VI的使用</h1><hr>
+<p>一、插入文本<br>┌──┬────────────┐<br>│命令│描述　　　　　　　　　　│<br>├──┼────────────┤<br>│i 　│在当前字符前插入文本　　│<br>├──┼────────────┤<br>│I 　│在行首插入文本 　　　 　│<br>├──┼────────────┤<br>│a 　│在当前字符后添加文本　　│<br>├──┼────────────┤<br>│A 　│在行末添加文本　　　　　│<br>├──┼────────────┤<br>│o 　│在当前行后面插入一空行　│<br>├──┼────────────┤<br>│O 　│在当前行前面插入一空行　│<br>├──┼────────────┤<br>│R 　│以改写方式输入文本　　　│<br>└──┴────────────┘<br>二、移动光标<br>┌─────┬───────────┐<br>│命令　　　│描述　　　　　　　　　│<br>├─────┼───────────┤<br>│j或下箭头 │向下移动一行　　　　　│<br>├─────┼───────────┤<br>│k或上箭头 │向上移动一行　　　　　│<br>├─────┼───────────┤<br>│h或左箭头 │左移一个字符　　　　　│<br>├─────┼───────────┤<br>│l或右箭头 │右移一个字符　　　　　│<br>├─────┼───────────┤<br>│w 　　　　│右移一个词　　　　　　│<br>├─────┼───────────┤<br>│W 　　　　│右移一个以空格分隔的词│<br>├─────┼───────────┤<br>│b 　　　　│左移一个词　　　　　　│<br>├─────┼───────────┤<br>│B 　　　　│左移一个以空格分隔的词│<br>├─────┼───────────┤<br>│0 　　　　│移到行首　　　　　　　│<br>│Ctrl-F　　│向前翻页　　　　　　　│<br>├─────┼───────────┤<br>│Ctrl-B　　│向后翻页　　　　　　　│<br>├─────┼───────────┤<br>│nG　　　　│到第n行 　　　　　　　│<br>├─────┼───────────┤<br>│G 　　　　│到最后一行　　　　　　│<br>└─────┴───────────┘<br>三、替换文本<br>┌─────┬──────┐<br>│命令　　　│描述　　　　│<br>├─────┼──────┤<br>│$ 　　　　│到行尾　　　│<br>├─────┼──────┤<br>│( 　　　　│到句子的开头│<br>├─────┼──────┤<br>│) 　　　　│到句子的末尾│<br>├─────┼──────┤<br>│{　 　　　│到段落的开头│<br>├─────┼──────┤<br>│}　　 　　│到段落的末尾│<br>└─────┴──────┘ </p>
+<p>四、删除文本<br>┌───┬───────────┐<br>│命令　│描述 　　　　　　 　　│<br>├───┼───────────┤<br>│r 　　│替换一个字符 　　　　 │<br>├───┼───────────┤<br>│c 　　│修改文本直到按下Esc健 │<br>├───┼───────────┤<br>│cw　　│修改下一个词 　　　 　│<br>├───┼───────────┤<br>│cnw　 │修改接下来的n个词 　　│<br>└───┴───────────┘<br>五、文本编辑<br>┌──┬──────────────────────┐<br>│命寺│描述　　　　　　　　　　　　　　　　　　　　│<br>├──┼──────────────────────┤<br>│yy　│将一行文本移到缺省缓冲区中 　　　　 　　　　│<br>├──┼──────────────────────┤<br>│yn　│将下一个词移到缺省缓冲区中 　　 　　　　　　│<br>├──┼──────────────────────┤<br>│ynw │将后面的n个词移到缺省缓冲区中　　　　 　　　│<br>├──┼──────────────────────┤<br>│p 　│如果缺省缓冲区中包含一行文本，则在当前　　　│<br>│　　│行后面插入一个空行井将缺省缓冲区中的声　　　│<br>│　　│容粘贴到这一行中；如果缺省缓冲区中包含　　　│<br>│　　│多个词，把这些词粘贴到光标的右边．　　　　　│<br>├──┼──────────────────────┤<br>│P 　│如果缺省缓冲区中包含一行文本，则正当前 　 　│<br>│ 　 │行前面插入一个空行井将缺省缓冲区中的内 　 　│<br>│　　│容粘贴到这一行中；如果缺省缓冲区中包含 　　 │<br>│ 　 │多个词，把这些词粘贴到光标的左边 　 　</p>
+<p>　　│<br>└──┴──────────────────────┘<br>六、保存退出<br>┌───────────┬───────────────┐<br>│命令　　　　　　　　　│描述　　　　　　　　　　　　　│<br>├───────────┼───────────────┤<br>│zz　　　　　　　　　　│保存并退出　　　　　　　　　　│<br>├───────────┼───────────────┤<br>│:w filename　　　　 　│写入文件　　　　　　　　　 　 │<br>├───────────┼───────────────┤<br>│:W　　　　　　　　　　│写入文件　　　　　　　　　　　│<br>├───────────┼───────────────┤<br>│:x　　　　　　　　　　│保存(如果当前文件修改过)并退出│<br>├───────────┼───────────────┤<br>│:q!　　　　　　　　　 │不保存文件，直接退出　　 　　 │<br>├───────────┼───────────────┤<br>│:q　　　　　　　　　　│退出vi　　　　　　　　　　　　│ </p>
+<h1 id="VI_u5E38_u7528_u6280_u5DE7"><a href="#VI_u5E38_u7528_u6280_u5DE7" class="headerlink" title="VI常用技巧"></a>VI常用技巧</h1><p>VI命令可以说是Unix/Linux世界里最常用的编辑文件的命令了，但是因为它的命令集众多，很多人都不习惯使用它，其实您只需要掌握基本命令，然后加以灵活运用，就会发现它的优势，并会逐渐喜欢使用这种方法。本文旨在介绍VI的一些最常用命令和高级应用技巧。 </p>
+<p>一、基本命令介绍 </p>
+<p>1．光标命令 </p>
+<p>k、j、h、l——上、下、左、右光标移动命令。虽然您可以在Linux中使用键盘右边的4个光标键，但是记住这4个命令还是非常有用的。这4个键正是右手在键盘上放置的基本位置。<br>nG——跳转命令。n为行数，该命令立即使光标跳到指定行。<br>Ctrl+G——光标所在位置的行数和列数报告。<br>w、b——使光标向前或向后跳过一个单词。<br>2．编辑命令<br>i、a、r——在光标的前、后以及所在处插入字符命令(i=insert、a=append、r=replace)。<br>cw、dw——改变(置换)/删除光标所在处的单词的命令 (c=change、d=delete)。<br>x、d$、dd——删除一个字符、删除光标所在处到行尾的所有字符以及删除整行的命令。<br>3．查找命令<br>/string、?string——从光标所在处向后或向前查找相应的字符串的命令。<br>4．拷贝复制命令<br>yy、p——拷贝一行到剪贴板或取出剪贴板中内容的命令。 </p>
+<p>二、常见问题及应用技巧 </p>
+<p>1．在一个新文件中读/etc/passwd中的内容，取出用户名部分。<br>vi file<br>:r /etc/passwd 在打开的文件file中光标所在处读入/etc/passwd<br>:%s/:.*//g 删除/etc/passwd中用户名后面的从冒号开始直到行尾的所有部分。<br>您也可以在指定的行号后读入文件内容，例如使用命令“:3r /etc/passwd”从新文件的第3行开始读入 /etc/passwd的所有内容。<br>我们还可以使用以下方法删掉文件中所有的空行及以#开始的注释行。 </p>
+<p>#cat squid.conf.default | grep -v ^$ | grep -v ^# </p>
+<p>2．在打开一个文件编辑后才知道登录的用户对该文件没有写的权限，不能存盘，需要将所做修改存入临时文件。<br>vi file<br>:w /tmp/1 保存所做的所有修改，也可以将其中的某一部分修改保存到临时文件，例如仅仅把第20～59行之间的内容存盘成文件/tmp/1，我们可以键入如下命令。<br>vi file<br>:20,59w /tmp/1 </p>
+<p>3．用VI编辑一个文件，但需要删除大段的内容。<br>首先利用编辑命令“vi file”打开文件，然后将光标移到需要删除的行处按Ctrl+G显示行号，再到结尾处再按Ctrl+G，显示文件结尾的行号。<br>:23,1045d 假定2次得到的行号为23和1045，则把这期间的内容全删除，也可以在要删除的开始行和结束行中用ma、mb命令标记，然后利用“:a,bd”命令删除。 </p>
+<p>4．在整个文件的各行或某几行的行首或行尾加一些字符串。<br>vi file<br>:3,$s/^/some string / 在文件的第一行至最后一行的行首插入“some string”。<br>:%s/$/some string/g 在整个文件每一行的行尾添加“some string”。<br>:%s/string1/string2/g 在整个文件中替换“string1”成“string2”。<br>:3,7s/string1/string2/ 仅替换文件中的第3行到第7行中的“string1”成“string2”。<br>注意: 其中s为substitute，%表示所有行，g表示global。 </p>
+<p>5．同时编辑2个文件，拷贝一个文件中的文本并粘贴到另一个文件中。<br>vi file1 file2<br>yy 在文件1的光标处拷贝所在行<br>:n 切换到文件2 (n=next)<br>p 在文件2的光标所在处粘贴所拷贝的行<br>:n 切换回文件1 </p>
+<p>6．替换文件中的路径。<br>使用命令“:%s#/usr/bin#/bin#g”可以把文件中所有路径/usr/bin换成/bin。也可以使用命令“:%s//usr/bin//bin/g”实现，其中“”是转义字符，表明其后的“/”字符是具有实际意义的字符，不是分隔符。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/vi/" rel="tag">#vi</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/08/27/Aspect实现日志管理/" rel="next" title="Aspect实现日志管理">
+                <i class="fa fa-chevron-left"></i> Aspect实现日志管理
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/09/webpack使用/" rel="prev" title="webpack使用">
+                webpack使用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="pangyalin" />
+          <p class="site-author-name" itemprop="name">pangyalin</p>
+          <p class="site-description motion-element" itemprop="description">pangyalin的博客</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">29</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u8FDB_u5165vi_u7684_u547D_u4EE4"><span class="nav-number">1.</span> <span class="nav-text">进入vi的命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u79FB_u52A8_u5149_u6807_u7C7B_u547D_u4EE4"><span class="nav-number">2.</span> <span class="nav-text">移动光标类命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5C4F_u5E55_u7FFB_u6EDA_u7C7B_u547D_u4EE4"><span class="nav-number">3.</span> <span class="nav-text">屏幕翻滚类命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u63D2_u5165_u6587_u672C_u7C7B_u547D_u4EE4"><span class="nav-number">4.</span> <span class="nav-text">插入文本类命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5728_u6587_u4EF6_u4E2D_u4FEE_u6539_u6587_u672C"><span class="nav-number">5.</span> <span class="nav-text">在文件中修改文本</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5220_u9664_u547D_u4EE4"><span class="nav-number">6.</span> <span class="nav-text">删除命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u641C_u7D22_u53CA_u66FF_u6362_u547D_u4EE4"><span class="nav-number">7.</span> <span class="nav-text">搜索及替换命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u9009_u9879_u8BBE_u7F6E"><span class="nav-number">8.</span> <span class="nav-text">选项设置</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u6700_u540E_u884C_u65B9_u5F0F_u547D_u4EE4"><span class="nav-number">9.</span> <span class="nav-text">最后行方式命令</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#u5BC4_u5B58_u5668_u64CD_u4F5C"><span class="nav-number">10.</span> <span class="nav-text">寄存器操作</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VI_u7684_u4F7F_u7528"><span class="nav-number">11.</span> <span class="nav-text">VI的使用</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#VI_u5E38_u7528_u6280_u5DE7"><span class="nav-number">12.</span> <span class="nav-text">VI常用技巧</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">pangyalin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
