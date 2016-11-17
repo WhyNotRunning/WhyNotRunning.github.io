@@ -1,0 +1,697 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="java cas keytool," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="pangyalin的博客" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.jpg?v=0.5.0" />
+
+
+
+
+
+
+<meta name="description" content="单点登录控制多个应用统一从一个登录界面进行登录。准备材料：    Intellij,jdk1.8,maven    Maven的CAS服务端模板，在这个基础上修改配置文件，作为CAS的服务端    https://codeload.github.com/apereo/cas-overlay-template/zip/master    cas使用数据库读取用户信息    https://apere">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CAS4.2.7单点登录">
+<meta property="og:url" content="http://www.iwooto.com/2016/11/06/CAS4.2.7单点登录/index.html">
+<meta property="og:site_name" content="pangyalin的博客">
+<meta property="og:description" content="单点登录控制多个应用统一从一个登录界面进行登录。准备材料：    Intellij,jdk1.8,maven    Maven的CAS服务端模板，在这个基础上修改配置文件，作为CAS的服务端    https://codeload.github.com/apereo/cas-overlay-template/zip/master    cas使用数据库读取用户信息    https://apere">
+<meta property="og:updated_time" content="2016-11-17T14:16:22.134Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CAS4.2.7单点登录">
+<meta name="twitter:description" content="单点登录控制多个应用统一从一个登录界面进行登录。准备材料：    Intellij,jdk1.8,maven    Maven的CAS服务端模板，在这个基础上修改配置文件，作为CAS的服务端    https://codeload.github.com/apereo/cas-overlay-template/zip/master    cas使用数据库读取用户信息    https://apere">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> CAS4.2.7单点登录 | pangyalin的博客 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">pangyalin的博客</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">pangyalin的博客</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                CAS4.2.7单点登录
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-11-06T22:36:15+08:00" content="2016-11-06">
+              2016-11-06
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>单点登录控制多个应用统一从一个登录界面进行登录。<br>准备材料：<br>    Intellij,jdk1.8,maven<br>    Maven的CAS服务端模板，在这个基础上修改配置文件，作为CAS的服务端<br>    <a href="https://codeload.github.com/apereo/cas-overlay-template/zip/master" target="_blank" rel="external">https://codeload.github.com/apereo/cas-overlay-template/zip/master</a><br>    cas使用数据库读取用户信息<br>    <a href="https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html#database-components" target="_blank" rel="external">https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html#database-components</a></p>
+<p>cas单点登录服务器默认使用HTTPS协议（可以自己修改配置改为HTTP协议），所以服务器要绑定证书，客户端要在jre内导入证书，服务器注册客户端服务器（未认证授权的服务，不允许使用CAS来认证您访问的目标应用），从数据库内读取用户信息，修改cas登录界面<br><a id="more"></a></p>
+<h1 id="u914D_u7F6E_u6D41_u7A0B"><a href="#u914D_u7F6E_u6D41_u7A0B" class="headerlink" title="配置流程"></a>配置流程</h1><p>1.修改host文件<br>根据演示需求，用修改hosts 文件的方法添加域名最简单方便（这个非常重要），<br>在文件 C:\Windows\System32\drivers\etc\hosts 文件中添加三条<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>   server.iwooto.com</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>	app1.iwooto.com</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span> 	app2.iwooto.com</span><br></pre></td></tr></table></figure></p>
+<p>2.生成证书<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -validity <span class="number">3650</span> -genkey -v -alias tomcat -keyalg RSA -keystore D:/tomcat.keystore -dname <span class="string">"CN=server.iwooto.com,OU=iwooto,O=iwooto,L=shanghai,ST=shanghai,C=CN"</span> -storepass <span class="number">123456</span> -keypass <span class="number">123456</span></span><br></pre></td></tr></table></figure></p>
+<p>3.导出crt证书<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -export -alias tomcat -keystore D:\tomcat.keystore -storepass <span class="number">123456</span> -rfc -file D:\tomcat.crt</span><br></pre></td></tr></table></figure></p>
+<p>4.客户端jre导入证书<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//先进入到%JAVA_HOME%\jre\lib\security\目录下-storepass为jre秘钥库的默认密码(changeit)</span><br><span class="line">keytool -import -keystore cacerts -file D:\tomcat.crt -alias tomcat -storepass changeit</span><br></pre></td></tr></table></figure></p>
+<p>5.tomcat配置HTTPS<br>在tomcat文件 conf/server.xml文件找到：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--</span><br><span class="line">    &lt;Connector port=<span class="string">"8443"</span> protocol=<span class="string">"HTTP/1.1"</span> SSLEnabled=<span class="string">"true"</span></span><br><span class="line">               maxThreads=<span class="string">"150"</span> scheme=<span class="string">"https"</span> secure=<span class="string">"true"</span></span><br><span class="line">               clientAuth=<span class="string">"false"</span> sslProtocol=<span class="string">"TLS"</span> /&gt;</span><br><span class="line">    --&gt;</span><br></pre></td></tr></table></figure></p>
+<p>修改成如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;Connector port=<span class="string">"8443"</span> protocol=<span class="string">"org.apache.coyote.http11.Http11Protocol"</span></span><br><span class="line">               maxThreads=<span class="string">"150"</span> SSLEnabled=<span class="string">"true"</span> scheme=<span class="string">"https"</span> secure=<span class="string">"true"</span></span><br><span class="line">               clientAuth=<span class="string">"false"</span> sslProtocol=<span class="string">"TLS"</span> </span><br><span class="line">               keystoreFile=<span class="string">"D:\tomcat.keystore"</span> keystorePass=<span class="string">"123456"</span></span><br><span class="line">                URIEncoding=<span class="string">"UTF-8"</span>/&gt;</span><br></pre></td></tr></table></figure></p>
+<p>参数说明：<br>keystoreFile 创建证书的路径<br>keystorePass 创建证书的密码<br>6.验证HTTPS配置<br>其他按照默认配置不作修改，双击%TOMCAT_HOME%\bin\startup.bat 启动tomcat-cas 验证https访问配置.<br>7.客户端应用的web.xml配置<br>在web.xml中添加以下配置<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ======================== 单点登录开始 ======================== --&gt;</span><br><span class="line">	&lt;!-- 用于单点退出，该过滤器用于实现单点登出功能，可选配置--&gt;</span><br><span class="line">	&lt;listener&gt;</span><br><span class="line">		&lt;listener-class&gt;org.jasig.cas.client.session.SingleSignOutHttpSessionListener&lt;/listener-class&gt;</span><br><span class="line">	&lt;/listener&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 该过滤器用于实现单点登出功能，可选配置。 --&gt;</span><br><span class="line">	&lt;filter&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS Single Sign Out Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;filter-class&gt;org.jasig.cas.client.session.SingleSignOutFilter&lt;/filter-class&gt;</span><br><span class="line">	&lt;/filter&gt;</span><br><span class="line"></span><br><span class="line">	&lt;filter-mapping&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS Single Sign Out Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 该过滤器负责用户的认证工作，必须启用它 --&gt;</span><br><span class="line">	&lt;filter&gt;</span><br><span class="line">		&lt;filter-name&gt;CASFilter&lt;/filter-name&gt;</span><br><span class="line">		&lt;filter-class&gt;org.jasig.cas.client.authentication.AuthenticationFilter&lt;/filter-class&gt;</span><br><span class="line">		&lt;init-param&gt;</span><br><span class="line">			&lt;param-name&gt;casServerLoginUrl&lt;/param-name&gt;</span><br><span class="line">			&lt;param-value&gt;https://server.iwooto.com:<span class="number">8443</span>/cas/login&lt;/param-value&gt;</span><br><span class="line">			&lt;!--这里的server是服务端的IP--&gt;</span><br><span class="line">		&lt;/init-param&gt;</span><br><span class="line">		&lt;init-param&gt;</span><br><span class="line">			&lt;param-name&gt;serverName&lt;/param-name&gt;</span><br><span class="line">			&lt;param-value&gt;http://app1.iwooto.com:<span class="number">8070</span>&lt;/param-value&gt;&lt;!--客户端--&gt;</span><br><span class="line">		&lt;/init-param&gt;</span><br><span class="line">	&lt;/filter&gt;</span><br><span class="line">	&lt;filter-mapping&gt;</span><br><span class="line">		&lt;filter-name&gt;CASFilter&lt;/filter-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- 该过滤器负责对Ticket的校验工作，必须启用它 --&gt;</span><br><span class="line">	&lt;filter&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS Validation Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;filter-class&gt;</span><br><span class="line">			org.jasig.cas.client.validation.Cas20ProxyReceivingTicketValidationFilter&lt;/filter-class&gt;</span><br><span class="line">		&lt;init-param&gt;</span><br><span class="line">			&lt;param-name&gt;casServerUrlPrefix&lt;/param-name&gt;</span><br><span class="line">			&lt;param-value&gt;https://server.iwooto.com:<span class="number">8443</span>/cas/&lt;/param-value&gt;</span><br><span class="line">		&lt;/init-param&gt;</span><br><span class="line">		&lt;init-param&gt;</span><br><span class="line">			&lt;param-name&gt;serverName&lt;/param-name&gt;</span><br><span class="line">			&lt;param-value&gt;http://app1.iwooto.com:<span class="number">8070</span>&lt;/param-value&gt;&lt;!--客户端--&gt;</span><br><span class="line">		&lt;/init-param&gt;</span><br><span class="line">	&lt;/filter&gt;</span><br><span class="line">	&lt;filter-mapping&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS Validation Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!--</span><br><span class="line">		该过滤器负责实现HttpServletRequest请求的包裹，</span><br><span class="line">		比如允许开发者通过HttpServletRequest的getRemoteUser()方法获得SSO登录用户的登录名，可选配置。</span><br><span class="line">	--&gt;</span><br><span class="line">	&lt;filter&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS HttpServletRequest Wrapper Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;filter-class&gt;</span><br><span class="line">			org.jasig.cas.client.util.HttpServletRequestWrapperFilter&lt;/filter-class&gt;</span><br><span class="line">	&lt;/filter&gt;</span><br><span class="line">	&lt;filter-mapping&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS HttpServletRequest Wrapper Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!--</span><br><span class="line">		该过滤器使得开发者可以通过org.jasig.cas.client.util.AssertionHolder来获取用户的登录名。</span><br><span class="line">		比如AssertionHolder.getAssertion().getPrincipal().getName()。</span><br><span class="line">	--&gt;</span><br><span class="line">	&lt;filter&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS Assertion Thread Local Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;filter-class&gt;org.jasig.cas.client.util.AssertionThreadLocalFilter&lt;/filter-class&gt;</span><br><span class="line">	&lt;/filter&gt;</span><br><span class="line">	&lt;filter-mapping&gt;</span><br><span class="line">		&lt;filter-name&gt;CAS Assertion Thread Local Filter&lt;/filter-name&gt;</span><br><span class="line">		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;</span><br><span class="line">	&lt;/filter-mapping&gt;</span><br><span class="line"></span><br><span class="line">	&lt;!-- ======================== 单点登录结束 ======================== --&gt;</span><br></pre></td></tr></table></figure></p>
+<p>8.下载并修改CAS服务端模板<br><a href="https://codeload.github.com/apereo/cas-overlay-template/zip/master" target="_blank" rel="external">https://codeload.github.com/apereo/cas-overlay-template/zip/master</a><br>8.1把WEB-INF/classes/services/HTTPSandIMAPS-10000001.json中的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"serviceId"</span> : <span class="string">"^(https|imaps)://.*"</span>,</span><br></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"serviceId"</span> : <span class="string">"^(https|imaps|http)://.*"</span>,</span><br></pre></td></tr></table></figure></p>
+<p>或者在WEB-INF/classes/services/下新建一个json文件添加客户端信息，为客户端授权。<br>8.2配置服务端模板读取数据库用户<br>服务端模板的pom.xml添加依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.jasig.cas&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;cas-server-support-jdbc&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="variable">$&#123;cas.version&#125;</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;<span class="number">5.1</span>.<span class="number">38</span>&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>修改WEB-INF/deployerConfigContext.xml<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="built_in">alias</span> name=<span class="string">"acceptUsersAuthenticationHandler"</span> <span class="built_in">alias</span>=<span class="string">"primaryAuthenticationHandler"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>修改为:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- </span><br><span class="line">    &lt;<span class="built_in">alias</span> name=<span class="string">"acceptUsersAuthenticationHandler"</span> <span class="built_in">alias</span>=<span class="string">"primaryAuthenticationHandler"</span> /&gt; --&gt;</span><br><span class="line">    &lt;bean id=<span class="string">"dataSource"</span></span><br><span class="line">      class=<span class="string">"com.mchange.v2.c3p0.ComboPooledDataSource"</span></span><br><span class="line">      p:driverClass=<span class="string">"com.mysql.jdbc.Driver"</span></span><br><span class="line">      p:jdbcUrl=<span class="string">"jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&amp;amp;characterEncoding=UTF-8&amp;amp;zeroDateTimeBehavior=convertToNull"</span></span><br><span class="line">      p:user=<span class="string">"root"</span></span><br><span class="line">      p:password=<span class="string">"root"</span></span><br><span class="line">      p:initialPoolSize=<span class="string">"6"</span></span><br><span class="line">      p:minPoolSize=<span class="string">"6"</span></span><br><span class="line">      p:maxPoolSize=<span class="string">"18"</span></span><br><span class="line">      p:maxIdleTimeExcessConnections=<span class="string">"120"</span></span><br><span class="line">      p:checkoutTimeout=<span class="string">"10000"</span></span><br><span class="line">      p:acquireIncrement=<span class="string">"6"</span></span><br><span class="line">      p:acquireRetryAttempts=<span class="string">"5"</span></span><br><span class="line">      p:acquireRetryDelay=<span class="string">"2000"</span></span><br><span class="line">      p:idleConnectionTestPeriod=<span class="string">"30"</span></span><br><span class="line">      p:preferredTestQuery=<span class="string">"select 1"</span> /&gt;</span><br><span class="line">    &lt;<span class="built_in">alias</span> name=<span class="string">"queryDatabaseAuthenticationHandler"</span> <span class="built_in">alias</span>=<span class="string">"primaryAuthenticationHandler"</span> /&gt;</span><br><span class="line">    &lt;<span class="built_in">alias</span> name=<span class="string">"dataSource"</span> <span class="built_in">alias</span>=<span class="string">"queryDatabaseDataSource"</span> /&gt;</span><br></pre></td></tr></table></figure></p>
+<p>修改WEB-INF/cas.properties文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#cas.jdbc.authn.query.sql=</span></span><br></pre></td></tr></table></figure></p>
+<p>修改为:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cas.jdbc.authn.query.sql=select password from app_user <span class="built_in">where</span> username=?</span><br></pre></td></tr></table></figure></p>
+<p>备注：cas-server-webapp的4.2.0版本读取数据用户本身有bug，建议使用4.2.7版本<br>更多cas用户信息读取数据库参照<br><a href="https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html#database-components" target="_blank" rel="external">https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html#database-components</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/java-cas-keytool/" rel="tag">#java cas keytool</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/09/09/webpack使用/" rel="next" title="webpack使用">
+                <i class="fa fa-chevron-left"></i> webpack使用
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/default_avatar.jpg"
+               alt="pangyalin" />
+          <p class="site-author-name" itemprop="name">pangyalin</p>
+          <p class="site-description motion-element" itemprop="description">pangyalin的博客</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">28</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">20</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        <div class="links-of-blogroll motion-element">
+          
+        </div>
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc-indicator-top post-toc-indicator">
+            <i class="fa fa-angle-double-up"></i>
+          </div>
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u914D_u7F6E_u6D41_u7A0B"><span class="nav-number">1.</span> <span class="nav-text">配置流程</span></a></li></ol></div>
+            
+          </div>
+          <div class="post-toc-indicator-bottom post-toc-indicator">
+            <i class="fa fa-angle-double-down"></i>
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">pangyalin</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+
+  
+
+
+
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
+
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=0.5.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=0.5.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=0.5.0"></script>
+
+
+
+  
+  
+<script type="text/javascript" src="/js/src/scrollspy.js?v=0.5.0"></script>
+
+<script type="text/javascript" id="sidebar.toc.highlight">
+  $(document).ready(function () {
+    var tocSelector = '.post-toc';
+    var $tocSelector = $(tocSelector);
+    var activeCurrentSelector = '.active-current';
+
+    $tocSelector
+      .on('activate.bs.scrollspy', function () {
+        var $currentActiveElement = $(tocSelector + ' .active').last();
+
+        removeCurrentActiveClass();
+        $currentActiveElement.addClass('active-current');
+
+        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
+      })
+      .on('clear.bs.scrollspy', function () {
+        removeCurrentActiveClass();
+      });
+
+    function removeCurrentActiveClass () {
+      $(tocSelector + ' ' + activeCurrentSelector)
+        .removeClass(activeCurrentSelector.substring(1));
+    }
+
+    function processTOC () {
+      getTOCMaxHeight();
+      toggleTOCOverflowIndicators();
+    }
+
+    function getTOCMaxHeight () {
+      var height = $('.sidebar').height() -
+                   $tocSelector.position().top -
+                   $('.post-toc-indicator-bottom').height();
+
+      $tocSelector.css('height', height);
+
+      return height;
+    }
+
+    function toggleTOCOverflowIndicators () {
+      tocOverflowIndicator(
+        '.post-toc-indicator-top',
+        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
+      );
+
+      tocOverflowIndicator(
+        '.post-toc-indicator-bottom',
+        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
+      )
+    }
+
+    $(document).on('sidebar.motion.complete', function () {
+      processTOC();
+    });
+
+    $('body').scrollspy({ target: tocSelector });
+    $(window).on('resize', function () {
+      if ( $('.sidebar').hasClass('sidebar-active') ) {
+        processTOC();
+      }
+    });
+
+    onScroll($tocSelector);
+
+    function onScroll (element) {
+      element.on('mousewheel DOMMouseScroll', function (event) {
+          var oe = event.originalEvent;
+          var delta = oe.wheelDelta || -oe.detail;
+
+          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
+          event.preventDefault();
+
+          toggleTOCOverflowIndicators();
+      });
+    }
+
+    function tocOverflowIndicator (indicator, action) {
+      var $indicator = $(indicator);
+      var opacity = action === 'show' ? 1 : 0;
+      $indicator.velocity ?
+        $indicator.velocity('stop').velocity({
+          opacity: opacity
+        }, { duration: 100 }) :
+        $indicator.stop().animate({
+          opacity: opacity
+        }, 100);
+    }
+
+  });
+</script>
+
+<script type="text/javascript" id="sidebar.nav">
+  $(document).ready(function () {
+    var html = $('html');
+    var TAB_ANIMATE_DURATION = 200;
+    var hasVelocity = $.isFunction(html.velocity);
+
+    $('.sidebar-nav li').on('click', function () {
+      var item = $(this);
+      var activeTabClassName = 'sidebar-nav-active';
+      var activePanelClassName = 'sidebar-panel-active';
+      if (item.hasClass(activeTabClassName)) {
+        return;
+      }
+
+      var currentTarget = $('.' + activePanelClassName);
+      var target = $('.' + item.data('target'));
+
+      hasVelocity ?
+        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
+          target
+            .velocity('stop')
+            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
+            .addClass(activePanelClassName);
+        }) :
+        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
+          currentTarget.hide();
+          target
+            .stop()
+            .css({'opacity': 0, 'display': 'block'})
+            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
+              currentTarget.removeClass(activePanelClassName);
+              target.addClass(activePanelClassName);
+            });
+        });
+
+      item.siblings().removeClass(activeTabClassName);
+      item.addClass(activeTabClassName);
+    });
+
+    $('.post-toc a').on('click', function (e) {
+      e.preventDefault();
+      var targetSelector = NexT.utils.escapeSelector(this.getAttribute('href'));
+      var offset = $(targetSelector).offset().top;
+      hasVelocity ?
+        html.velocity('stop').velocity('scroll', {
+          offset: offset  + 'px',
+          mobileHA: false
+        }) :
+        $('html, body').stop().animate({
+          scrollTop: offset
+        }, 500);
+    });
+
+    // Expand sidebar on post detail page by default, when post has a toc.
+    NexT.motion.middleWares.sidebar = function () {
+      var $tocContent = $('.post-toc-content');
+
+      if (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always') {
+        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
+          NexT.utils.displaySidebar();
+        }
+      }
+    };
+  });
+</script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=0.5.0"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
