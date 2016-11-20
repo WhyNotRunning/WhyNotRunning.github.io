@@ -68,7 +68,7 @@
 <meta property="og:description" content="ubuntu添加openssh-server服务12sudo apt-get openssh-serversudo -s//进入root用户
 修改ssh服务配置ubuntu默认无法用户ssh登陆1vim /ect/ssh/sshd_config">
 <meta property="og:image" content="http://www.iwooto.com/images/ubuntu16.png">
-<meta property="og:updated_time" content="2016-11-20T10:50:14.223Z">
+<meta property="og:updated_time" content="2016-11-20T15:18:44.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【系统搭建系列】ubuntu创建用户与分配权限">
 <meta name="twitter:description" content="ubuntu添加openssh-server服务12sudo apt-get openssh-serversudo -s//进入root用户
@@ -266,7 +266,7 @@
 <p>修改后<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Authentication:</span></span><br><span class="line">LoginGraceTime <span class="number">120</span></span><br><span class="line">PermitRootLogin without-password </span><br><span class="line"><span class="comment">#PermitRootLogin yes</span></span><br><span class="line">StrictModes yes</span><br><span class="line"></span><br><span class="line">RSAAuthentication yes</span><br><span class="line">PubkeyAuthentication yes</span><br><span class="line">AuthorizedKeysFile      %h/.ssh/authorized_keys</span><br></pre></td></tr></table></figure></p>
 <p>用shell5连接一下试试，报“ssh所选用的用户秘钥未在远程主机上注册”。<br>网上查了一下资料：<br>必须保证authorized_keys只对其所有者有读写权限，其他人不允许有写的权限，否则SSH是不会工作的。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">~/.ssh$ chmod <span class="number">644</span> authorized_keys</span><br></pre></td></tr></table></figure></p>
 <p>用shell5连接一下，可以无密码连接。说明成功了<br>那我们还可以用服务器上的客户端加进去看两用户是否都可以连接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">ubuntu@ubuntu:~$ ~/.ssh$ cat ~/.ssh/id_dsa.pub &gt;&gt; ~/.ssh/authorized_keys</span><br><span class="line">ubuntu@ubuntu:~$ ssh ubuntu@localhost</span><br><span class="line">Welcome to Ubuntu <span class="number">16.04</span> LTS (GNU/Linux <span class="number">4.4</span>.<span class="number">0</span>-<span class="number">21</span>-generic x86_64)</span><br><span class="line"></span><br><span class="line"> * Documentation:  https://help.ubuntu.com/</span><br><span class="line"></span><br><span class="line"><span class="number">415</span> packages can be updated.</span><br><span class="line"><span class="number">133</span> updates are security updates.</span><br><span class="line"></span><br><span class="line">Last login: Sun Nov <span class="number">20</span> <span class="number">18</span>:<span class="number">40</span>:<span class="number">35</span> <span class="number">2016</span> from <span class="number">127.0</span>.<span class="number">0.1</span></span><br><span class="line">ubuntu@ubuntu:~$  <span class="built_in">exit</span></span><br></pre></td></tr></table></figure></p>
-<p>现在就无密码的快乐的玩耍了。</p>
+<p>现在就无密码的快乐的玩耍了。<br>添加用户<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">adduser admin <span class="comment">#创建名为mcxiaoke的新用户</span></span><br><span class="line">gpasswd <span class="operator">-a</span> admin sudo <span class="comment">#将用户admin添加到sudo用户组</span></span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -297,6 +297,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/20/【系统搭建系列】ubuntu配置java环境/" rel="prev" title="【系统搭建系列】ubuntu配置java环境">
+                【系统搭建系列】ubuntu配置java环境 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -364,7 +368,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">30</span>
+              <span class="site-state-item-count">31</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

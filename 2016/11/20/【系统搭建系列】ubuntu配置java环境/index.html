@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="sql," />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -59,19 +59,16 @@
 
 
 
-<meta name="description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
-标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
+<meta name="description" content="1.官网下载jdk文件jdk下载地址2.上传到服务123456root@ubuntu:/# cd /usr/lib/root@ubuntu:/lib# mkdir javaroot@ubuntu:/lib/java# rz -berz waiting to receive.**B0100000063f694root@ubuntu:/lib/java# lsjdk-8u112-linux-x64.t">
 <meta property="og:type" content="article">
-<meta property="og:title" content="表值函数和标量函数">
-<meta property="og:url" content="http://www.iwooto.com/2016/02/04/表值函数和标量函数/index.html">
+<meta property="og:title" content="【系统搭建系列】ubuntu配置java环境">
+<meta property="og:url" content="http://www.iwooto.com/2016/11/20/【系统搭建系列】ubuntu配置java环境/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
-标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
-<meta property="og:updated_time" content="2016-06-20T14:20:20.550Z">
+<meta property="og:description" content="1.官网下载jdk文件jdk下载地址2.上传到服务123456root@ubuntu:/# cd /usr/lib/root@ubuntu:/lib# mkdir javaroot@ubuntu:/lib/java# rz -berz waiting to receive.**B0100000063f694root@ubuntu:/lib/java# lsjdk-8u112-linux-x64.t">
+<meta property="og:updated_time" content="2016-11-20T15:41:45.894Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="表值函数和标量函数">
-<meta name="twitter:description" content="基本解释表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表
-标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时">
+<meta name="twitter:title" content="【系统搭建系列】ubuntu配置java环境">
+<meta name="twitter:description" content="1.官网下载jdk文件jdk下载地址2.上传到服务123456root@ubuntu:/# cd /usr/lib/root@ubuntu:/lib# mkdir javaroot@ubuntu:/lib/java# rz -berz waiting to receive.**B0100000063f694root@ubuntu:/lib/java# lsjdk-8u112-linux-x64.t">
 
 
 
@@ -89,7 +86,7 @@
   };
 </script>
 
-  <title> 表值函数和标量函数 | pangyalin的博客 </title>
+  <title> 【系统搭建系列】ubuntu配置java环境 | pangyalin的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -209,7 +206,7 @@
             
             
               
-                表值函数和标量函数
+                【系统搭建系列】ubuntu配置java环境
               
             
           </h1>
@@ -221,8 +218,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-04T20:36:16+08:00" content="2016-02-04">
-              2016-02-04
+            <time itemprop="dateCreated" datetime="2016-11-20T19:12:21+08:00" content="2016-11-20">
+              2016-11-20
             </time>
           </span>
 
@@ -248,10 +245,21 @@
       
 
       
-        <h1 id="u57FA_u672C_u89E3_u91CA"><a href="#u57FA_u672C_u89E3_u91CA" class="headerlink" title="基本解释"></a>基本解释</h1><p>表值函数:返回类型为table类型，table类型相当于一张存储在内存中的虚拟的一张虚拟表</p>
-<p>标量值函数:返回类型只能是基类型，其返回值类型为除TEXT、NTEXT 、IMAGE、CURSOR、 TIMESTAMP 和TABLE 类型外的其它数据类型。函数体语句定义在BEGIN-END语句内，其中包含了可以返回值的Transact-SQL 命令。调用返回表的 SQL Server 内置函数时，必须将前缀 :: 添加至函数名：<br>SELECT * FROM ::fn_helpcollations()</p>
-<p>存储过程:可包含程序流、逻辑以及对数据库的查询。它们可以接受参数、输出参数、返回单个或多个结果集以及返回值。</p>
-<p>函数与存储过程本质上没区别。只是函数有如：只能返回一个变量的限制。而存储过程可以返回多个。而函数是可以嵌入在sql中使用的,可以在select中调用，而存储过程不行。执行的本质都一样。函数限制比较多，比如不能用临时表，只能用表变量．还有一些函数都不可用等等．而存储过程的限制相对就比较少<br><a href="http://knowsky.com/534162.html" target="_blank" rel="external">转载地址</a></p>
+        <p>1.官网下载jdk文件<br><a href="http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz?AuthParam=1479640153_6ee07da95eb0d09c4d7f435c762e31eb" target="_blank" rel="external">jdk下载地址</a><br>2.上传到服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/<span class="comment"># cd /usr/lib/</span></span><br><span class="line">root@ubuntu:/lib<span class="comment"># mkdir java</span></span><br><span class="line">root@ubuntu:/lib/java<span class="comment"># rz -be</span></span><br><span class="line">rz waiting to receive.**B0100000063f694</span><br><span class="line">root@ubuntu:/lib/java<span class="comment"># ls</span></span><br><span class="line">jdk-<span class="number">8</span>u112-linux-x64.tar.gz</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>3.服务器解压并安装<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar xvf jdk-<span class="number">8</span>u112-linux-x64.tar.gz</span><br></pre></td></tr></table></figure></p>
+<p>4.环境变量的配置<br>这里采用全局设置方法，它是是所有用户的共用的环境变量<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>.bashrc文件下的末尾添加以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/lib/java/jdk1.<span class="number">8.0</span>_112 </span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre  </span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib  </span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></span><br></pre></td></tr></table></figure></p>
+<p>输入命令<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>使其生效。<br>请记住，在上述添加过程中，等号两侧不要加入空格，不然会出现“不是有效的标识符”，因为source /etc/profile 时不能识别多余到空格，会理解为是路径一部分。<br>然后保存。<br>5.检验是否安装成功<br>成功显示如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/<span class="comment"># java -version</span></span><br><span class="line">java version <span class="string">"1.8.0_112"</span></span><br><span class="line">Java(TM) SE Runtime Environment (build <span class="number">1.8</span>.<span class="number">0</span>_112-b15)</span><br><span class="line">Java HotSpot(TM) <span class="number">64</span>-Bit Server VM (build <span class="number">25.112</span>-b15, mixed mode)</span><br><span class="line">root@ubuntu:/<span class="comment"># javac -version</span></span><br><span class="line">javac <span class="number">1.8</span>.<span class="number">0</span>_112</span><br></pre></td></tr></table></figure></p>
+<p>安装tomcat<br>1.下载tomcat<br><a href="https://mirrors.tuna.tsinghua.edu.cn/apache/tomcat/tomcat-9/v9.0.0.M13/bin/apache-tomcat-9.0.0.M13.tar.gz" target="_blank" rel="external">tomcat地址</a><br>2.上传并解压tomcat<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/lib<span class="comment"># mkdir tomcat</span></span><br><span class="line">root@ubuntu:/lib<span class="comment"># cd /lib/tomcat/</span></span><br><span class="line">root@ubuntu:/lib/tomcat<span class="comment"># rz</span></span><br><span class="line">**B0100000023be50eive.**B0100000023be50</span><br><span class="line">root@ubuntu:/lib/tomcat<span class="comment"># tar xvf apache-tomcat-9.0.0.M13.tar.gz</span></span><br></pre></td></tr></table></figure></p>
+<p>3.配置tomcat环境变量<br>这里采用全局设置方法，它是是所有用户的共用的环境变量。<br>如果是局部变量的话可以在tomcat的bin目录下startup.sh下添加变量即可。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br></pre></td></tr></table></figure></p>
+<p>.bashrc文件下的末尾添加以下代码<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> JAVA_HOME=/lib/java/jdk1.<span class="number">8.0</span>_112 </span><br><span class="line"><span class="built_in">export</span> JRE_HOME=<span class="variable">$&#123;JAVA_HOME&#125;</span>/jre  </span><br><span class="line"><span class="built_in">export</span> CLASSPATH=.:<span class="variable">$&#123;JAVA_HOME&#125;</span>/lib:<span class="variable">$&#123;JRE_HOME&#125;</span>/lib  </span><br><span class="line"><span class="built_in">export</span> PATH=<span class="variable">$&#123;JAVA_HOME&#125;</span>/bin:<span class="variable">$PATH</span></span><br><span class="line"><span class="built_in">export</span> TOMCAT_HOME=/lib/tomcat/apache-tomcat-<span class="number">9.0</span>.<span class="number">0</span>M13</span><br></pre></td></tr></table></figure></p>
+<p>4.启动tomcat<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/lib/tomcat/apache-tomcat-<span class="number">9.0</span>.<span class="number">0</span>.M13/bin<span class="comment"># ./startup.sh </span></span><br><span class="line">Using CATALINA_BASE:   /lib/tomcat/apache-tomcat-<span class="number">9.0</span>.<span class="number">0</span>.M13</span><br><span class="line">Using CATALINA_HOME:   /lib/tomcat/apache-tomcat-<span class="number">9.0</span>.<span class="number">0</span>.M13</span><br><span class="line">Using CATALINA_TMPDIR: /lib/tomcat/apache-tomcat-<span class="number">9.0</span>.<span class="number">0</span>.M13/temp</span><br><span class="line">Using JRE_HOME:        /lib/java/jdk1.<span class="number">8.0</span>_112/jre</span><br><span class="line">Using CLASSPATH:       /lib/tomcat/apache-tomcat-<span class="number">9.0</span>.<span class="number">0</span>.M13/bin/bootstrap.jar:/lib/tomcat/apache-tomcat-<span class="number">9.0</span>.<span class="number">0</span>.M13/bin/tomcat-juli.jar</span><br><span class="line">Tomcat started.</span><br></pre></td></tr></table></figure></p>
+<p>安装nginx<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install nginx</span><br></pre></td></tr></table></figure></p>
+<p>配置nginx<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/nginx/sites-available/default</span><br></pre></td></tr></table></figure></p>
+<p>启动nginx<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx start</span><br></pre></td></tr></table></figure></p>
+<p>停止nginx<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service nginx stop</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -266,7 +274,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/sql/" rel="tag">#sql</a>
+            <a href="/tags/linux/" rel="tag">#linux</a>
           
         </div>
       
@@ -275,17 +283,13 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/02/01/css强制换行与不换行/" rel="next" title="css强制换行与不换行">
-                <i class="fa fa-chevron-left"></i> css强制换行与不换行
+              <a href="/2016/11/19/系统搭建系列1/" rel="next" title="【系统搭建系列】ubuntu创建用户与分配权限">
+                <i class="fa fa-chevron-left"></i> 【系统搭建系列】ubuntu创建用户与分配权限
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/25/linux文件目录权限/" rel="prev" title="linux文件目录权限">
-                linux文件目录权限 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -404,7 +408,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#u57FA_u672C_u89E3_u91CA"><span class="nav-number">1.</span> <span class="nav-text">基本解释</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">
