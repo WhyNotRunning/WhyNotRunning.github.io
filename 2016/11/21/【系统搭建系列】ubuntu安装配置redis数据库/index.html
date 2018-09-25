@@ -41,7 +41,7 @@
 <link href="/css/main.css?v=0.5.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="linux," />
 
 
 
@@ -59,16 +59,25 @@
 
 
 
-<meta name="description" content="pangyalin的博客">
+<meta name="description" content="1.安装redis1apt-get install redis-server
+安装完成后，Redis服务器会自动启动，我们检查Redis服务器程序1ps -aux|grep redis
+通过启动命令检查Redis服务器状态,执行：1netstat -nlt|grep 6379
+查看服务状态123service redis-server status或者/etc/init.d/redis-serve">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【系统搭建系列】ubuntu安装配置redis数据库">
 <meta property="og:url" content="http://www.iwooto.com/2016/11/21/【系统搭建系列】ubuntu安装配置redis数据库/index.html">
 <meta property="og:site_name" content="pangyalin的博客">
-<meta property="og:description" content="pangyalin的博客">
-<meta property="og:updated_time" content="2016-11-21T15:18:05.528Z">
+<meta property="og:description" content="1.安装redis1apt-get install redis-server
+安装完成后，Redis服务器会自动启动，我们检查Redis服务器程序1ps -aux|grep redis
+通过启动命令检查Redis服务器状态,执行：1netstat -nlt|grep 6379
+查看服务状态123service redis-server status或者/etc/init.d/redis-serve">
+<meta property="og:updated_time" content="2016-11-25T14:28:41.103Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【系统搭建系列】ubuntu安装配置redis数据库">
-<meta name="twitter:description" content="pangyalin的博客">
+<meta name="twitter:description" content="1.安装redis1apt-get install redis-server
+安装完成后，Redis服务器会自动启动，我们检查Redis服务器程序1ps -aux|grep redis
+通过启动命令检查Redis服务器状态,执行：1netstat -nlt|grep 6379
+查看服务状态123service redis-server status或者/etc/init.d/redis-serve">
 
 
 
@@ -245,7 +254,12 @@
       
 
       
-        
+        <p>1.安装redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install redis-server</span><br></pre></td></tr></table></figure></p>
+<p>安装完成后，Redis服务器会自动启动，我们检查Redis服务器程序<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -aux|grep redis</span><br></pre></td></tr></table></figure></p>
+<p>通过启动命令检查Redis服务器状态,执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nlt|grep <span class="number">6379</span></span><br></pre></td></tr></table></figure></p>
+<p>查看服务状态<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">service redis-server status</span><br><span class="line">或者</span><br><span class="line">/etc/init.d/redis-server status</span><br></pre></td></tr></table></figure></p>
+<p>安装Redis服务器，会自动地一起安装Redis命令行客户端程序。<br>在本机输入redis-cli命令就可以启动，客户端程序访问Redis服务器。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">redis-cli</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt; <span class="built_in">set</span> <span class="string">'abc'</span> <span class="string">'123'</span></span><br><span class="line">OK</span><br><span class="line"><span class="number">127.0</span>.<span class="number">0.1</span>:<span class="number">6379</span>&gt; get <span class="string">'abc'</span></span><br><span class="line"><span class="string">"123"</span></span><br></pre></td></tr></table></figure></p>
+
       
     </div>
 
@@ -256,6 +270,12 @@
     </div>
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/linux/" rel="tag">#linux</a>
+          
+        </div>
       
 
       
@@ -269,6 +289,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/11/聚集索引与非聚集索引/" rel="prev" title="聚集索引与非聚集索引">
+                聚集索引与非聚集索引 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -346,7 +370,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-count">21</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -409,7 +433,7 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
