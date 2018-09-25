@@ -3,9 +3,9 @@
   <title><![CDATA[pangyalin的博客]]></title>
   <subtitle><![CDATA[pangyalin的博客]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://www.iwooto.com/"/>
+  <link href="http://whynotrunning.github.io/"/>
   <updated>2017-03-12T01:06:41.283Z</updated>
-  <id>http://www.iwooto.com/</id>
+  <id>http://whynotrunning.github.io/</id>
   
   <author>
     <name><![CDATA[pangyalin]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[聚集索引与非聚集索引]]></title>
-    <link href="http://www.iwooto.com/2016/12/11/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/"/>
-    <id>http://www.iwooto.com/2016/12/11/聚集索引与非聚集索引/</id>
+    <link href="http://whynotrunning.github.io/2016/12/11/%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95%E4%B8%8E%E9%9D%9E%E8%81%9A%E9%9B%86%E7%B4%A2%E5%BC%95/"/>
+    <id>http://whynotrunning.github.io/2016/12/11/聚集索引与非聚集索引/</id>
     <published>2016-12-11T07:44:56.000Z</published>
     <updated>2017-03-12T01:06:41.283Z</updated>
     <content type="html"><![CDATA[<p>1.什么是索引</p>
@@ -29,14 +29,14 @@
 ]]>
     </summary>
     
-      <category term="sql" scheme="http://www.iwooto.com/tags/sql/"/>
+      <category term="sql" scheme="http://whynotrunning.github.io/tags/sql/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[【系统搭建系列】ubuntu安装配置redis数据库]]></title>
-    <link href="http://www.iwooto.com/2016/11/21/%E3%80%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%97%E3%80%91ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEredis%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
-    <id>http://www.iwooto.com/2016/11/21/【系统搭建系列】ubuntu安装配置redis数据库/</id>
+    <link href="http://whynotrunning.github.io/2016/11/21/%E3%80%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%97%E3%80%91ubuntu%E5%AE%89%E8%A3%85%E9%85%8D%E7%BD%AEredis%E6%95%B0%E6%8D%AE%E5%BA%93/"/>
+    <id>http://whynotrunning.github.io/2016/11/21/【系统搭建系列】ubuntu安装配置redis数据库/</id>
     <published>2016-11-21T15:18:05.000Z</published>
     <updated>2016-11-25T14:28:41.103Z</updated>
     <content type="html"><![CDATA[<p>1.安装redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install redis-server</span><br></pre></td></tr></table></figure></p>
@@ -49,14 +49,14 @@
     <![CDATA[<p>1.安装redis<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"]]>
     </summary>
     
-      <category term="linux" scheme="http://www.iwooto.com/tags/linux/"/>
+      <category term="linux" scheme="http://whynotrunning.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[【系统搭建系列】ubuntu配置java环境]]></title>
-    <link href="http://www.iwooto.com/2016/11/20/%E3%80%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%97%E3%80%91ubuntu%E9%85%8D%E7%BD%AEjava%E7%8E%AF%E5%A2%83/"/>
-    <id>http://www.iwooto.com/2016/11/20/【系统搭建系列】ubuntu配置java环境/</id>
+    <link href="http://whynotrunning.github.io/2016/11/20/%E3%80%90%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%97%E3%80%91ubuntu%E9%85%8D%E7%BD%AEjava%E7%8E%AF%E5%A2%83/"/>
+    <id>http://whynotrunning.github.io/2016/11/20/【系统搭建系列】ubuntu配置java环境/</id>
     <published>2016-11-20T11:12:21.000Z</published>
     <updated>2016-12-20T14:50:28.440Z</updated>
     <content type="html"><![CDATA[<p>1.官网下载jdk文件<br><a href="http://download.oracle.com/otn-pub/java/jdk/8u112-b15/jdk-8u112-linux-x64.tar.gz?AuthParam=1479640153_6ee07da95eb0d09c4d7f435c762e31eb" target="_blank" rel="external">jdk下载地址</a><br>2.上传到服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">root@ubuntu:/<span class="comment"># cd /usr/lib/</span></span><br><span class="line">root@ubuntu:/lib<span class="comment"># mkdir java</span></span><br><span class="line">root@ubuntu:/lib/java<span class="comment"># rz -be</span></span><br><span class="line">rz waiting to receive.**B0100000063f694</span><br><span class="line">root@ubuntu:/lib/java<span class="comment"># ls</span></span><br><span class="line">jdk-<span class="number">8</span>u112-linux-x64.tar.gz</span><br></pre></td></tr></table></figure></p>
@@ -82,14 +82,14 @@
     
     </summary>
     
-      <category term="linux" scheme="http://www.iwooto.com/tags/linux/"/>
+      <category term="linux" scheme="http://whynotrunning.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[【系统搭建系列】ubuntu创建用户与分配权限]]></title>
-    <link href="http://www.iwooto.com/2016/11/19/%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%971/"/>
-    <id>http://www.iwooto.com/2016/11/19/系统搭建系列1/</id>
+    <link href="http://whynotrunning.github.io/2016/11/19/%E7%B3%BB%E7%BB%9F%E6%90%AD%E5%BB%BA%E7%B3%BB%E5%88%971/"/>
+    <id>http://whynotrunning.github.io/2016/11/19/系统搭建系列1/</id>
     <published>2016-11-19T11:11:22.000Z</published>
     <updated>2016-11-20T15:18:44.795Z</updated>
     <content type="html"><![CDATA[<p>ubuntu添加openssh-server服务<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get openssh-server</span><br><span class="line">sudo <span class="operator">-s</span>//进入root用户</span><br></pre></td></tr></table></figure></p>
@@ -117,14 +117,14 @@
     
     </summary>
     
-      <category term="linux" scheme="http://www.iwooto.com/tags/linux/"/>
+      <category term="linux" scheme="http://whynotrunning.github.io/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CAS4.2.7单点登录]]></title>
-    <link href="http://www.iwooto.com/2016/11/06/CAS4.2.7%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95/"/>
-    <id>http://www.iwooto.com/2016/11/06/CAS4.2.7单点登录/</id>
+    <link href="http://whynotrunning.github.io/2016/11/06/CAS4.2.7%E5%8D%95%E7%82%B9%E7%99%BB%E5%BD%95/"/>
+    <id>http://whynotrunning.github.io/2016/11/06/CAS4.2.7单点登录/</id>
     <published>2016-11-06T14:36:15.000Z</published>
     <updated>2016-11-17T14:16:22.134Z</updated>
     <content type="html"><![CDATA[<p>单点登录控制多个应用统一从一个登录界面进行登录。<br>准备材料：<br>    Intellij,jdk1.8,maven<br>    Maven的CAS服务端模板，在这个基础上修改配置文件，作为CAS的服务端<br>    <a href="https://codeload.github.com/apereo/cas-overlay-template/zip/master" target="_blank" rel="external">https://codeload.github.com/apereo/cas-overlay-template/zip/master</a><br>    cas使用数据库读取用户信息<br>    <a href="https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html#database-components" target="_blank" rel="external">https://apereo.github.io/cas/4.2.x/installation/Database-Authentication.html#database-components</a></p>
@@ -151,14 +151,14 @@
     
     </summary>
     
-      <category term="java cas keytool" scheme="http://www.iwooto.com/tags/java-cas-keytool/"/>
+      <category term="java cas keytool" scheme="http://whynotrunning.github.io/tags/java-cas-keytool/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[webpack使用]]></title>
-    <link href="http://www.iwooto.com/2016/09/09/webpack%E4%BD%BF%E7%94%A8/"/>
-    <id>http://www.iwooto.com/2016/09/09/webpack使用/</id>
+    <link href="http://whynotrunning.github.io/2016/09/09/webpack%E4%BD%BF%E7%94%A8/"/>
+    <id>http://whynotrunning.github.io/2016/09/09/webpack使用/</id>
     <published>2016-09-09T11:38:49.000Z</published>
     <updated>2016-09-09T15:39:59.291Z</updated>
     <content type="html"><![CDATA[<h1 id="u4EC0_u4E48_u662F_webpack_uFF1F"><a href="#u4EC0_u4E48_u662F_webpack_uFF1F" class="headerlink" title="什么是 webpack？"></a>什么是 webpack？</h1><p>webpack是近期最火的一款模块加载器兼打包工具，它能把各种资源，例如JS（含JSX）、coffee、样式（含less/sass）、图片等都作为模块来使用和处理。<br>我们可以直接使用 require(XXX) 的形式来引入各模块，即使它们可能需要经过编译（比如JSX和sass），但我们无须在上面花费太多心思，因为 webpack 有着各种健全的加载器（loader）在默默处理这些事情，这块我们后续会提到。<br>你可以不打算将其用在你的项目上，但没有理由不去掌握它，因为以近期 Github 上各大主流的（React相关）项目来说，它们仓库上所展示的示例已经是基于 webpack 来开发的，比如 React-Boostrap 和 Redux。<br>webpack的官网是 <a href="http://webpack.github.io/" target="_blank" rel="external">http://webpack.github.io/</a> ，文档地址是 <a href="http://webpack.github.io/docs/" target="_blank" rel="external">http://webpack.github.io/docs/</a> ，想对其进行更详细了解的可以点进去瞧一瞧。<a id="more"></a></p>
@@ -201,14 +201,14 @@
     
     </summary>
     
-      <category term="webpack" scheme="http://www.iwooto.com/tags/webpack/"/>
+      <category term="webpack" scheme="http://whynotrunning.github.io/tags/webpack/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[vi命令]]></title>
-    <link href="http://www.iwooto.com/2016/08/30/vi%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.iwooto.com/2016/08/30/vi命令/</id>
+    <link href="http://whynotrunning.github.io/2016/08/30/vi%E5%91%BD%E4%BB%A4/"/>
+    <id>http://whynotrunning.github.io/2016/08/30/vi命令/</id>
     <published>2016-08-30T12:21:54.000Z</published>
     <updated>2016-11-17T15:38:31.471Z</updated>
     <content type="html"><![CDATA[<h1 id="u8FDB_u5165vi_u7684_u547D_u4EE4"><a href="#u8FDB_u5165vi_u7684_u547D_u4EE4" class="headerlink" title="进入vi的命令"></a>进入vi的命令</h1><p>vi filename :打开或新建文件，并将光标置于第一行首<br>vi +n filename ：打开文件，并将光标置于第n行首<br>vi + filename ：打开文件，并将光标置于最后一行首<br>vi +/pattern filename：打开文件，并将光标置于第一个与pattern匹配的串处<br>vi -r filename ：在上次正用vi编辑时发生系统崩溃，恢复filename<br>vi filename….filename ：打开多个文件，依次进行编辑 </p>
@@ -245,14 +245,14 @@
     <![CDATA[<h1 id="u8FDB_u5165vi_u7684_u547D_u4EE4"><a href="#u8FDB_u5165vi_u7684_u547D_u4EE4" class="headerlink" title="进入vi的命令"></a>进入vi的命令</h1><p>vi]]>
     </summary>
     
-      <category term="vi" scheme="http://www.iwooto.com/tags/vi/"/>
+      <category term="vi" scheme="http://whynotrunning.github.io/tags/vi/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Aspect实现日志管理]]></title>
-    <link href="http://www.iwooto.com/2016/08/27/Aspect%E5%AE%9E%E7%8E%B0%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86/"/>
-    <id>http://www.iwooto.com/2016/08/27/Aspect实现日志管理/</id>
+    <link href="http://whynotrunning.github.io/2016/08/27/Aspect%E5%AE%9E%E7%8E%B0%E6%97%A5%E5%BF%97%E7%AE%A1%E7%90%86/"/>
+    <id>http://whynotrunning.github.io/2016/08/27/Aspect实现日志管理/</id>
     <published>2016-08-27T04:00:51.000Z</published>
     <updated>2016-08-27T04:00:51.869Z</updated>
     <content type="html"></content>
@@ -264,8 +264,8 @@
   
   <entry>
     <title><![CDATA[mybatis调用sqlserver和oracle存储过程]]></title>
-    <link href="http://www.iwooto.com/2016/08/27/mybatis%E8%B0%83%E7%94%A8sqlserver%E5%92%8Coracle%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
-    <id>http://www.iwooto.com/2016/08/27/mybatis调用sqlserver和oracle存储过程/</id>
+    <link href="http://whynotrunning.github.io/2016/08/27/mybatis%E8%B0%83%E7%94%A8sqlserver%E5%92%8Coracle%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B/"/>
+    <id>http://whynotrunning.github.io/2016/08/27/mybatis调用sqlserver和oracle存储过程/</id>
     <published>2016-08-27T03:57:36.000Z</published>
     <updated>2016-08-27T03:57:36.320Z</updated>
     <content type="html"></content>
@@ -277,8 +277,8 @@
   
   <entry>
     <title><![CDATA[iis和tomcat禁止DELETE PUT OPTIONS请求]]></title>
-    <link href="http://www.iwooto.com/2016/08/22/iis%E5%92%8Ctomcat%E7%A6%81%E6%AD%A2DELETE-PUT-OPTIONS%E8%AF%B7%E6%B1%82/"/>
-    <id>http://www.iwooto.com/2016/08/22/iis和tomcat禁止DELETE-PUT-OPTIONS请求/</id>
+    <link href="http://whynotrunning.github.io/2016/08/22/iis%E5%92%8Ctomcat%E7%A6%81%E6%AD%A2DELETE-PUT-OPTIONS%E8%AF%B7%E6%B1%82/"/>
+    <id>http://whynotrunning.github.io/2016/08/22/iis和tomcat禁止DELETE-PUT-OPTIONS请求/</id>
     <published>2016-08-22T15:35:21.000Z</published>
     <updated>2016-08-22T15:35:21.912Z</updated>
     <content type="html"></content>
@@ -290,8 +290,8 @@
   
   <entry>
     <title><![CDATA[iis配置反向代理]]></title>
-    <link href="http://www.iwooto.com/2016/08/22/iis%E9%85%8D%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/"/>
-    <id>http://www.iwooto.com/2016/08/22/iis配置反向代理/</id>
+    <link href="http://whynotrunning.github.io/2016/08/22/iis%E9%85%8D%E7%BD%AE%E5%8F%8D%E5%90%91%E4%BB%A3%E7%90%86/"/>
+    <id>http://whynotrunning.github.io/2016/08/22/iis配置反向代理/</id>
     <published>2016-08-22T15:32:15.000Z</published>
     <updated>2016-08-22T15:32:15.440Z</updated>
     <content type="html"></content>
@@ -303,8 +303,8 @@
   
   <entry>
     <title><![CDATA[iis 添加ssl证书]]></title>
-    <link href="http://www.iwooto.com/2016/08/22/iis-%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6/"/>
-    <id>http://www.iwooto.com/2016/08/22/iis-添加ssl证书/</id>
+    <link href="http://whynotrunning.github.io/2016/08/22/iis-%E6%B7%BB%E5%8A%A0ssl%E8%AF%81%E4%B9%A6/"/>
+    <id>http://whynotrunning.github.io/2016/08/22/iis-添加ssl证书/</id>
     <published>2016-08-22T15:31:47.000Z</published>
     <updated>2016-09-24T10:48:18.579Z</updated>
     <content type="html"><![CDATA[<embed src="http://music.163.com/style/swf/widget.swf?sid=28830411&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworking="all">]]></content>
@@ -312,14 +312,14 @@
     <![CDATA[<embed src="http://music.163.com/style/swf/widget.swf?sid=28830411&type=2&auto=1&width=320&height=66" width="340" height="86" allownetworkin]]>
     </summary>
     
-      <category term="iis" scheme="http://www.iwooto.com/tags/iis/"/>
+      <category term="iis" scheme="http://whynotrunning.github.io/tags/iis/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[sqlserver加密解密]]></title>
-    <link href="http://www.iwooto.com/2016/08/10/sqlserver%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/"/>
-    <id>http://www.iwooto.com/2016/08/10/sqlserver加密解密/</id>
+    <link href="http://whynotrunning.github.io/2016/08/10/sqlserver%E5%8A%A0%E5%AF%86%E8%A7%A3%E5%AF%86/"/>
+    <id>http://whynotrunning.github.io/2016/08/10/sqlserver加密解密/</id>
     <published>2016-08-10T13:17:53.000Z</published>
     <updated>2016-08-22T15:30:52.112Z</updated>
     <content type="html"><![CDATA[<h1 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h1><p>加密是指通过使用密钥或密码对数据进行模糊处理的过程。在SQL Server中，加密并不能替代其他的安全设置，比如防止未被授权的人访问数据库<br><a id="more"></a></p>
@@ -343,14 +343,14 @@
     
     </summary>
     
-      <category term="sqlserver" scheme="http://www.iwooto.com/tags/sqlserver/"/>
+      <category term="sqlserver" scheme="http://whynotrunning.github.io/tags/sqlserver/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[eclipse常见问题]]></title>
-    <link href="http://www.iwooto.com/2016/07/02/eclipse%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
-    <id>http://www.iwooto.com/2016/07/02/eclipse常见问题/</id>
+    <link href="http://whynotrunning.github.io/2016/07/02/eclipse%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98/"/>
+    <id>http://whynotrunning.github.io/2016/07/02/eclipse常见问题/</id>
     <published>2016-07-02T02:11:02.000Z</published>
     <updated>2016-07-07T15:15:06.055Z</updated>
     <content type="html"><![CDATA[<h1 id="java"><a href="#java" class="headerlink" title="java"></a>java</h1><h1 id="jsp"><a href="#jsp" class="headerlink" title="jsp"></a>jsp</h1><p>1.Can not find the tag library descriptor for “<a href="http://shiro.apache.org/tags" target="_blank" rel="external">http://shiro.apache.org/tags</a>“<br>问题解决：首先可能jar包没有导入到项目中，如果已经导入到项目，<br>找到错误信息的位置剪切下错误的代码，文件不提示错误后再粘贴进去（eclipse已经对改文件打上错误的标示，<br>即使已经引入了jar包，确没有从新检查）<br><a id="more"></a></p>
@@ -367,14 +367,14 @@
     
     </summary>
     
-      <category term="eclipse" scheme="http://www.iwooto.com/tags/eclipse/"/>
+      <category term="eclipse" scheme="http://whynotrunning.github.io/tags/eclipse/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[git命令]]></title>
-    <link href="http://www.iwooto.com/2016/06/30/git%E5%91%BD%E4%BB%A4/"/>
-    <id>http://www.iwooto.com/2016/06/30/git命令/</id>
+    <link href="http://whynotrunning.github.io/2016/06/30/git%E5%91%BD%E4%BB%A4/"/>
+    <id>http://whynotrunning.github.io/2016/06/30/git命令/</id>
     <published>2016-06-30T14:21:54.000Z</published>
     <updated>2016-06-30T14:33:23.209Z</updated>
     <content type="html"><![CDATA[<h1 id="u751F_u6210ssh_key"><a href="#u751F_u6210ssh_key" class="headerlink" title="生成ssh key"></a>生成ssh key</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"email.com"</span></span><br><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter file <span class="keyword">in</span> <span class="built_in">which</span> to save the key (/c/Users/Administrator/.ssh/id_rsa):</span><br><span class="line">/c/Users/Administrator/.ssh/id_rsa already exists.</span><br><span class="line">Overwrite (y/n)? Y</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br><span class="line">Passphrases <span class="keyword">do</span> not match. Try again.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br><span class="line">Enter same passphrase again:</span><br></pre></td></tr></table></figure>
@@ -400,14 +400,14 @@
     
     </summary>
     
-      <category term="git" scheme="http://www.iwooto.com/tags/git/"/>
+      <category term="git" scheme="http://whynotrunning.github.io/tags/git/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[sqlserver触发器]]></title>
-    <link href="http://www.iwooto.com/2016/06/05/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/"/>
-    <id>http://www.iwooto.com/2016/06/05/sqlserver触发器/</id>
+    <link href="http://whynotrunning.github.io/2016/06/05/sqlserver%E8%A7%A6%E5%8F%91%E5%99%A8/"/>
+    <id>http://whynotrunning.github.io/2016/06/05/sqlserver触发器/</id>
     <published>2016-06-05T14:23:01.000Z</published>
     <updated>2016-06-13T11:21:32.356Z</updated>
     <content type="html"><![CDATA[<p>触发器的分类<br>DML触发器是响应Insert、Update、Delete语句，DDL是响应Create、Alter、Drop开头的数据定义语句而激活的。<br>1.触发器的概念：就是在数据库进行insert、delete、update时会触发我们规定的的一系列的动作<br>创建一个简单的触发器<a id="more"></a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">create trigger tgr_name --触发器的名称</span><br><span class="line">on table_name --触发器作用的表名</span><br><span class="line">	<span class="keyword">for</span> insert --触发的操作</span><br><span class="line">as</span><br><span class="line">	<span class="built_in">print</span> <span class="string">'我添加了一条记录哦'</span></span><br><span class="line">go</span><br></pre></td></tr></table></figure></p>
@@ -419,14 +419,14 @@
     
     </summary>
     
-      <category term="sqlserver" scheme="http://www.iwooto.com/tags/sqlserver/"/>
+      <category term="sqlserver" scheme="http://whynotrunning.github.io/tags/sqlserver/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[java自定义注解]]></title>
-    <link href="http://www.iwooto.com/2016/04/19/java%E6%B3%A8%E8%A7%A3/"/>
-    <id>http://www.iwooto.com/2016/04/19/java注解/</id>
+    <link href="http://whynotrunning.github.io/2016/04/19/java%E6%B3%A8%E8%A7%A3/"/>
+    <id>http://whynotrunning.github.io/2016/04/19/java注解/</id>
     <published>2016-04-19T12:31:10.000Z</published>
     <updated>2016-05-24T14:10:38.584Z</updated>
     <content type="html"><![CDATA[<h1 id="u5143_u6CE8_u89E3"><a href="#u5143_u6CE8_u89E3" class="headerlink" title="元注解"></a>元注解</h1><p>@Target表示该注解可以用于什么地方，可能的ElementType参数有：<br>CONSTRUCTOR：构造器的声明<br>FIELD：域声明（包括enum实例）<br>LOCAL_VARIABLE：局部变量声明<br>METHOD：方法声明<br>PACKAGE：包声明<br>PARAMETER：参数声明<br>TYPE：类、接口（包括注解类型）或enum声明</p>
@@ -448,14 +448,14 @@
     <![CDATA[<h1 id="u5143_u6CE8_u89E3"><a href="#u5143_u6CE8_u89E3" class="headerlink" title="元注解"></a>元注解</h1><p>@Target表示该注解可以用于什么地方，可能的ElementType参数有]]>
     </summary>
     
-      <category term="java" scheme="http://www.iwooto.com/tags/java/"/>
+      <category term="java" scheme="http://whynotrunning.github.io/tags/java/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[python学习(1)]]></title>
-    <link href="http://www.iwooto.com/2016/04/06/python%E5%AD%A6%E4%B9%A0-1/"/>
-    <id>http://www.iwooto.com/2016/04/06/python学习-1/</id>
+    <link href="http://whynotrunning.github.io/2016/04/06/python%E5%AD%A6%E4%B9%A0-1/"/>
+    <id>http://whynotrunning.github.io/2016/04/06/python学习-1/</id>
     <published>2016-04-05T17:23:39.000Z</published>
     <updated>2016-04-05T17:26:31.284Z</updated>
     <content type="html"><![CDATA[<h1 id="Python_u5B66_u4E60_281_29"><a href="#Python_u5B66_u4E60_281_29" class="headerlink" title="Python学习(1)"></a>Python学习(1)</h1><a id="more"></a>
@@ -466,14 +466,14 @@
     
     </summary>
     
-      <category term="python" scheme="http://www.iwooto.com/tags/python/"/>
+      <category term="python" scheme="http://whynotrunning.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[python学习(2)]]></title>
-    <link href="http://www.iwooto.com/2016/04/06/python%E5%AD%A6%E4%B9%A0-2/"/>
-    <id>http://www.iwooto.com/2016/04/06/python学习-2/</id>
+    <link href="http://whynotrunning.github.io/2016/04/06/python%E5%AD%A6%E4%B9%A0-2/"/>
+    <id>http://whynotrunning.github.io/2016/04/06/python学习-2/</id>
     <published>2016-04-05T17:19:58.000Z</published>
     <updated>2016-04-05T17:26:23.752Z</updated>
     <content type="html"><![CDATA[<h1 id="Python_u5B66_u4E60_282_29"><a href="#Python_u5B66_u4E60_282_29" class="headerlink" title="Python学习(2)"></a>Python学习(2)</h1><a id="more"></a>
@@ -483,14 +483,14 @@
     
     </summary>
     
-      <category term="python" scheme="http://www.iwooto.com/tags/python/"/>
+      <category term="python" scheme="http://whynotrunning.github.io/tags/python/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[redis下载安装测试]]></title>
-    <link href="http://www.iwooto.com/2016/04/06/redis%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95/"/>
-    <id>http://www.iwooto.com/2016/04/06/redis下载安装测试/</id>
+    <link href="http://whynotrunning.github.io/2016/04/06/redis%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E6%B5%8B%E8%AF%95/"/>
+    <id>http://whynotrunning.github.io/2016/04/06/redis下载安装测试/</id>
     <published>2016-04-05T16:38:32.000Z</published>
     <updated>2016-04-05T17:24:59.373Z</updated>
     <content type="html"><![CDATA[<h1 id="redis_u5B89_u88C5"><a href="#redis_u5B89_u88C5" class="headerlink" title="redis安装"></a>redis安装</h1><p>1． 下载地址：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ wget http://download.redis.io/releases/redis-<span class="number">3.0</span>.<span class="number">7</span>.tar.gz</span><br></pre></td></tr></table></figure></p>
@@ -538,7 +538,7 @@
     
     </summary>
     
-      <category term="redis" scheme="http://www.iwooto.com/tags/redis/"/>
+      <category term="redis" scheme="http://whynotrunning.github.io/tags/redis/"/>
     
   </entry>
   
